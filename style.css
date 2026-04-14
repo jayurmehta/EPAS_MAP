@@ -1,0 +1,70 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+#app {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  height: 100%;
+}
+#sidebar {
+  padding: 16px;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  background: #fff;
+}
+#map {
+  width: 100%;
+  height: 100%;
+}
+h1 {
+  font-size: 1.25rem;
+  margin: 0 0 8px;
+}
+.sub {
+  margin-top: 0;
+  color: #555;
+  line-height: 1.35;
+}
+label {
+  display: block;
+  font-weight: 600;
+  margin: 14px 0 6px;
+}
+select, input[type="range"], button {
+  width: 100%;
+  box-sizing: border-box;
+}
+button {
+  margin-top: 12px;
+  padding: 8px 10px;
+  border: 1px solid #bbb;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+.legend, #summary {
+  margin-top: 16px;
+  padding: 12px;
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+.maplibregl-popup-content {
+  max-width: 360px;
+}
+.popup-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.popup-list {
+  margin: 0;
+  padding-left: 18px;
+}
+.popup-list li {
+  margin-bottom: 3px;
+}
+.small {
+  color: #666;
+  font-size: 0.9rem;
+}
