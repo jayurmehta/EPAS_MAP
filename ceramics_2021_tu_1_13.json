@@ -1,0 +1,647 @@
+{
+  "1": {
+    "tu": 1,
+    "levels": [
+      {
+        "level": "1900-01-02 00:00:00",
+        "records": [
+          {
+            "count": 1,
+            "type": "porcelain",
+            "chronology": "1660+",
+            "vessel_portion": "rim",
+            "vessel_form": "saucer",
+            "photo_id": "EPAS2021 374-375"
+          },
+          {
+            "count": 1,
+            "type": "pearlware",
+            "chronology": "1775-1830",
+            "vessel_portion": "base",
+            "vessel_form": "plate",
+            "photo_id": "EPAS2021 372-373"
+          },
+          {
+            "count": 1,
+            "type": "pearlware",
+            "chronology": "1775-1830",
+            "vessel_portion": "base",
+            "vessel_form": "plate",
+            "photo_id": "EPAS2021 376-377"
+          },
+          {
+            "count": 1,
+            "type": "pearlware",
+            "chronology": "1775-1830",
+            "vessel_portion": "base",
+            "vessel_form": "plate",
+            "photo_id": "EPAS2021 378-379"
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "bowl",
+            "photo_id": "EPAS2021 380-381"
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1902-1959",
+            "vessel_portion": "base",
+            "vessel_form": "plate",
+            "photo_id": "EPAS2021 382-383"
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1902-1959",
+            "vessel_portion": "base",
+            "vessel_form": "plate",
+            "photo_id": "EPAS2021 384-385"
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1902-1959",
+            "vessel_portion": "base",
+            "vessel_form": "plate",
+            "photo_id": "EPAS2021 386-387"
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1902-1959",
+            "vessel_portion": "base",
+            "vessel_form": "plate",
+            "photo_id": "EPAS2021 388-389"
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1902-1959",
+            "vessel_portion": "body",
+            "vessel_form": "plate",
+            "photo_id": "EPAS2021 390-391"
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "plate",
+            "photo_id": "EPAS2021 496-497"
+          }
+        ],
+        "level_total_count": 11,
+        "level_record_count": 11
+      },
+      {
+        "level": "1900-01-03 00:00:00",
+        "records": [
+          {
+            "count": 1,
+            "type": "pearlware",
+            "chronology": "1775-1830",
+            "vessel_portion": "rim",
+            "vessel_form": "plate",
+            "photo_id": "EPAS2021 362-363"
+          }
+        ],
+        "level_total_count": 1,
+        "level_record_count": 1
+      }
+    ],
+    "record_count": 12,
+    "total_count": 12
+  },
+  "3": {
+    "tu": 3,
+    "levels": [
+      {
+        "level": "1900-01-01 00:00:00",
+        "records": [
+          {
+            "count": 1,
+            "type": "pearlware",
+            "chronology": "1775-1830",
+            "vessel_portion": "base",
+            "vessel_form": "saucer",
+            "photo_id": "EPAS2021 360-361"
+          }
+        ],
+        "level_total_count": 1,
+        "level_record_count": 1
+      }
+    ],
+    "record_count": 1,
+    "total_count": 1
+  },
+  "4": {
+    "tu": 4,
+    "levels": [
+      {
+        "level": "1900-01-02 00:00:00",
+        "records": [
+          {
+            "count": 1,
+            "type": "pipestem",
+            "chronology": "1720-1750",
+            "vessel_portion": "stem",
+            "vessel_form": "",
+            "photo_id": "EPAS 2021-57-58"
+          }
+        ],
+        "level_total_count": 1,
+        "level_record_count": 1
+      }
+    ],
+    "record_count": 1,
+    "total_count": 1
+  },
+  "7": {
+    "tu": 7,
+    "levels": [
+      {
+        "level": "1900-01-02 00:00:00",
+        "records": [
+          {
+            "count": 1,
+            "type": "stoneware",
+            "chronology": "1685-1785",
+            "vessel_portion": "body",
+            "vessel_form": "saucer",
+            "photo_id": "EPAS2021-675-676"
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "plate",
+            "photo_id": "EPAS2021-677-678"
+          }
+        ],
+        "level_total_count": 2,
+        "level_record_count": 2
+      }
+    ],
+    "record_count": 2,
+    "total_count": 2
+  },
+  "9": {
+    "tu": 9,
+    "levels": [
+      {
+        "level": "1900-01-02 00:00:00",
+        "records": [
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "plate",
+            "photo_id": "EPAS2021-727-728"
+          },
+          {
+            "count": 1,
+            "type": "porcelain",
+            "chronology": "1750-2000",
+            "vessel_portion": "neck",
+            "vessel_form": "bottle",
+            "photo_id": "EPAS2021-729-730"
+          },
+          {
+            "count": 1,
+            "type": "annular banded",
+            "chronology": "1790-1840",
+            "vessel_portion": "body",
+            "vessel_form": "UID",
+            "photo_id": "EPAS2021-749-750"
+          },
+          {
+            "count": 1,
+            "type": "annular banded",
+            "chronology": "1790-20th century",
+            "vessel_portion": "rim",
+            "vessel_form": "cup",
+            "photo_id": "EPAS2021-751-752"
+          }
+        ],
+        "level_total_count": 4,
+        "level_record_count": 4
+      }
+    ],
+    "record_count": 4,
+    "total_count": 4
+  },
+  "10": {
+    "tu": 10,
+    "levels": [
+      {
+        "level": "1900-01-02 00:00:00",
+        "records": [
+          {
+            "count": 1,
+            "type": "creamware",
+            "chronology": "1759-1775",
+            "vessel_portion": "body",
+            "vessel_form": "cup",
+            "photo_id": "EPAS2021-1081-1082"
+          },
+          {
+            "count": 1,
+            "type": "yellowware",
+            "chronology": "1830-1940",
+            "vessel_portion": "rim",
+            "vessel_form": "teacup",
+            "photo_id": "EPAS2021-1083-1084"
+          },
+          {
+            "count": 1,
+            "type": "UNID sherd",
+            "chronology": "",
+            "vessel_portion": "",
+            "vessel_form": "",
+            "photo_id": "EPAS2021-1085-1086"
+          }
+        ],
+        "level_total_count": 3,
+        "level_record_count": 3
+      }
+    ],
+    "record_count": 3,
+    "total_count": 3
+  },
+  "12": {
+    "tu": 12,
+    "levels": [
+      {
+        "level": "1",
+        "records": [
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "bowl",
+            "photo_id": "EPAS2021-882-883"
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "bowl",
+            "photo_id": "EPAS2021-884-885"
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "bowl",
+            "photo_id": "EPAS2021-886-887"
+          }
+        ],
+        "level_total_count": 3,
+        "level_record_count": 3
+      },
+      {
+        "level": "1900-01-01 00:00:00",
+        "records": [
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "bowl",
+            "photo_id": "EPAS2021-888-889"
+          }
+        ],
+        "level_total_count": 1,
+        "level_record_count": 1
+      }
+    ],
+    "record_count": 4,
+    "total_count": 4
+  },
+  "13": {
+    "tu": 13,
+    "levels": [
+      {
+        "level": "1900-01-01 00:00:00",
+        "records": [
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "base",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "base",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware, polychrome sprig/sponged?",
+            "chronology": "1835-1870/1840-1900",
+            "vessel_portion": "rim",
+            "vessel_form": "saucer",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware, polychrome sprig/sponged?",
+            "chronology": "1835-1870/1840-1900",
+            "vessel_portion": "rim",
+            "vessel_form": "saucer",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "base",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "base",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "platter",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "platter",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "platter",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "platter",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "platter",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "platter",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "platter",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "platter",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "base",
+            "vessel_form": "platter",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "platter",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "base",
+            "vessel_form": "platter",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "body",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "plate",
+            "photo_id": ""
+          },
+          {
+            "count": 1,
+            "type": "whiteware",
+            "chronology": "1820-2000",
+            "vessel_portion": "rim",
+            "vessel_form": "plate",
+            "photo_id": ""
+          }
+        ],
+        "level_total_count": 34,
+        "level_record_count": 34
+      },
+      {
+        "level": "Unspecified",
+        "records": [
+          {
+            "count": 1,
+            "type": "porcelain, bone china",
+            "chronology": "1830-1900",
+            "vessel_portion": "rim",
+            "vessel_form": "plate",
+            "photo_id": "EPAS2021-1067-1068"
+          },
+          {
+            "count": 1,
+            "type": "porcelain, bone china",
+            "chronology": "1830-1900",
+            "vessel_portion": "body",
+            "vessel_form": "plate",
+            "photo_id": "EPAS2021-1069-1070"
+          },
+          {
+            "count": 1,
+            "type": "porcelain, bone china",
+            "chronology": "1830-1900",
+            "vessel_portion": "body",
+            "vessel_form": "plate",
+            "photo_id": "EPAS2021-1071-1072"
+          }
+        ],
+        "level_total_count": 3,
+        "level_record_count": 3
+      }
+    ],
+    "record_count": 37,
+    "total_count": 37
+  }
+}

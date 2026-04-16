@@ -9,28 +9,44 @@
 </head>
 <body>
   <div id="app">
-    <aside id="sidebar">
-      <h1>Evergreen Test Units</h1>
-      <p class="sub">Click a test unit to see all artifact categories and counts from that unit.</p>
+    <aside id="sidebar" class="open">
+      <div class="sidebar-header">
+        <div>
+          <h1>Evergreen Test Units</h1>
+          <p class="sub">Click a test unit to see all artifact categories and counts from that unit.</p>
+        </div>
+        <button id="toggleSidebar" class="toggle-btn" aria-label="Hide sidebar">⟨</button>
+      </div>
 
-      <label for="artifact">Highlight by category</label>
-      <select id="artifact"></select>
+      <div class="controls">
+        <label for="artifact">Highlight by category</label>
+        <select id="artifact"></select>
 
-      <label for="minrange">Minimum count: <span id="minval">0</span></label>
-      <input type="range" id="minrange" min="0" max="500" value="0" step="1" />
+        <label for="minrange">Minimum count: <span id="minval">0</span></label>
+        <input type="range" id="minrange" min="0" max="500" value="0" step="1" />
 
-      <button id="resetBtn">Reset</button>
+        <button id="resetBtn">Reset</button>
+      </div>
 
       <div class="legend">
         <div><strong>Default:</strong> all test units shown</div>
         <div><strong>Filter:</strong> color by selected category count</div>
       </div>
 
-      <div id="summary">
+      <section id="selectionPanel">
+        <h2>Selected Unit</h2>
+        <div id="selectionContent" class="empty-state">
+          Tap or click a test unit to view artifact categories and counts.
+        </div>
+      </section>
+
+      <section id="summary">
         <h2>Map summary</h2>
         <div id="summaryText">All test units are shown.</div>
-      </div>
+      </section>
     </aside>
+
+    <button id="floatingOpenBtn" class="floating-open hidden" aria-label="Show sidebar">☰</button>
     <main id="map"></main>
   </div>
 
