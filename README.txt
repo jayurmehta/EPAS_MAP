@@ -1,15 +1,11 @@
-Evergreen MapLibre Package v7
+Evergreen MapLibre Package v8
 
 New in this version:
-- Adds 2021 analyzed ceramics to the side panel for Test Units 1-13
-- Ceramics are grouped by level
-- Each ceramic record shows:
-  - Count
-  - Type
-  - Chronology
-  - Vessel Portion
-  - Vessel Form
-  - Photo ID
+- Adds cabins as a second map layer
+- Cabins display alongside test units
+- Clicking a test unit shows artifact data in the side panel
+- Clicking a cabin shows cabin information in the side panel
+- Test units and cabins both remain visible for site context
 
 How to update on GitHub:
 Replace the files in your EPAS_MAP repository with the files from this package and commit the changes.

@@ -1,5 +1,6 @@
 const DATA_URL = 'tu_summary.geojson';
 const CERAMICS_URL = 'ceramics_2021_tu_1_13.json';
+const CABINS_URL = 'cabins.geojson';
 const FIELD_LABELS = window.FIELD_LABELS || {};
 const FILTER_FIELDS = window.FILTER_FIELDS || [];
 
@@ -18,6 +19,8 @@ let currentMin = 0;
 let sourceData = null;
 let selectedTU = null;
 let ceramicsData = {};
+let cabinsData = null;
+let selectedCabin = null;
 
 const noneOpt = document.createElement('option');
 noneOpt.value = '';
@@ -111,7 +114,7 @@ function buildCeramicsHTML(tu) {
   `;
 }
 
-function buildSelectionHTML(props) {
+function buildTUSelectionHTML(props) {
   const entries = [];
   FILTER_FIELDS.forEach(field => {
     if (field === 'all_total') return;
@@ -126,11 +129,7 @@ function buildSelectionHTML(props) {
   const total = Number(props.all_total || 0);
 
   const assemblageHtml = entries.length
-    ? `
-      <ul class="selection-list">
-        ${entries.map(e => `<li><strong>${e.label}:</strong> ${e.value}</li>`).join('')}
-      </ul>
-    `
+    ? `<ul class="selection-list">${entries.map(e => `<li><strong>${e.label}:</strong> ${e.value}</li>`).join('')}</ul>`
     : `<div class="empty-state">No nonzero artifact categories recorded for this unit.</div>`;
 
   return `
@@ -142,30 +141,65 @@ function buildSelectionHTML(props) {
   `;
 }
 
-function showSelection(props) {
-  selectionContent.innerHTML = buildSelectionHTML(props);
+function buildCabinSelectionHTML(props) {
+  const cabinId = props.cabin_id || 'Unknown';
+  const cabinNum = props.cabin_num ?? '';
+  const isLong = props.is_long || 'no';
+  const ptCount = props.pt_count ?? '';
+  return `
+    <div class="selection-title">Cabin ${cabinNum}</div>
+    <div class="selection-total">Cabin ID: ${cabinId}</div>
+    <h3>Cabin Information</h3>
+    <ul class="selection-list">
+      <li><strong>Cabin Number:</strong> ${cabinNum}</li>
+      <li><strong>Long Cabin:</strong> ${isLong}</li>
+      <li><strong>Source Point Count:</strong> ${ptCount}</li>
+    </ul>
+    <div class="small">Cabin polygons are shown for site context. Test unit clicks continue to show artifact data.</div>
+  `;
+}
+
+function showTUSelection(props) {
+  selectionContent.innerHTML = buildTUSelectionHTML(props);
   selectedTU = Number(props.tu ?? -9999);
+  selectedCabin = null;
   if (map.getLayer('tu-selected')) {
     map.setFilter('tu-selected', ['==', ['get', 'tu'], selectedTU]);
   }
-  if (window.innerWidth <= 800) {
-    openSidebar();
+  if (map.getLayer('cabin-selected')) {
+    map.setFilter('cabin-selected', ['==', ['get', 'cabin_num'], -9999]);
   }
+  if (window.innerWidth <= 800) openSidebar();
+}
+
+function showCabinSelection(props) {
+  selectionContent.innerHTML = buildCabinSelectionHTML(props);
+  selectedCabin = Number(props.cabin_num ?? -9999);
+  selectedTU = null;
+  if (map.getLayer('tu-selected')) {
+    map.setFilter('tu-selected', ['==', ['get', 'tu'], -9999]);
+  }
+  if (map.getLayer('cabin-selected')) {
+    map.setFilter('cabin-selected', ['==', ['get', 'cabin_num'], selectedCabin]);
+  }
+  if (window.innerWidth <= 800) openSidebar();
 }
 
 function updateSummary() {
   if (!sourceData) return;
   const feats = sourceData.features;
+  const cabinCount = cabinsData ? cabinsData.features.length : 0;
   if (!currentField) {
-    summaryText.textContent = `Showing all ${feats.length} test units.`;
+    summaryText.innerHTML = `Showing all ${feats.length} test units and ${cabinCount} cabins.`;
     return;
   }
   const visible = feats.filter(f => Number(f.properties[currentField] || 0) >= currentMin);
   const total = visible.reduce((sum, f) => sum + Number(f.properties[currentField] || 0), 0);
   summaryText.innerHTML = `
     <div><strong>Category:</strong> ${FIELD_LABELS[currentField] || currentField}</div>
-    <div><strong>Matching units:</strong> ${visible.length}</div>
+    <div><strong>Matching test units:</strong> ${visible.length}</div>
     <div><strong>Total count:</strong> ${total}</div>
+    <div><strong>Cabins shown:</strong> ${cabinCount}</div>
   `;
 }
 
@@ -207,13 +241,16 @@ function toggleSidebarState() {
 
 Promise.all([
   fetch(DATA_URL).then(r => r.json()),
-  fetch(CERAMICS_URL).then(r => r.json()).catch(() => ({}))
-]).then(([data, ceramicJson]) => {
+  fetch(CERAMICS_URL).then(r => r.json()).catch(() => ({})),
+  fetch(CABINS_URL).then(r => r.json())
+]).then(([data, ceramicJson, cabinJson]) => {
   sourceData = data;
   ceramicsData = ceramicJson || {};
+  cabinsData = cabinJson;
 
   map.on('load', () => {
     map.addSource('tu-data', { type: 'geojson', data });
+    map.addSource('cabins-data', { type: 'geojson', data: cabinJson });
 
     map.addLayer({
       id: 'tu-fill',
@@ -221,7 +258,7 @@ Promise.all([
       source: 'tu-data',
       paint: {
         'fill-color': '#cfcfcf',
-        'fill-opacity': 0.55
+        'fill-opacity': 0.45
       }
     });
 
@@ -232,6 +269,26 @@ Promise.all([
       paint: {
         'line-color': '#333',
         'line-width': 1.1
+      }
+    });
+
+    map.addLayer({
+      id: 'cabins-fill',
+      type: 'fill',
+      source: 'cabins-data',
+      paint: {
+        'fill-color': '#8c5a2b',
+        'fill-opacity': 0.5
+      }
+    });
+
+    map.addLayer({
+      id: 'cabins-outline',
+      type: 'line',
+      source: 'cabins-data',
+      paint: {
+        'line-color': '#6d431e',
+        'line-width': 1.4
       }
     });
 
@@ -257,12 +314,37 @@ Promise.all([
       filter: ['==', ['get', 'tu'], -9999]
     });
 
-    map.fitBounds(getBoundsFromGeoJSON(data), { padding: 30 });
+    map.addLayer({
+      id: 'cabin-hover',
+      type: 'line',
+      source: 'cabins-data',
+      paint: {
+        'line-color': '#f0d264',
+        'line-width': 3
+      },
+      filter: ['==', ['get', 'cabin_num'], -9999]
+    });
+
+    map.addLayer({
+      id: 'cabin-selected',
+      type: 'line',
+      source: 'cabins-data',
+      paint: {
+        'line-color': '#2a6fdb',
+        'line-width': 3.5
+      },
+      filter: ['==', ['get', 'cabin_num'], -9999]
+    });
+
+    const tuBounds = getBoundsFromGeoJSON(data);
+    const cabinBounds = getBoundsFromGeoJSON(cabinJson);
+    tuBounds.extend(cabinBounds.getSouthWest());
+    tuBounds.extend(cabinBounds.getNorthEast());
+    map.fitBounds(tuBounds, { padding: 30 });
 
     map.on('mousemove', 'tu-fill', e => {
       map.getCanvas().style.cursor = 'pointer';
-      const f = e.features[0];
-      const tu = Number(f.properties.tu ?? -9999);
+      const tu = Number(e.features[0].properties.tu ?? -9999);
       map.setFilter('tu-hover', ['==', ['get', 'tu'], tu]);
     });
 
@@ -272,7 +354,22 @@ Promise.all([
     });
 
     map.on('click', 'tu-fill', e => {
-      showSelection(e.features[0].properties);
+      showTUSelection(e.features[0].properties);
+    });
+
+    map.on('mousemove', 'cabins-fill', e => {
+      map.getCanvas().style.cursor = 'pointer';
+      const cabinNum = Number(e.features[0].properties.cabin_num ?? -9999);
+      map.setFilter('cabin-hover', ['==', ['get', 'cabin_num'], cabinNum]);
+    });
+
+    map.on('mouseleave', 'cabins-fill', () => {
+      map.getCanvas().style.cursor = '';
+      map.setFilter('cabin-hover', ['==', ['get', 'cabin_num'], -9999]);
+    });
+
+    map.on('click', 'cabins-fill', e => {
+      showCabinSelection(e.features[0].properties);
     });
 
     updateSummary();
@@ -308,7 +405,7 @@ floatingOpenBtn.addEventListener('click', openSidebar);
 window.addEventListener('resize', () => {
   if (window.innerWidth > 800) {
     openSidebar();
-  } else if (!sidebar.classList.contains('closed') && !selectedTU) {
+  } else if (!sidebar.classList.contains('closed') && !selectedTU && !selectedCabin) {
     closeSidebar();
   }
 });
