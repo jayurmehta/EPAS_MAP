@@ -1,11 +1,10 @@
-Evergreen MapLibre Package v8
+Evergreen MapLibre Package v9
 
 New in this version:
-- Adds cabins as a second map layer
-- Cabins display alongside test units
-- Clicking a test unit shows artifact data in the side panel
-- Clicking a cabin shows cabin information in the side panel
-- Test units and cabins both remain visible for site context
-
-How to update on GitHub:
-Replace the files in your EPAS_MAP repository with the files from this package and commit the changes.
+- Uses the uploaded authoritative cabin polygon shapefile
+- Cabins are linked to nearby test units (3 nearest)
+- Clicking a cabin shows:
+  - cabin information
+  - nearby test units
+  - aggregated artifact summary from those nearby test units
+- Test unit clicks still show test unit artifact summaries and 2021 ceramics
