@@ -1,0 +1,1678 @@
+{
+  "type": "FeatureCollection",
+  "name": "surface_collections_optionA_preview",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC1R1",
+        "context_type": "surface_collection",
+        "cabin_ref": 1.0,
+        "cabin_label": "C1",
+        "row": 1,
+        "entries": 9,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC1-2R1-2; SFC1R1B1",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64227607773816,
+              30.02471842396395
+            ],
+            [
+              -90.64241789771431,
+              30.02451234267912
+            ],
+            [
+              -90.64240900588845,
+              30.024507709143496
+            ],
+            [
+              -90.64226718590183,
+              30.024713790418218
+            ],
+            [
+              -90.64227607773816,
+              30.02471842396395
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC1R2",
+        "context_type": "surface_collection",
+        "cabin_ref": 1.0,
+        "cabin_label": "C1",
+        "row": 2,
+        "entries": 8,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC1-2R1-2",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64226718590183,
+              30.024713790418218
+            ],
+            [
+              -90.64240900588845,
+              30.024507709143496
+            ],
+            [
+              -90.64240011406343,
+              30.024503075607303
+            ],
+            [
+              -90.64225829406638,
+              30.024709156871932
+            ],
+            [
+              -90.64226718590183,
+              30.024713790418218
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC1R5",
+        "context_type": "surface_collection",
+        "cabin_ref": 1.0,
+        "cabin_label": "C1",
+        "row": 5,
+        "entries": 8,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFCA1-6R5",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64224051039805,
+              30.02469988977768
+            ],
+            [
+              -90.642382330416,
+              30.024493808533247
+            ],
+            [
+              -90.64237343859357,
+              30.024489174995388
+            ],
+            [
+              -90.64223161856516,
+              30.02469525622972
+            ],
+            [
+              -90.64224051039805,
+              30.02469988977768
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC1.5R2",
+        "context_type": "surface_collection",
+        "cabin_ref": 1.5,
+        "cabin_label": "C1.5",
+        "row": 2,
+        "entries": 10,
+        "confidence": "generalized",
+        "source_used": "corrected_code",
+        "corrected_codes": "SFC1.5R2B2",
+        "original_codes": "SFOP3C1-2R2",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64237811005344,
+              30.024552604550507
+            ],
+            [
+              -90.64243990169466,
+              30.024462813727446
+            ],
+            [
+              -90.64243100987193,
+              30.024458180193452
+            ],
+            [
+              -90.64236921822615,
+              30.024547971012122
+            ],
+            [
+              -90.64237811005344,
+              30.024552604550507
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC2R1",
+        "context_type": "surface_collection",
+        "cabin_ref": 2.0,
+        "cabin_label": "C2",
+        "row": 1,
+        "entries": 25,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC1-2R1-2; SFC2-4R1",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64241789771431,
+              30.02451234267912
+            ],
+            [
+              -90.6425575492472,
+              30.024309411352224
+            ],
+            [
+              -90.64254865743162,
+              30.024304777826547
+            ],
+            [
+              -90.64240900588845,
+              30.024507709143496
+            ],
+            [
+              -90.64241789771431,
+              30.02451234267912
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC2R2",
+        "context_type": "surface_collection",
+        "cabin_ref": 2.0,
+        "cabin_label": "C2",
+        "row": 2,
+        "entries": 9,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC1-2R1-2; SFC2R2",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64240900588845,
+              30.024507709143496
+            ],
+            [
+              -90.64254865743162,
+              30.024304777826547
+            ],
+            [
+              -90.6425397656169,
+              30.024300144300298
+            ],
+            [
+              -90.64240011406343,
+              30.024503075607303
+            ],
+            [
+              -90.64240900588845,
+              30.024507709143496
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC2R3",
+        "context_type": "surface_collection",
+        "cabin_ref": 2.0,
+        "cabin_label": "C2",
+        "row": 3,
+        "entries": 7,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC2+4R3; SFC2R3B1; SFOP3C2R3",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64240011406343,
+              30.024503075607303
+            ],
+            [
+              -90.6425397656169,
+              30.024300144300298
+            ],
+            [
+              -90.64253087380303,
+              30.024295510773488
+            ],
+            [
+              -90.64239122223928,
+              30.024498442070552
+            ],
+            [
+              -90.64240011406343,
+              30.024503075607303
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC2R5",
+        "context_type": "surface_collection",
+        "cabin_ref": 2.0,
+        "cabin_label": "C2",
+        "row": 5,
+        "entries": 34,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC2-3R5; SFCA1-6R5",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.642382330416,
+              30.024493808533247
+            ],
+            [
+              -90.64252198199003,
+              30.024290877246127
+            ],
+            [
+              -90.64251309017787,
+              30.024286243718205
+            ],
+            [
+              -90.64237343859357,
+              30.024489174995388
+            ],
+            [
+              -90.642382330416,
+              30.024493808533247
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC3R1",
+        "context_type": "surface_collection",
+        "cabin_ref": 3.0,
+        "cabin_label": "C3",
+        "row": 1,
+        "entries": 17,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC2-4R1",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.6425575492472,
+              30.024309411352224
+            ],
+            [
+              -90.64269067600635,
+              30.024115960378037
+            ],
+            [
+              -90.64268178420058,
+              30.024111326861846
+            ],
+            [
+              -90.64254865743162,
+              30.024304777826547
+            ],
+            [
+              -90.6425575492472,
+              30.024309411352224
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC3R3",
+        "context_type": "surface_collection",
+        "cabin_ref": 3.0,
+        "cabin_label": "C3",
+        "row": 3,
+        "entries": 1,
+        "confidence": "precise",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC3R3B2",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.6425397656169,
+              30.024300144300298
+            ],
+            [
+              -90.64267289239567,
+              30.024106693345086
+            ],
+            [
+              -90.64266400059161,
+              30.02410205982776
+            ],
+            [
+              -90.64253087380303,
+              30.024295510773488
+            ],
+            [
+              -90.6425397656169,
+              30.024300144300298
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC3R4",
+        "context_type": "surface_collection",
+        "cabin_ref": 3.0,
+        "cabin_label": "C3",
+        "row": 4,
+        "entries": 3,
+        "confidence": "precise",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC3R4B2; SFC3R4B3",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64253087380303,
+              30.024295510773488
+            ],
+            [
+              -90.64266400059161,
+              30.02410205982776
+            ],
+            [
+              -90.64265510878839,
+              30.024097426309872
+            ],
+            [
+              -90.64252198199003,
+              30.024290877246127
+            ],
+            [
+              -90.64253087380303,
+              30.024295510773488
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC3R5",
+        "context_type": "surface_collection",
+        "cabin_ref": 3.0,
+        "cabin_label": "C3",
+        "row": 5,
+        "entries": 34,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC2-3R5; SFCA1-6R5",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64252198199003,
+              30.024290877246127
+            ],
+            [
+              -90.64265510878839,
+              30.024097426309872
+            ],
+            [
+              -90.64264621698604,
+              30.024092792791432
+            ],
+            [
+              -90.64251309017787,
+              30.024286243718205
+            ],
+            [
+              -90.64252198199003,
+              30.024290877246127
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC3R6",
+        "context_type": "surface_collection",
+        "cabin_ref": 3.0,
+        "cabin_label": "C3",
+        "row": 6,
+        "entries": 1,
+        "confidence": "precise",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC3R6B1",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64251309017787,
+              30.024286243718205
+            ],
+            [
+              -90.64264621698604,
+              30.024092792791432
+            ],
+            [
+              -90.64263732518457,
+              30.024088159272424
+            ],
+            [
+              -90.64250419836657,
+              30.024281610189725
+            ],
+            [
+              -90.64251309017787,
+              30.024286243718205
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC4R1",
+        "context_type": "surface_collection",
+        "cabin_ref": 4.0,
+        "cabin_label": "C4",
+        "row": 1,
+        "entries": 17,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC2-4R1",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64269067600635,
+              30.024115960378037
+            ],
+            [
+              -90.64282375009043,
+              30.023922585003394
+            ],
+            [
+              -90.64281485829446,
+              30.023917951496667
+            ],
+            [
+              -90.64268178420058,
+              30.024111326861846
+            ],
+            [
+              -90.64269067600635,
+              30.024115960378037
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC4R3",
+        "context_type": "surface_collection",
+        "cabin_ref": 4.0,
+        "cabin_label": "C4",
+        "row": 3,
+        "entries": 2,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC2+4R3",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64267289239567,
+              30.024106693345086
+            ],
+            [
+              -90.64280596649934,
+              30.02391331798938
+            ],
+            [
+              -90.64279707470509,
+              30.023908684481516
+            ],
+            [
+              -90.64266400059161,
+              30.02410205982776
+            ],
+            [
+              -90.64267289239567,
+              30.024106693345086
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC4R4",
+        "context_type": "surface_collection",
+        "cabin_ref": 4.0,
+        "cabin_label": "C4",
+        "row": 4,
+        "entries": 3,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC4-5R4",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64266400059161,
+              30.02410205982776
+            ],
+            [
+              -90.64279707470509,
+              30.023908684481516
+            ],
+            [
+              -90.64278818291169,
+              30.023904050973115
+            ],
+            [
+              -90.64265510878839,
+              30.024097426309872
+            ],
+            [
+              -90.64266400059161,
+              30.02410205982776
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC4R5",
+        "context_type": "surface_collection",
+        "cabin_ref": 4.0,
+        "cabin_label": "C4",
+        "row": 5,
+        "entries": 8,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFCA1-6R5",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64265510878839,
+              30.024097426309872
+            ],
+            [
+              -90.64278818291169,
+              30.023904050973115
+            ],
+            [
+              -90.64277929111913,
+              30.023899417464158
+            ],
+            [
+              -90.64264621698604,
+              30.024092792791432
+            ],
+            [
+              -90.64265510878839,
+              30.024097426309872
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC4R6",
+        "context_type": "surface_collection",
+        "cabin_ref": 4.0,
+        "cabin_label": "C4",
+        "row": 6,
+        "entries": 1,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC4-5R6",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64264621698604,
+              30.024092792791432
+            ],
+            [
+              -90.64277929111913,
+              30.023899417464158
+            ],
+            [
+              -90.64277039932745,
+              30.023894783954624
+            ],
+            [
+              -90.64263732518457,
+              30.024088159272424
+            ],
+            [
+              -90.64264621698604,
+              30.024092792791432
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC4R7",
+        "context_type": "surface_collection",
+        "cabin_ref": 4.0,
+        "cabin_label": "C4",
+        "row": 7,
+        "entries": 1,
+        "confidence": "precise",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC4R7",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64263732518457,
+              30.024088159272424
+            ],
+            [
+              -90.64277039932745,
+              30.023894783954624
+            ],
+            [
+              -90.6427615075366,
+              30.02389015044454
+            ],
+            [
+              -90.64262843338392,
+              30.02408352575286
+            ],
+            [
+              -90.64263732518457,
+              30.024088159272424
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC4R8",
+        "context_type": "surface_collection",
+        "cabin_ref": 4.0,
+        "cabin_label": "C4",
+        "row": 8,
+        "entries": 2,
+        "confidence": "generalized",
+        "source_used": "mixed",
+        "corrected_codes": "SFC4R8B1",
+        "original_codes": "SFC4R8B2; SFCA4R8B1",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64262843338392,
+              30.02408352575286
+            ],
+            [
+              -90.6427615075366,
+              30.02389015044454
+            ],
+            [
+              -90.64275261574662,
+              30.023885516933888
+            ],
+            [
+              -90.64261954158414,
+              30.024078892232737
+            ],
+            [
+              -90.64262843338392,
+              30.02408352575286
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC4.5R2",
+        "context_type": "surface_collection",
+        "cabin_ref": 4.5,
+        "cabin_label": "C4.5",
+        "row": 2,
+        "entries": 10,
+        "confidence": "generalized",
+        "source_used": "corrected_code",
+        "corrected_codes": "SFC4.5R2B2",
+        "original_codes": "SFR4C4+5B2",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.6427849618205,
+              30.023961395358224
+            ],
+            [
+              -90.64284475474143,
+              30.023874507626637
+            ],
+            [
+              -90.64283586294853,
+              30.023869874121484
+            ],
+            [
+              -90.64277607002319,
+              30.0239567618488
+            ],
+            [
+              -90.6427849618205,
+              30.023961395358224
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC5R1",
+        "context_type": "surface_collection",
+        "cabin_ref": 5.0,
+        "cabin_label": "C5",
+        "row": 1,
+        "entries": 14,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC5-7R1+2",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64282375009043,
+              30.023922585003394
+            ],
+            [
+              -90.6429639177497,
+              30.023718900644464
+            ],
+            [
+              -90.64295502596406,
+              30.023714267147707
+            ],
+            [
+              -90.64281485829446,
+              30.023917951496667
+            ],
+            [
+              -90.64282375009043,
+              30.023922585003394
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC5R2",
+        "context_type": "surface_collection",
+        "cabin_ref": 5.0,
+        "cabin_label": "C5",
+        "row": 2,
+        "entries": 14,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC5-7R1+2",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64281485829446,
+              30.023917951496667
+            ],
+            [
+              -90.64295502596406,
+              30.023714267147707
+            ],
+            [
+              -90.64294613417927,
+              30.02370963365041
+            ],
+            [
+              -90.64280596649934,
+              30.02391331798938
+            ],
+            [
+              -90.64281485829446,
+              30.023917951496667
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC5R4",
+        "context_type": "surface_collection",
+        "cabin_ref": 5.0,
+        "cabin_label": "C5",
+        "row": 4,
+        "entries": 3,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC4-5R4",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64279707470509,
+              30.023908684481516
+            ],
+            [
+              -90.64293724239533,
+              30.02370500015255
+            ],
+            [
+              -90.64292835061225,
+              30.02370036665412
+            ],
+            [
+              -90.64278818291169,
+              30.023904050973115
+            ],
+            [
+              -90.64279707470509,
+              30.023908684481516
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC5R5",
+        "context_type": "surface_collection",
+        "cabin_ref": 5.0,
+        "cabin_label": "C5",
+        "row": 5,
+        "entries": 8,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFCA1-6R5",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64278818291169,
+              30.023904050973115
+            ],
+            [
+              -90.64292835061225,
+              30.02370036665412
+            ],
+            [
+              -90.64291945883002,
+              30.023695733155133
+            ],
+            [
+              -90.64277929111913,
+              30.023899417464158
+            ],
+            [
+              -90.64278818291169,
+              30.023904050973115
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC5R6",
+        "context_type": "surface_collection",
+        "cabin_ref": 5.0,
+        "cabin_label": "C5",
+        "row": 6,
+        "entries": 1,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC4-5R6",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64277929111913,
+              30.023899417464158
+            ],
+            [
+              -90.64291945883002,
+              30.023695733155133
+            ],
+            [
+              -90.64291056704867,
+              30.02369109965558
+            ],
+            [
+              -90.64277039932745,
+              30.023894783954624
+            ],
+            [
+              -90.64277929111913,
+              30.023899417464158
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC6R1",
+        "context_type": "surface_collection",
+        "cabin_ref": 6.0,
+        "cabin_label": "C6",
+        "row": 1,
+        "entries": 24,
+        "confidence": "generalized",
+        "source_used": "mixed",
+        "corrected_codes": "SFC6R1",
+        "original_codes": "OP3C6SF; SFC5-7R1+2",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.6429639177497,
+              30.023718900644464
+            ],
+            [
+              -90.643111593132,
+              30.023504305319314
+            ],
+            [
+              -90.64310270135724,
+              30.023499671833083
+            ],
+            [
+              -90.64295502596406,
+              30.023714267147707
+            ],
+            [
+              -90.6429639177497,
+              30.023718900644464
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC6R2",
+        "context_type": "surface_collection",
+        "cabin_ref": 6.0,
+        "cabin_label": "C6",
+        "row": 2,
+        "entries": 18,
+        "confidence": "generalized",
+        "source_used": "mixed",
+        "corrected_codes": "SFC6R2",
+        "original_codes": "SFC5-7R1+2; SFCA5-7R1-2",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64295502596406,
+              30.023714267147707
+            ],
+            [
+              -90.64310270135724,
+              30.023499671833083
+            ],
+            [
+              -90.64309380958332,
+              30.023495038346294
+            ],
+            [
+              -90.64294613417927,
+              30.02370963365041
+            ],
+            [
+              -90.64295502596406,
+              30.023714267147707
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC6R5",
+        "context_type": "surface_collection",
+        "cabin_ref": 6.0,
+        "cabin_label": "C6",
+        "row": 5,
+        "entries": 11,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC6R5B1; SFC6R5B2; SFCA1-6R5",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64292835061225,
+              30.02370036665412
+            ],
+            [
+              -90.64307602603807,
+              30.023485771371018
+            ],
+            [
+              -90.64306713426672,
+              30.023481137882563
+            ],
+            [
+              -90.64291945883002,
+              30.023695733155133
+            ],
+            [
+              -90.64292835061225,
+              30.02370036665412
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC6R6",
+        "context_type": "surface_collection",
+        "cabin_ref": 6.0,
+        "cabin_label": "C6",
+        "row": 6,
+        "entries": 1,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFCA6-7R6",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64291945883002,
+              30.023695733155133
+            ],
+            [
+              -90.64306713426672,
+              30.023481137882563
+            ],
+            [
+              -90.64305824249622,
+              30.023476504393525
+            ],
+            [
+              -90.64291056704867,
+              30.02369109965558
+            ],
+            [
+              -90.64291945883002,
+              30.023695733155133
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC7R1",
+        "context_type": "surface_collection",
+        "cabin_ref": 7.0,
+        "cabin_label": "C7",
+        "row": 1,
+        "entries": 14,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC5-7R1+2",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.643111593132,
+              30.023504305319314
+            ],
+            [
+              -90.64325208231264,
+              30.02330015158486
+            ],
+            [
+              -90.64324319054823,
+              30.023295518108633
+            ],
+            [
+              -90.64310270135724,
+              30.023499671833083
+            ],
+            [
+              -90.643111593132,
+              30.023504305319314
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC7R2",
+        "context_type": "surface_collection",
+        "cabin_ref": 7.0,
+        "cabin_label": "C7",
+        "row": 2,
+        "entries": 18,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC5-7R1+2; SFC7R2-3",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64310270135724,
+              30.023499671833083
+            ],
+            [
+              -90.64324319054823,
+              30.023295518108633
+            ],
+            [
+              -90.64323429878466,
+              30.02329088463184
+            ],
+            [
+              -90.64309380958332,
+              30.023495038346294
+            ],
+            [
+              -90.64310270135724,
+              30.023499671833083
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC7R3",
+        "context_type": "surface_collection",
+        "cabin_ref": 7.0,
+        "cabin_label": "C7",
+        "row": 3,
+        "entries": 7,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC7R2-3; SFC7R3B1; SFC7R3B3",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64309380958332,
+              30.023495038346294
+            ],
+            [
+              -90.64323429878466,
+              30.02329088463184
+            ],
+            [
+              -90.64322540702196,
+              30.02328625115449
+            ],
+            [
+              -90.64308491781027,
+              30.023490404858936
+            ],
+            [
+              -90.64309380958332,
+              30.023495038346294
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC7R6",
+        "context_type": "surface_collection",
+        "cabin_ref": 7.0,
+        "cabin_label": "C7",
+        "row": 6,
+        "entries": 1,
+        "confidence": "composite",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFCA6-7R6",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64306713426672,
+              30.023481137882563
+            ],
+            [
+              -90.64320762349911,
+              30.023276984198123
+            ],
+            [
+              -90.64319873173896,
+              30.02327235071908
+            ],
+            [
+              -90.64305824249622,
+              30.023476504393525
+            ],
+            [
+              -90.64306713426672,
+              30.023481137882563
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC9R3",
+        "context_type": "surface_collection",
+        "cabin_ref": 9.0,
+        "cabin_label": "C9",
+        "row": 3,
+        "entries": 1,
+        "confidence": "precise",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC9R3B1",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64336743950652,
+              30.02309740848492
+            ],
+            [
+              -90.6435004452292,
+              30.02290412757107
+            ],
+            [
+              -90.64349155348609,
+              30.02289949411268
+            ],
+            [
+              -90.64335854775362,
+              30.02309277501705
+            ],
+            [
+              -90.64336743950652,
+              30.02309740848492
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC9R5",
+        "context_type": "surface_collection",
+        "cabin_ref": 9.0,
+        "cabin_label": "C9",
+        "row": 5,
+        "entries": 2,
+        "confidence": "precise",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC9R5B1",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64334965600158,
+              30.023088141548627
+            ],
+            [
+              -90.64348266174385,
+              30.022894860653714
+            ],
+            [
+              -90.64347377000244,
+              30.022890227194203
+            ],
+            [
+              -90.64334076425038,
+              30.023083508079633
+            ],
+            [
+              -90.64334965600158,
+              30.023088141548627
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC11R4",
+        "context_type": "surface_collection",
+        "cabin_ref": 11.0,
+        "cabin_label": "C11",
+        "row": 4,
+        "entries": 1,
+        "confidence": "precise",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC11R4B1",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64362457283468,
+              30.022706192478253
+            ],
+            [
+              -90.64375983684087,
+              30.022509627975136
+            ],
+            [
+              -90.64375094511838,
+              30.022504994535275
+            ],
+            [
+              -90.64361568110225,
+              30.022701559028757
+            ],
+            [
+              -90.64362457283468,
+              30.022706192478253
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC11R6",
+        "context_type": "surface_collection",
+        "cabin_ref": 11.0,
+        "cabin_label": "C11",
+        "row": 6,
+        "entries": 1,
+        "confidence": "precise",
+        "source_used": "bag_clean",
+        "corrected_codes": "",
+        "original_codes": "SFC11R6B9",
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; bag numbers intentionally ignored for spatial analysis."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64360678937064,
+              30.022696925578714
+            ],
+            [
+              -90.64374205339674,
+              30.02250036109487
+            ],
+            [
+              -90.64373316167597,
+              30.022495727653894
+            ],
+            [
+              -90.6435978976399,
+              30.022692292128113
+            ],
+            [
+              -90.64360678937064,
+              30.022696925578714
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

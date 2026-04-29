@@ -1,0 +1,17 @@
+{
+  "total_qc_rows": 668,
+  "corrected_code_column": "Column I",
+  "corrected_entries_filled": 35,
+  "spatialized_expanded_records": 349,
+  "unique_aggregated_surface_areas": 38,
+  "preview_polygons_created": 38,
+  "bag_numbers_used_for_geometry": false,
+  "supports_half_cabin_refs": true,
+  "row_spacing_m": 1.0,
+  "notes": [
+    "Option A aggregation by cabin_ref + row.",
+    "Bag numbers are ignored for spatial analysis.",
+    "C1.5 means the gap/midpoint zone between Cabins 1 and 2.",
+    "Collection areas were not regularly sized; polygons are generalized approximations."
+  ]
+}

@@ -1,3 +1,4 @@
+const SURFACE_URL = 'surface_collections_optionA_preview.geojson?v=19';
 const DATA_URL = 'tu_summary.geojson';
 const CERAMICS_URL = 'ceramics_2021_tu_1_13.json';
 const CABINS_URL = 'cabins.geojson';
@@ -613,3 +614,40 @@ resetBtn.addEventListener('click', () => { currentField = ''; currentMin = 0; ar
 toggleSidebar.addEventListener('click', toggleSidebarState);
 floatingOpenBtn.addEventListener('click', openSidebar);
 window.addEventListener('resize', () => { if (window.innerWidth > 800) openSidebar(); else if (!sidebar.classList.contains('closed') && !selectedTU && !selectedCabin) closeSidebar(); });
+
+
+fetch(SURFACE_URL).then(r=>r.json()).then(surfaceData=>{
+  map.addSource('surface-data', {type:'geojson', data:surfaceData});
+  map.addLayer({
+    id:'surface-fill',
+    type:'fill',
+    source:'surface-data',
+    paint:{
+      'fill-color':['match',['get','confidence'],
+        'precise','#e34a33',
+        'composite','#fdbb84',
+        'generalized','#756bb1',
+        '#999'
+      ],
+      'fill-opacity':0.6
+    }
+  });
+  map.addLayer({
+    id:'surface-outline',
+    type:'line',
+    source:'surface-data',
+    paint:{'line-color':'#333','line-width':1}
+  });
+
+  map.on('click','surface-fill', e=>{
+    const p = e.features[0].properties;
+    selectionContent.innerHTML = `
+      <div class="selection-title">Surface Collection</div>
+      <div><strong>Cabin Ref:</strong> ${p.cabin_label}</div>
+      <div><strong>Row:</strong> ${p.row}</div>
+      <div><strong>Entries:</strong> ${p.entries}</div>
+      <div><strong>Confidence:</strong> ${p.confidence}</div>
+    `;
+    openSidebar();
+  });
+});

@@ -1,0 +1,39 @@
+cabin_ref,row,entries,original_codes,corrected_codes,source_used,confidence
+1.0,1.0,9,SFC1-2R1-2; SFC1R1B1,,bag_clean,composite
+1.0,2.0,8,SFC1-2R1-2,,bag_clean,composite
+1.0,5.0,8,SFCA1-6R5,,bag_clean,composite
+1.5,2.0,10,SFOP3C1-2R2,SFC1.5R2B2,corrected_code,generalized
+2.0,1.0,25,SFC1-2R1-2; SFC2-4R1,,bag_clean,composite
+2.0,2.0,9,SFC1-2R1-2; SFC2R2,,bag_clean,composite
+2.0,3.0,7,SFC2+4R3; SFC2R3B1; SFOP3C2R3,,bag_clean,composite
+2.0,5.0,34,SFC2-3R5; SFCA1-6R5,,bag_clean,composite
+3.0,1.0,17,SFC2-4R1,,bag_clean,composite
+3.0,3.0,1,SFC3R3B2,,bag_clean,precise
+3.0,4.0,3,SFC3R4B2; SFC3R4B3,,bag_clean,precise
+3.0,5.0,34,SFC2-3R5; SFCA1-6R5,,bag_clean,composite
+3.0,6.0,1,SFC3R6B1,,bag_clean,precise
+4.0,1.0,17,SFC2-4R1,,bag_clean,composite
+4.0,3.0,2,SFC2+4R3,,bag_clean,composite
+4.0,4.0,3,SFC4-5R4,,bag_clean,composite
+4.0,5.0,8,SFCA1-6R5,,bag_clean,composite
+4.0,6.0,1,SFC4-5R6,,bag_clean,composite
+4.0,7.0,1,SFC4R7,,bag_clean,precise
+4.0,8.0,2,SFC4R8B2; SFCA4R8B1,SFC4R8B1,mixed,generalized
+4.5,2.0,10,SFR4C4+5B2,SFC4.5R2B2,corrected_code,generalized
+5.0,1.0,14,SFC5-7R1+2,,bag_clean,composite
+5.0,2.0,14,SFC5-7R1+2,,bag_clean,composite
+5.0,4.0,3,SFC4-5R4,,bag_clean,composite
+5.0,5.0,8,SFCA1-6R5,,bag_clean,composite
+5.0,6.0,1,SFC4-5R6,,bag_clean,composite
+6.0,1.0,24,OP3C6SF; SFC5-7R1+2,SFC6R1,mixed,generalized
+6.0,2.0,18,SFC5-7R1+2; SFCA5-7R1-2,SFC6R2,mixed,generalized
+6.0,5.0,11,SFC6R5B1; SFC6R5B2; SFCA1-6R5,,bag_clean,composite
+6.0,6.0,1,SFCA6-7R6,,bag_clean,composite
+7.0,1.0,14,SFC5-7R1+2,,bag_clean,composite
+7.0,2.0,18,SFC5-7R1+2; SFC7R2-3,,bag_clean,composite
+7.0,3.0,7,SFC7R2-3; SFC7R3B1; SFC7R3B3,,bag_clean,composite
+7.0,6.0,1,SFCA6-7R6,,bag_clean,composite
+9.0,3.0,1,SFC9R3B1,,bag_clean,precise
+9.0,5.0,2,SFC9R5B1,,bag_clean,precise
+11.0,4.0,1,SFC11R4B1,,bag_clean,precise
+11.0,6.0,1,SFC11R6B9,,bag_clean,precise

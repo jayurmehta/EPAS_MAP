@@ -1,0 +1,874 @@
+source_index,bag_clean,corrected_code,spatialized,source_used,source_pattern,cabin_ref,row,confidence,parse_note
+0,SFOP3C2R3,,True,bag_clean,original_other_spatial,2.0,3.0,precise,
+1,SFOP3C2R3,,True,bag_clean,original_other_spatial,2.0,3.0,precise,
+2,SFC7R3B3,,True,bag_clean,corrected_or_precise,7.0,3.0,precise,
+3,SFC6R5B2,,True,bag_clean,corrected_or_precise,6.0,5.0,precise,
+4,SFC6R5B2,,True,bag_clean,corrected_or_precise,6.0,5.0,precise,
+5,SFC6R5B1,,True,bag_clean,corrected_or_precise,6.0,5.0,precise,
+6,SFC11R6B9,,True,bag_clean,corrected_or_precise,11.0,6.0,precise,
+7,SFC11R4B1,,True,bag_clean,corrected_or_precise,11.0,4.0,precise,
+8,SFC7R3B1,,True,bag_clean,corrected_or_precise,7.0,3.0,precise,
+9,SFC7R3B1,,True,bag_clean,corrected_or_precise,7.0,3.0,precise,
+10,SFC4R8B2,,True,bag_clean,corrected_or_precise,4.0,8.0,precise,
+11,SFC9R5B1,,True,bag_clean,corrected_or_precise,9.0,5.0,precise,
+12,SFC9R5B1,,True,bag_clean,corrected_or_precise,9.0,5.0,precise,
+13,SFC2R3B1,,True,bag_clean,corrected_or_precise,2.0,3.0,precise,
+14,SFC2R3B1,,True,bag_clean,corrected_or_precise,2.0,3.0,precise,
+15,SFC9R3B1,,True,bag_clean,corrected_or_precise,9.0,3.0,precise,
+16,SFC2R3B1,,True,bag_clean,corrected_or_precise,2.0,3.0,precise,
+17,SFCA1-6R5,,True,bag_clean,original_composite_sfca,1.0,5.0,composite,
+17,SFCA1-6R5,,True,bag_clean,original_composite_sfca,2.0,5.0,composite,
+17,SFCA1-6R5,,True,bag_clean,original_composite_sfca,3.0,5.0,composite,
+17,SFCA1-6R5,,True,bag_clean,original_composite_sfca,4.0,5.0,composite,
+17,SFCA1-6R5,,True,bag_clean,original_composite_sfca,5.0,5.0,composite,
+17,SFCA1-6R5,,True,bag_clean,original_composite_sfca,6.0,5.0,composite,
+18,SFCA1-6R5,,True,bag_clean,original_composite_sfca,1.0,5.0,composite,
+18,SFCA1-6R5,,True,bag_clean,original_composite_sfca,2.0,5.0,composite,
+18,SFCA1-6R5,,True,bag_clean,original_composite_sfca,3.0,5.0,composite,
+18,SFCA1-6R5,,True,bag_clean,original_composite_sfca,4.0,5.0,composite,
+18,SFCA1-6R5,,True,bag_clean,original_composite_sfca,5.0,5.0,composite,
+18,SFCA1-6R5,,True,bag_clean,original_composite_sfca,6.0,5.0,composite,
+19,SFCA1-6R5,,True,bag_clean,original_composite_sfca,1.0,5.0,composite,
+19,SFCA1-6R5,,True,bag_clean,original_composite_sfca,2.0,5.0,composite,
+19,SFCA1-6R5,,True,bag_clean,original_composite_sfca,3.0,5.0,composite,
+19,SFCA1-6R5,,True,bag_clean,original_composite_sfca,4.0,5.0,composite,
+19,SFCA1-6R5,,True,bag_clean,original_composite_sfca,5.0,5.0,composite,
+19,SFCA1-6R5,,True,bag_clean,original_composite_sfca,6.0,5.0,composite,
+20,SFCA1-6R5,,True,bag_clean,original_composite_sfca,1.0,5.0,composite,
+20,SFCA1-6R5,,True,bag_clean,original_composite_sfca,2.0,5.0,composite,
+20,SFCA1-6R5,,True,bag_clean,original_composite_sfca,3.0,5.0,composite,
+20,SFCA1-6R5,,True,bag_clean,original_composite_sfca,4.0,5.0,composite,
+20,SFCA1-6R5,,True,bag_clean,original_composite_sfca,5.0,5.0,composite,
+20,SFCA1-6R5,,True,bag_clean,original_composite_sfca,6.0,5.0,composite,
+21,SFCA1-6R5,,True,bag_clean,original_composite_sfca,1.0,5.0,composite,
+21,SFCA1-6R5,,True,bag_clean,original_composite_sfca,2.0,5.0,composite,
+21,SFCA1-6R5,,True,bag_clean,original_composite_sfca,3.0,5.0,composite,
+21,SFCA1-6R5,,True,bag_clean,original_composite_sfca,4.0,5.0,composite,
+21,SFCA1-6R5,,True,bag_clean,original_composite_sfca,5.0,5.0,composite,
+21,SFCA1-6R5,,True,bag_clean,original_composite_sfca,6.0,5.0,composite,
+22,SFCA1-6R5,,True,bag_clean,original_composite_sfca,1.0,5.0,composite,
+22,SFCA1-6R5,,True,bag_clean,original_composite_sfca,2.0,5.0,composite,
+22,SFCA1-6R5,,True,bag_clean,original_composite_sfca,3.0,5.0,composite,
+22,SFCA1-6R5,,True,bag_clean,original_composite_sfca,4.0,5.0,composite,
+22,SFCA1-6R5,,True,bag_clean,original_composite_sfca,5.0,5.0,composite,
+22,SFCA1-6R5,,True,bag_clean,original_composite_sfca,6.0,5.0,composite,
+23,SFCA1-6R5,,True,bag_clean,original_composite_sfca,1.0,5.0,composite,
+23,SFCA1-6R5,,True,bag_clean,original_composite_sfca,2.0,5.0,composite,
+23,SFCA1-6R5,,True,bag_clean,original_composite_sfca,3.0,5.0,composite,
+23,SFCA1-6R5,,True,bag_clean,original_composite_sfca,4.0,5.0,composite,
+23,SFCA1-6R5,,True,bag_clean,original_composite_sfca,5.0,5.0,composite,
+23,SFCA1-6R5,,True,bag_clean,original_composite_sfca,6.0,5.0,composite,
+24,SFCA1-6R5,,True,bag_clean,original_composite_sfca,1.0,5.0,composite,
+24,SFCA1-6R5,,True,bag_clean,original_composite_sfca,2.0,5.0,composite,
+24,SFCA1-6R5,,True,bag_clean,original_composite_sfca,3.0,5.0,composite,
+24,SFCA1-6R5,,True,bag_clean,original_composite_sfca,4.0,5.0,composite,
+24,SFCA1-6R5,,True,bag_clean,original_composite_sfca,5.0,5.0,composite,
+24,SFCA1-6R5,,True,bag_clean,original_composite_sfca,6.0,5.0,composite,
+25,SFCA6-7R6,,True,bag_clean,original_composite_sfca,6.0,6.0,composite,
+25,SFCA6-7R6,,True,bag_clean,original_composite_sfca,7.0,6.0,composite,
+26,SFCA4R8B1,SFC4R8B1,True,corrected_code,corrected_or_precise,4.0,8.0,generalized,
+27,SFCA5-7R1-2,SFC6R2,True,corrected_code,corrected_or_precise,6.0,2.0,generalized,
+28,SFCA5-7R1-2,SFC6R2,True,corrected_code,corrected_or_precise,6.0,2.0,generalized,
+29,SFCA5-7R1-2,SFC6R2,True,corrected_code,corrected_or_precise,6.0,2.0,generalized,
+30,SFCA5-7R1-2,SFC6R2,True,corrected_code,corrected_or_precise,6.0,2.0,generalized,
+31,SFC4R7,,True,bag_clean,corrected_or_precise,4.0,7.0,precise,
+32,SFC7R2-3,,True,bag_clean,original_composite,7.0,2.0,composite,
+32,SFC7R2-3,,True,bag_clean,original_composite,7.0,3.0,composite,
+33,SFC7R2-3,,True,bag_clean,original_composite,7.0,2.0,composite,
+33,SFC7R2-3,,True,bag_clean,original_composite,7.0,3.0,composite,
+34,SFC7R2-3,,True,bag_clean,original_composite,7.0,2.0,composite,
+34,SFC7R2-3,,True,bag_clean,original_composite,7.0,3.0,composite,
+35,SFC7R2-3,,True,bag_clean,original_composite,7.0,2.0,composite,
+35,SFC7R2-3,,True,bag_clean,original_composite,7.0,3.0,composite,
+36,SFC2R2,,True,bag_clean,corrected_or_precise,2.0,2.0,precise,
+37,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,1.0,composite,
+37,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,2.0,composite,
+37,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,1.0,composite,
+37,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,2.0,composite,
+38,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,1.0,composite,
+38,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,2.0,composite,
+38,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,1.0,composite,
+38,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,2.0,composite,
+39,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,1.0,composite,
+39,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,2.0,composite,
+39,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,1.0,composite,
+39,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,2.0,composite,
+40,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,1.0,composite,
+40,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,2.0,composite,
+40,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,1.0,composite,
+40,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,2.0,composite,
+41,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,1.0,composite,
+41,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,2.0,composite,
+41,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,1.0,composite,
+41,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,2.0,composite,
+42,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,1.0,composite,
+42,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,2.0,composite,
+42,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,1.0,composite,
+42,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,2.0,composite,
+43,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,1.0,composite,
+43,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,2.0,composite,
+43,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,1.0,composite,
+43,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,2.0,composite,
+44,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,1.0,composite,
+44,SFC1-2R1-2,,True,bag_clean,original_composite,1.0,2.0,composite,
+44,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,1.0,composite,
+44,SFC1-2R1-2,,True,bag_clean,original_composite,2.0,2.0,composite,
+45,SFC2+4R3,,True,bag_clean,original_composite,2.0,3.0,composite,
+45,SFC2+4R3,,True,bag_clean,original_composite,4.0,3.0,composite,
+46,SFC2+4R3,,True,bag_clean,original_composite,2.0,3.0,composite,
+46,SFC2+4R3,,True,bag_clean,original_composite,4.0,3.0,composite,
+47,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,1.0,composite,
+47,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,2.0,composite,
+47,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,1.0,composite,
+47,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,2.0,composite,
+47,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,1.0,composite,
+47,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,2.0,composite,
+48,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,1.0,composite,
+48,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,2.0,composite,
+48,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,1.0,composite,
+48,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,2.0,composite,
+48,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,1.0,composite,
+48,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,2.0,composite,
+49,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,1.0,composite,
+49,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,2.0,composite,
+49,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,1.0,composite,
+49,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,2.0,composite,
+49,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,1.0,composite,
+49,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,2.0,composite,
+50,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,1.0,composite,
+50,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,2.0,composite,
+50,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,1.0,composite,
+50,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,2.0,composite,
+50,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,1.0,composite,
+50,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,2.0,composite,
+51,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,1.0,composite,
+51,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,2.0,composite,
+51,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,1.0,composite,
+51,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,2.0,composite,
+51,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,1.0,composite,
+51,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,2.0,composite,
+52,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,1.0,composite,
+52,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,2.0,composite,
+52,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,1.0,composite,
+52,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,2.0,composite,
+52,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,1.0,composite,
+52,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,2.0,composite,
+53,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,1.0,composite,
+53,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,2.0,composite,
+53,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,1.0,composite,
+53,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,2.0,composite,
+53,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,1.0,composite,
+53,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,2.0,composite,
+54,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,1.0,composite,
+54,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,2.0,composite,
+54,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,1.0,composite,
+54,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,2.0,composite,
+54,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,1.0,composite,
+54,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,2.0,composite,
+55,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,1.0,composite,
+55,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,2.0,composite,
+55,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,1.0,composite,
+55,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,2.0,composite,
+55,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,1.0,composite,
+55,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,2.0,composite,
+56,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,1.0,composite,
+56,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,2.0,composite,
+56,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,1.0,composite,
+56,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,2.0,composite,
+56,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,1.0,composite,
+56,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,2.0,composite,
+57,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,1.0,composite,
+57,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,2.0,composite,
+57,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,1.0,composite,
+57,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,2.0,composite,
+57,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,1.0,composite,
+57,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,2.0,composite,
+58,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,1.0,composite,
+58,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,2.0,composite,
+58,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,1.0,composite,
+58,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,2.0,composite,
+58,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,1.0,composite,
+58,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,2.0,composite,
+59,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,1.0,composite,
+59,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,2.0,composite,
+59,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,1.0,composite,
+59,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,2.0,composite,
+59,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,1.0,composite,
+59,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,2.0,composite,
+60,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,1.0,composite,
+60,SFC5-7R1+2,,True,bag_clean,original_composite,5.0,2.0,composite,
+60,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,1.0,composite,
+60,SFC5-7R1+2,,True,bag_clean,original_composite,6.0,2.0,composite,
+60,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,1.0,composite,
+60,SFC5-7R1+2,,True,bag_clean,original_composite,7.0,2.0,composite,
+61,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+61,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+61,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+62,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+62,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+62,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+63,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+63,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+63,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+64,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+64,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+64,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+65,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+65,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+65,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+66,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+66,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+66,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+67,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+67,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+67,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+68,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+68,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+68,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+69,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+69,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+69,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+70,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+70,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+70,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+71,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+71,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+71,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+72,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+72,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+72,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+73,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+73,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+73,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+74,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+74,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+74,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+75,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+75,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+75,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+76,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+76,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+76,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+77,SFC2-4R1,,True,bag_clean,original_composite,2.0,1.0,composite,
+77,SFC2-4R1,,True,bag_clean,original_composite,3.0,1.0,composite,
+77,SFC2-4R1,,True,bag_clean,original_composite,4.0,1.0,composite,
+78,SFC1R1B1,,True,bag_clean,corrected_or_precise,1.0,1.0,precise,
+79,SFOP3C1-2R2,SFC1.5R2B2,True,corrected_code,corrected_or_precise,1.5,2.0,generalized,
+80,SFOP3C1-2R2,SFC1.5R2B2,True,corrected_code,corrected_or_precise,1.5,2.0,generalized,
+81,SFOP3C1-2R2,SFC1.5R2B2,True,corrected_code,corrected_or_precise,1.5,2.0,generalized,
+82,SFOP3C1-2R2,SFC1.5R2B2,True,corrected_code,corrected_or_precise,1.5,2.0,generalized,
+83,SFOP3C1-2R2,SFC1.5R2B2,True,corrected_code,corrected_or_precise,1.5,2.0,generalized,
+84,SFOP3C1-2R2,SFC1.5R2B2,True,corrected_code,corrected_or_precise,1.5,2.0,generalized,
+85,SFOP3C1-2R2,SFC1.5R2B2,True,corrected_code,corrected_or_precise,1.5,2.0,generalized,
+86,SFOP3C1-2R2,SFC1.5R2B2,True,corrected_code,corrected_or_precise,1.5,2.0,generalized,
+87,SFOP3C1-2R2,SFC1.5R2B2,True,corrected_code,corrected_or_precise,1.5,2.0,generalized,
+88,SFOP3C1-2R2,SFC1.5R2B2,True,corrected_code,corrected_or_precise,1.5,2.0,generalized,
+89,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+89,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+90,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+90,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+91,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+91,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+92,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+92,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+93,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+93,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+94,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+94,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+95,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+95,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+96,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+96,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+97,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+97,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+98,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+98,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+99,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+99,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+100,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+100,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+101,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+101,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+102,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+102,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+103,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+103,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+104,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+104,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+105,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+105,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+106,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+106,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+107,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+107,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+108,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+108,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+109,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+109,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+110,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+110,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+111,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+111,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+112,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+112,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+113,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+113,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+114,SFC2-3R5,,True,bag_clean,original_composite,2.0,5.0,composite,
+114,SFC2-3R5,,True,bag_clean,original_composite,3.0,5.0,composite,
+115,OP3C6SF,SFC6R1,True,corrected_code,corrected_or_precise,6.0,1.0,generalized,
+116,OP3C6SF,SFC6R1,True,corrected_code,corrected_or_precise,6.0,1.0,generalized,
+117,OP3C6SF,SFC6R1,True,corrected_code,corrected_or_precise,6.0,1.0,generalized,
+118,OP3C6SF,SFC6R1,True,corrected_code,corrected_or_precise,6.0,1.0,generalized,
+119,OP3C6SF,SFC6R1,True,corrected_code,corrected_or_precise,6.0,1.0,generalized,
+120,OP3C6SF,SFC6R1,True,corrected_code,corrected_or_precise,6.0,1.0,generalized,
+121,OP3C6SF,SFC6R1,True,corrected_code,corrected_or_precise,6.0,1.0,generalized,
+122,OP3C6SF,SFC6R1,True,corrected_code,corrected_or_precise,6.0,1.0,generalized,
+123,OP3C6SF,SFC6R1,True,corrected_code,corrected_or_precise,6.0,1.0,generalized,
+124,OP3C6SF,SFC6R1,True,corrected_code,corrected_or_precise,6.0,1.0,generalized,
+125,SFC3R3B2,,True,bag_clean,corrected_or_precise,3.0,3.0,precise,
+126,SFC4-5R6,,True,bag_clean,original_composite,4.0,6.0,composite,
+126,SFC4-5R6,,True,bag_clean,original_composite,5.0,6.0,composite,
+127,SFC3R6B1,,True,bag_clean,corrected_or_precise,3.0,6.0,precise,
+128,SFBOX11,,False,bag_clean,,,,,not spatialized
+129,SFC3R4B2,,True,bag_clean,corrected_or_precise,3.0,4.0,precise,
+130,SFOP2,,False,bag_clean,,,,,not spatialized
+131,SFOP2,,False,bag_clean,,,,,not spatialized
+132,SFOP2,,False,bag_clean,,,,,not spatialized
+133,SFOP2,,False,bag_clean,,,,,not spatialized
+134,SFOP2,,False,bag_clean,,,,,not spatialized
+135,SFOP2,,False,bag_clean,,,,,not spatialized
+136,SF,,False,bag_clean,,,,,not spatialized
+137,SF,,False,bag_clean,,,,,not spatialized
+138,SF,,False,bag_clean,,,,,not spatialized
+139,SF,,False,bag_clean,,,,,not spatialized
+140,SF,,False,bag_clean,,,,,not spatialized
+141,SF,,False,bag_clean,,,,,not spatialized
+142,SF,,False,bag_clean,,,,,not spatialized
+143,SF,,False,bag_clean,,,,,not spatialized
+144,SF,,False,bag_clean,,,,,not spatialized
+145,OP3SF,,False,bag_clean,,,,,not spatialized
+146,SFC4-5R4,,True,bag_clean,original_composite,4.0,4.0,composite,
+146,SFC4-5R4,,True,bag_clean,original_composite,5.0,4.0,composite,
+147,SFC4-5R4,,True,bag_clean,original_composite,4.0,4.0,composite,
+147,SFC4-5R4,,True,bag_clean,original_composite,5.0,4.0,composite,
+148,SFC4-5R4,,True,bag_clean,original_composite,4.0,4.0,composite,
+148,SFC4-5R4,,True,bag_clean,original_composite,5.0,4.0,composite,
+149,SFC3R4B3,,True,bag_clean,corrected_or_precise,3.0,4.0,precise,
+150,SFC3R4B3,,True,bag_clean,corrected_or_precise,3.0,4.0,precise,
+151,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+152,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+153,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+154,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+155,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+156,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+157,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+158,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+159,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+160,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+161,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+162,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+163,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+164,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+165,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+166,SF(TREELINE),,False,bag_clean,,,,,not spatialized
+167,STP13,,False,bag_clean,,,,,not spatialized
+168,STP13,,False,bag_clean,,,,,not spatialized
+169,STP13,,False,bag_clean,,,,,not spatialized
+170,SF(N.D)*,,False,bag_clean,,,,,not spatialized
+171,SF(N.D),,False,bag_clean,,,,,not spatialized
+172,SF(N.D),,False,bag_clean,,,,,not spatialized
+173,SF(N.D),,False,bag_clean,,,,,not spatialized
+174,SF(N.D),,False,bag_clean,,,,,not spatialized
+175,SF(N.D),,False,bag_clean,,,,,not spatialized
+176,SF(N.D),,False,bag_clean,,,,,not spatialized
+177,SF(N.D),,False,bag_clean,,,,,not spatialized
+178,SF(N.D),,False,bag_clean,,,,,not spatialized
+179,SF(N.D),,False,bag_clean,,,,,not spatialized
+180,SF(N.D),,False,bag_clean,,,,,not spatialized
+181,SF(N.D),,False,bag_clean,,,,,not spatialized
+182,SF(N.D),,False,bag_clean,,,,,not spatialized
+183,SF(N.D),,False,bag_clean,,,,,not spatialized
+184,SF(N.D),,False,bag_clean,,,,,not spatialized
+185,SF(N.D),,False,bag_clean,,,,,not spatialized
+186,SF(N.D),,False,bag_clean,,,,,not spatialized
+187,SF(N.D),,False,bag_clean,,,,,not spatialized
+188,SF(N.D),,False,bag_clean,,,,,not spatialized
+189,SF(N.D),,False,bag_clean,,,,,not spatialized
+190,SF(N.D),,False,bag_clean,,,,,not spatialized
+191,SF(N.D),,False,bag_clean,,,,,not spatialized
+192,SF(N.D),,False,bag_clean,,,,,not spatialized
+193,SF(N.D),,False,bag_clean,,,,,not spatialized
+194,SF(N.D),,False,bag_clean,,,,,not spatialized
+195,SF(N.D),,False,bag_clean,,,,,not spatialized
+196,SF(N.D),,False,bag_clean,,,,,not spatialized
+197,SF(N.D),,False,bag_clean,,,,,not spatialized
+198,SF(N.D),,False,bag_clean,,,,,not spatialized
+199,SF(N.D),,False,bag_clean,,,,,not spatialized
+200,SF(N.D),,False,bag_clean,,,,,not spatialized
+201,SF(N.D),,False,bag_clean,,,,,not spatialized
+202,SF(N.D),,False,bag_clean,,,,,not spatialized
+203,SF(N.D),,False,bag_clean,,,,,not spatialized
+204,SF(N.D),,False,bag_clean,,,,,not spatialized
+205,SF(N.D),,False,bag_clean,,,,,not spatialized
+206,SF(N.D),,False,bag_clean,,,,,not spatialized
+207,SF(N.D),,False,bag_clean,,,,,not spatialized
+208,SF(N.D),,False,bag_clean,,,,,not spatialized
+209,SF(N.D),,False,bag_clean,,,,,not spatialized
+210,SF*,,False,bag_clean,,,,,not spatialized
+211,SF,,False,bag_clean,,,,,not spatialized
+212,SF,,False,bag_clean,,,,,not spatialized
+213,SF,,False,bag_clean,,,,,not spatialized
+214,SF,,False,bag_clean,,,,,not spatialized
+215,SF,,False,bag_clean,,,,,not spatialized
+216,SF,,False,bag_clean,,,,,not spatialized
+217,SF,,False,bag_clean,,,,,not spatialized
+218,SF,,False,bag_clean,,,,,not spatialized
+219,SF,,False,bag_clean,,,,,not spatialized
+220,SF,,False,bag_clean,,,,,not spatialized
+221,SF,,False,bag_clean,,,,,not spatialized
+222,SF(N.D)**,,False,bag_clean,,,,,not spatialized
+223,SF(N.D),,False,bag_clean,,,,,not spatialized
+224,SF(N.D),,False,bag_clean,,,,,not spatialized
+225,SF(N.D),,False,bag_clean,,,,,not spatialized
+226,SF(N.D),,False,bag_clean,,,,,not spatialized
+227,SF(N.D),,False,bag_clean,,,,,not spatialized
+228,SF(N.D),,False,bag_clean,,,,,not spatialized
+229,SF(N.D),,False,bag_clean,,,,,not spatialized
+230,SF(N.D),,False,bag_clean,,,,,not spatialized
+231,SF(N.D),,False,bag_clean,,,,,not spatialized
+232,SF(N.D),,False,bag_clean,,,,,not spatialized
+233,SF(N.D),,False,bag_clean,,,,,not spatialized
+234,SF(N.D),,False,bag_clean,,,,,not spatialized
+235,SF(N.D),,False,bag_clean,,,,,not spatialized
+236,SF(N.D),,False,bag_clean,,,,,not spatialized
+237,SF(N.D),,False,bag_clean,,,,,not spatialized
+238,SF(N.D),,False,bag_clean,,,,,not spatialized
+239,SF(N.D),,False,bag_clean,,,,,not spatialized
+240,SF(N.D),,False,bag_clean,,,,,not spatialized
+241,SF(N.D),,False,bag_clean,,,,,not spatialized
+242,SF(N.D),,False,bag_clean,,,,,not spatialized
+243,SF(N.D),,False,bag_clean,,,,,not spatialized
+244,SF(N.D),,False,bag_clean,,,,,not spatialized
+245,SF(N.D),,False,bag_clean,,,,,not spatialized
+246,SF(N.D),,False,bag_clean,,,,,not spatialized
+247,SF(N.D),,False,bag_clean,,,,,not spatialized
+248,SF(N.D),,False,bag_clean,,,,,not spatialized
+249,SF(N.D),,False,bag_clean,,,,,not spatialized
+250,SF(N.D),,False,bag_clean,,,,,not spatialized
+251,SF(N.D),,False,bag_clean,,,,,not spatialized
+252,SF(N.D),,False,bag_clean,,,,,not spatialized
+253,SF(N.D),,False,bag_clean,,,,,not spatialized
+254,SF(N.D),,False,bag_clean,,,,,not spatialized
+255,SF(N.D),,False,bag_clean,,,,,not spatialized
+256,SF(N.D),,False,bag_clean,,,,,not spatialized
+257,SF(N.D),,False,bag_clean,,,,,not spatialized
+258,SF(N.D),,False,bag_clean,,,,,not spatialized
+259,SF(N.D),,False,bag_clean,,,,,not spatialized
+260,SF(N.D),,False,bag_clean,,,,,not spatialized
+261,SF(N.D),,False,bag_clean,,,,,not spatialized
+262,SF(N.D),,False,bag_clean,,,,,not spatialized
+263,SF(N.D),,False,bag_clean,,,,,not spatialized
+264,SF(N.D),,False,bag_clean,,,,,not spatialized
+265,SF(N.D),,False,bag_clean,,,,,not spatialized
+266,SF(N.D),,False,bag_clean,,,,,not spatialized
+267,SURFACEFINDS(N.D.)***,,False,bag_clean,,,,,not spatialized
+268,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+269,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+270,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+271,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+272,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+273,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+274,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+275,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+276,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+277,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+278,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+279,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+280,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+281,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+282,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+283,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+284,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+285,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+286,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+287,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+288,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+289,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+290,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+291,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+292,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+293,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+294,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+295,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+296,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+297,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+298,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+299,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+300,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+301,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+302,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+303,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+304,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+305,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+306,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+307,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+308,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+309,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+310,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+311,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+312,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+313,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+314,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+315,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+316,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+317,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+318,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+319,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+320,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+321,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+322,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+323,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+324,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+325,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+326,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+327,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+328,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+329,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+330,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+331,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+332,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+333,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+334,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+335,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+336,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+337,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+338,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+339,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+340,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+341,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+342,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+343,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+344,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+345,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+346,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+347,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+348,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+349,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+350,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+351,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+352,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+353,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+354,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+355,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+356,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+357,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+358,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+359,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+360,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+361,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+362,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+363,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+364,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+365,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+366,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+367,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+368,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+369,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+370,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+371,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+372,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+373,SURFACEFINDS(N.D.),,False,bag_clean,,,,,not spatialized
+374,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000)****,,False,bag_clean,,,,,not spatialized
+375,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+376,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+377,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+378,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+379,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+380,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+381,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+382,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+383,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+384,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+385,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+386,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+387,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+388,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+389,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+390,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+391,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+392,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+393,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+394,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+395,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+396,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+397,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+398,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+399,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+400,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+401,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+402,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+403,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+404,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+405,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+406,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+407,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+408,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+409,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+410,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+411,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+412,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+413,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+414,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+415,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+416,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+417,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+418,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+419,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+420,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+421,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+422,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+423,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+424,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+425,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+426,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+427,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+428,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+429,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+430,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+431,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+432,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+433,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+434,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+435,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+436,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+437,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+438,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+439,SURFACEFINDS(N.D.)(SEPARATEBAGFROMEPAS2021-894TO1000),,False,bag_clean,,,,,not spatialized
+440,SFR4C4+5B2,SFC4.5R2B2,True,corrected_code,corrected_or_precise,4.5,2.0,generalized,
+441,SFR4C4+5B2,SFC4.5R2B2,True,corrected_code,corrected_or_precise,4.5,2.0,generalized,
+442,SFR4C4+5B2,SFC4.5R2B2,True,corrected_code,corrected_or_precise,4.5,2.0,generalized,
+443,SFR4C4+5B2,SFC4.5R2B2,True,corrected_code,corrected_or_precise,4.5,2.0,generalized,
+444,SFR4C4+5B2,SFC4.5R2B2,True,corrected_code,corrected_or_precise,4.5,2.0,generalized,
+445,SFR4C4+5B2,SFC4.5R2B2,True,corrected_code,corrected_or_precise,4.5,2.0,generalized,
+446,SFR4C4+5B2,SFC4.5R2B2,True,corrected_code,corrected_or_precise,4.5,2.0,generalized,
+447,SFR4C4+5B2,SFC4.5R2B2,True,corrected_code,corrected_or_precise,4.5,2.0,generalized,
+448,SFR4C4+5B2,SFC4.5R2B2,True,corrected_code,corrected_or_precise,4.5,2.0,generalized,
+449,SFR4C4+5B2,SFC4.5R2B2,True,corrected_code,corrected_or_precise,4.5,2.0,generalized,
+450,S.F.(2012),,False,bag_clean,,,,,not spatialized
+451,S.F.(2012),,False,bag_clean,,,,,not spatialized
+452,S.F.(2012),,False,bag_clean,,,,,not spatialized
+453,S.F.(2012),,False,bag_clean,,,,,not spatialized
+454,S.F.(2012),,False,bag_clean,,,,,not spatialized
+455,S.F.(2012),,False,bag_clean,,,,,not spatialized
+456,S.F.(2012),,False,bag_clean,,,,,not spatialized
+457,S.F.(2012),,False,bag_clean,,,,,not spatialized
+458,S.F.(2012),,False,bag_clean,,,,,not spatialized
+459,S.F.(2012),,False,bag_clean,,,,,not spatialized
+460,S.F.(2012),,False,bag_clean,,,,,not spatialized
+461,S.F.(2012),,False,bag_clean,,,,,not spatialized
+462,S.F.(2012),,False,bag_clean,,,,,not spatialized
+463,S.F.(2012),,False,bag_clean,,,,,not spatialized
+464,S.F.(2012),,False,bag_clean,,,,,not spatialized
+465,S.F.(2012),,False,bag_clean,,,,,not spatialized
+466,S.F.(2012),,False,bag_clean,,,,,not spatialized
+467,S.F.(2012),,False,bag_clean,,,,,not spatialized
+468,S.F.(2012),,False,bag_clean,,,,,not spatialized
+469,S.F.(2012),,False,bag_clean,,,,,not spatialized
+470,S.F.(2012),,False,bag_clean,,,,,not spatialized
+471,S.F.(2012),,False,bag_clean,,,,,not spatialized
+472,S.F.(2012),,False,bag_clean,,,,,not spatialized
+473,S.F.(2012),,False,bag_clean,,,,,not spatialized
+474,S.F.(2012),,False,bag_clean,,,,,not spatialized
+475,S.F.(2012),,False,bag_clean,,,,,not spatialized
+476,S.F.(2012),,False,bag_clean,,,,,not spatialized
+477,S.F.(2012),,False,bag_clean,,,,,not spatialized
+478,S.F.(2012),,False,bag_clean,,,,,not spatialized
+479,S.F.(2012),,False,bag_clean,,,,,not spatialized
+480,S.F.(2012),,False,bag_clean,,,,,not spatialized
+481,S.F.(2012),,False,bag_clean,,,,,not spatialized
+482,S.F.(2012),,False,bag_clean,,,,,not spatialized
+483,S.F.(2012),,False,bag_clean,,,,,not spatialized
+484,S.F.(2012),,False,bag_clean,,,,,not spatialized
+485,S.F.(2012),,False,bag_clean,,,,,not spatialized
+486,S.F.(2012),,False,bag_clean,,,,,not spatialized
+487,S.F.(2012),,False,bag_clean,,,,,not spatialized
+488,S.F.(2012),,False,bag_clean,,,,,not spatialized
+489,S.F.(2012),,False,bag_clean,,,,,not spatialized
+490,S.F.(2012),,False,bag_clean,,,,,not spatialized
+491,S.F.(2012),,False,bag_clean,,,,,not spatialized
+492,S.F.(2012),,False,bag_clean,,,,,not spatialized
+493,S.F.(2012),,False,bag_clean,,,,,not spatialized
+494,S.F.(2012),,False,bag_clean,,,,,not spatialized
+495,S.F.(2012),,False,bag_clean,,,,,not spatialized
+496,S.F.(2012),,False,bag_clean,,,,,not spatialized
+497,S.F.(2012),,False,bag_clean,,,,,not spatialized
+498,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+499,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+500,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+501,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+502,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+503,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+504,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+505,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+506,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+507,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+508,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+509,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+510,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+511,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+512,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+513,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+514,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+515,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+516,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+517,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+518,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+519,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+520,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+521,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+522,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+523,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+524,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+525,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+526,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+527,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+528,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+529,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+530,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+531,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+532,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+533,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+534,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+535,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+536,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+537,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+538,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+539,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+540,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+541,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+542,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+543,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+544,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+545,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+546,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+547,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+548,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+549,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+550,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+551,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+552,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+553,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+554,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+555,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+556,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+557,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+558,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+559,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+560,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+561,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+562,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+563,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+564,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+565,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+566,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+567,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+568,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+569,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+570,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+571,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+572,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+573,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+574,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+575,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+576,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+577,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+578,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+579,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+580,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+581,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+582,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+583,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+584,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+585,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+586,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+587,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+588,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+589,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+590,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+591,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+592,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+593,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+594,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+595,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+596,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+597,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+598,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+599,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+600,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+601,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+602,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+603,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+604,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+605,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+606,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+607,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+608,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+609,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+610,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+611,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+612,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+613,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+614,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+615,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+616,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+617,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+618,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+619,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+620,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+621,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+622,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+623,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+624,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+625,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+626,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+627,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+628,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+629,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+630,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+631,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+632,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+633,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+634,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+635,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+636,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+637,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+638,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+639,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+640,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+641,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+642,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+643,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+644,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+645,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+646,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+647,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+648,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+649,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+650,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+651,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+652,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+653,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+654,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+655,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+656,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+657,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+658,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+659,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+660,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+661,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+662,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+663,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+664,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+665,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+666,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized
+667,"SURFACEFINDS(2012""CANEFIELDACROSSROAD"")",,False,bag_clean,,,,,not spatialized

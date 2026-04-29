@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Evergreen Surface Collections Option A Preview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet"/>
+<script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+<style>
+body { margin:0; font-family: Arial, sans-serif; }
+#map { position:absolute; inset:0; }
+.panel { position:absolute; top:12px; left:12px; width:340px; max-height:calc(100vh - 24px); overflow:auto; background:white; padding:12px; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,.25); font-size:14px; }
+.legend-item { margin:6px 0; display:flex; align-items:center; gap:8px; }
+.swatch { width:18px; height:12px; border:1px solid #555; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div class="panel">
+<h2>Surface Collections Option A Preview</h2>
+<p>Aggregated by Cabin/Gap + Row. Bag numbers are ignored. Polygons are generalized approximations because collection areas were not all regularly sized.</p>
+<div class="legend-item"><span class="swatch" style="background:#e34a33"></span>Precise</div>
+<div class="legend-item"><span class="swatch" style="background:#fdbb84"></span>Composite</div>
+<div class="legend-item"><span class="swatch" style="background:#756bb1"></span>Generalized / corrected</div>
+<p><strong>Click a polygon</strong> to inspect cabin reference, row, entries, original and corrected codes.</p>
+</div>
+<script>
+const map = new maplibregl.Map({
+  container: 'map',
+  style: {version:8, sources:{osm:{type:'raster', tiles:['https://tile.openstreetmap.org/{z}/{x}/{y}.png'], tileSize:256, attribution:'© OpenStreetMap contributors'}}, layers:[{id:'osm', type:'raster', source:'osm'}]}
+});
+map.addControl(new maplibregl.NavigationControl(), 'top-right');
+Promise.all([
+  fetch('surface_collections_optionA_preview.geojson').then(r=>r.json()),
+  fetch('cabins.geojson').then(r=>r.json())
+]).then(([surf,cabins]) => {
+  map.on('load', () => {
+    map.addSource('surface', {type:'geojson', data:surf});
+    map.addSource('cabins', {type:'geojson', data:cabins});
+    map.addLayer({id:'surface-fill', type:'fill', source:'surface', paint:{'fill-color':['match',['get','confidence'],'precise','#e34a33','composite','#fdbb84','generalized','#756bb1','#999'], 'fill-opacity':0.58}});
+    map.addLayer({id:'surface-line', type:'line', source:'surface', paint:{'line-color':'#333', 'line-width':1}});
+    map.addLayer({id:'cabins-fill', type:'fill', source:'cabins', paint:{'fill-color':'#8856a7','fill-opacity':0.35}});
+    map.addLayer({id:'cabins-line', type:'line', source:'cabins', paint:{'line-color':'#4d004b','line-width':1.4}});
+    const bounds = new maplibregl.LngLatBounds();
+    surf.features.forEach(f => f.geometry.coordinates[0].forEach(c => bounds.extend(c)));
+    cabins.features.forEach(f => {
+      if (f.geometry.type === 'Polygon') f.geometry.coordinates[0].forEach(c => bounds.extend(c));
+      if (f.geometry.type === 'MultiPolygon') f.geometry.coordinates.forEach(p => p[0].forEach(c => bounds.extend(c)));
+    });
+    map.fitBounds(bounds, {padding:40});
+    map.on('click','surface-fill', e => {
+      const p = e.features[0].properties;
+      new maplibregl.Popup({maxWidth:'360px'}).setLngLat(e.lngLat).setHTML(
+        `<strong>${p.context_id}</strong><br>
+         Cabin ref: ${p.cabin_label}<br>
+         Row: ${p.row}<br>
+         Confidence: ${p.confidence}<br>
+         Entries: ${p.entries}<br>
+         <strong>Corrected codes:</strong><br>${p.corrected_codes || '(none)'}<br>
+         <strong>Original codes:</strong><br>${p.original_codes}`
+      ).addTo(map);
+    });
+    map.on('mouseenter','surface-fill',()=>map.getCanvas().style.cursor='pointer');
+    map.on('mouseleave','surface-fill',()=>map.getCanvas().style.cursor='');
+  });
+});
+</script>
+</body>
+</html>
