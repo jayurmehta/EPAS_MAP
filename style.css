@@ -151,5 +151,19 @@ button {
   margin-bottom: 10px;
 }
 
+.artifact-photo {
+  margin-top: 8px;
+}
 
+.artifact-photo img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.photo-label {
+  font-size: 0.75rem;
+  color: #666;
+}
 /* cabins layer shares side panel styles; no extra rules required beyond this placeholder */
