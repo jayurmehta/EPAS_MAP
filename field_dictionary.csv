@@ -1,0 +1,29 @@
+field,label
+all_total,All Artifacts
+t_beads,Beads
+t_brick,Brick
+t_bullet,Bullets
+t_button,Buttons
+t_cerobj,Ceramic Objects
+t_cershrd,Ceramic Sherds
+t_coalchr,Coal / Charcoal
+t_coin,Coin
+t_concrt,Concrete
+t_faunbn,Faunal Bone
+t_glass,Glass
+t_glassobj,Glass Objects
+t_graphite,Graphite
+t_grndstn,Groundstone
+t_gunflint,Gunflint
+t_lead,Lead
+t_lithics,Lithics
+t_marbles,Marbles
+t_metid,Metal Identified
+t_metuid,Metal Unidentified
+t_mortar,Mortar
+t_nails,Nails
+t_other,Other
+t_plastic,Plastic
+t_rubber,Rubber
+t_shell,Shell
+t_slag,Slag
