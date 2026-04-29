@@ -99,22 +99,12 @@ function tuLevelImageUrls(tu, level) {
   const cleanTU = String(tu).trim();
   const cleanLevel = String(level).trim();
 
-  // Primary expected filename: "13 2.JPG" for Test Unit 13, Level 2.
-  const primaryBase = `${cleanTU} ${cleanLevel}`;
-  const primary = encodeURIComponent(primaryBase);
-
-  // Fallbacks support common alternate naming conventions:
-  // "13-2.JPG", "TU13 2.JPG", and "TU13 Level 2.JPG".
-  const fallback1 = encodeURIComponent(`${cleanTU}-${cleanLevel}`);
-  const fallback2 = encodeURIComponent(`TU${cleanTU} ${cleanLevel}`);
-  const fallback3 = encodeURIComponent(`TU${cleanTU} Level ${cleanLevel}`);
+  const baseName = `${cleanTU} ${cleanLevel}`;
+  const encoded = encodeURIComponent(baseName);
 
   return {
-    display: `${IMAGE_BASE}${primary}.JPG`,
-    fallback: `${IMAGE_BASE}${primary}.jpg`,
-    fallback2: `${IMAGE_BASE}${fallback1}.JPG`,
-    fallback3: `${IMAGE_BASE}${fallback2}.JPG`,
-    fallback4: `${IMAGE_BASE}${fallback3}.JPG`,
+    display: `${IMAGE_BASE}${encoded}.jpg`,
+    fallback: `${IMAGE_BASE}${encoded}.jpg`,
     label: `TU ${cleanTU}, Level ${cleanLevel}`
   };
 }
