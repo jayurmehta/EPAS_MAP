@@ -4,6 +4,7 @@ const CABINS_URL = 'cabins.geojson';
 const CABIN_LINKS_URL = 'cabin_links.json';
 const FIELD_LABELS = window.FIELD_LABELS || {};
 const FILTER_FIELDS = window.FILTER_FIELDS || [];
+const IMAGE_BASE = "https://pub-ab138914e68b46c9b202d08c2017af1b.r2.dev/";
 
 const artifactSelect = document.getElementById('artifact');
 const minRange = document.getElementById('minrange');
@@ -93,7 +94,15 @@ function buildCeramicsHTML(tu) {
       if (r.chronology) parts.push(`<strong>Chronology:</strong> ${r.chronology}`);
       if (r.vessel_portion) parts.push(`<strong>Vessel Portion:</strong> ${r.vessel_portion}`);
       if (r.vessel_form) parts.push(`<strong>Vessel Form:</strong> ${r.vessel_form}`);
-      if (r.photo_id) parts.push(`<strong>Photo ID:</strong> ${r.photo_id}`);
+      if (r.photo_id) {
+        const imgUrl = `${IMAGE_BASE}${r.photo_id}.jpg`;
+        parts.push(`
+        <div class="artifact-photo">
+        <img src="${imgUrl}" alt="Artifact ${r.photo_id}" loading="lazy">
+        <div class="photo-label">Photo ID: ${r.photo_id}</div>
+      </div>
+    \`);
+  }
       return `<li class="ceramic-record">${parts.join('<br>')}</li>`;
     }).join('');
     return `
