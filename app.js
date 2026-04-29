@@ -95,14 +95,28 @@ function buildCeramicsHTML(tu) {
       if (r.vessel_portion) parts.push(`<strong>Vessel Portion:</strong> ${r.vessel_portion}`);
       if (r.vessel_form) parts.push(`<strong>Vessel Form:</strong> ${r.vessel_form}`);
       if (r.photo_id) {
-        const imgUrl = `${IMAGE_BASE}${r.photo_id}.jpg`;
+  // Convert EPAS2021-399 → EPAS2021 399
+        const baseName = r.photo_id.replace("-", " ");
+
+  // Encode for URL (space → %20)
+        const encoded = encodeURIComponent(baseName);
+
+  // Try both JPG and jpg automatically
+        const imgJPG = `https://pub-ab138914e68b46c9b202d08c2017af1b.r2.dev/${encoded}.JPG`;
+        const imgjpg = `https://pub-ab138914e68b46c9b202d08c2017af1b.r2.dev/${encoded}.jpg`;
+       
         parts.push(`
-        <div class="artifact-photo">
-        <img src="${imgUrl}" alt="Artifact ${r.photo_id}" loading="lazy">
-        <div class="photo-label">Photo ID: ${r.photo_id}</div>
-      </div>
-    \`);
-  }
+          <div class="artifact-photo">
+            <img 
+            src="${imgJPG}" 
+            alt="Artifact ${r.photo_id}" 
+            loading="lazy"
+            onerror="this.onerror=null; this.src='${imgjpg}';"
+          >
+          <div class="photo-label">Photo ID: ${r.photo_id}</div>
+        </div>
+      `);
+    }
       return `<li class="ceramic-record">${parts.join('<br>')}</li>`;
     }).join('');
     return `
