@@ -1,27 +1,16 @@
-Evergreen MapLibre v16 — TU Photo Visibility Fix
+Evergreen MapLibre v17 — TU Context Photo Gallery
 
-This version fixes two likely reasons the TU-level photos and Church Excavation panel were not visible:
+New in this version:
+- Adds tu_context_photos.json as a manifest of uploaded test-unit photos.
+- Test Unit Photos appear by test unit:
+  - clicking TU2 shows 2 1.jpg and 2 2.jpg
+  - clicking TU13 shows 13 1.jpg and 13 2.jpg
+- Artifact ceramics remain grouped by level.
+- Each ceramic record states its context: Test Unit and Level.
+- Church Excavation photo panel now has a close button.
+- Church Excavation panel appears for TUs 2–10.
+- Context photos use lowercase .jpg first, with uppercase .JPG fallback.
 
-1. Cache busting:
-   - index.html now loads style.css?v=16 and app.js?v=16.
-   - This helps GitHub Pages/browser cache actually load the new JavaScript and CSS.
-
-2. More robust TU-level photo filenames:
-   For TU 13, Level 2, the viewer now tries:
-   - 13 2.JPG
-   - 13 2.jpg
-   - 13-2.JPG
-   - TU13 2.JPG
-   - TU13 Level 2.JPG
-
-3. Church Excavation panel:
-   - The panel is now fixed to the browser window instead of nested inside the map grid.
-   - It should appear on the right when clicking TUs 2–10.
-   - Expected filename remains Church Excavation.JPG.
-
-Existing behavior preserved:
-- artifact photos from PHOTOID1/PHOTOID2
-- artifact gallery
-- lightbox
-- cabin layer
-- cabin-to-TU links
+Important:
+- The context photo filenames must match the manifest entries, e.g. "2 1.jpg".
+- To add future TU photos, edit tu_context_photos.json.

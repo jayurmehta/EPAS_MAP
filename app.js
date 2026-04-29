@@ -2,6 +2,7 @@ const DATA_URL = 'tu_summary.geojson';
 const CERAMICS_URL = 'ceramics_2021_tu_1_13.json';
 const CABINS_URL = 'cabins.geojson';
 const CABIN_LINKS_URL = 'cabin_links.json';
+const TU_CONTEXT_PHOTOS_URL = 'tu_context_photos.json';
 const IMAGE_BASE = 'https://pub-ab138914e68b46c9b202d08c2017af1b.r2.dev/';
 const FIELD_LABELS = window.FIELD_LABELS || {};
 const FILTER_FIELDS = window.FILTER_FIELDS || [];
@@ -23,6 +24,7 @@ let selectedTU = null;
 let ceramicsData = {};
 let cabinsData = null;
 let cabinLinks = {};
+let tuContextPhotos = {};
 let selectedCabin = null;
 let currentGallery = [];
 let currentGalleryIndex = 0;
@@ -84,8 +86,16 @@ function safeAttr(value) {
   return String(value ?? '').replace(/"/g, '&quot;');
 }
 
-function imageUrls(photoId) {
-  if (!photoId) return null;
+function urlForBaseName(baseName) {
+  const encoded = encodeURIComponent(String(baseName).trim());
+  return {
+    display: `${IMAGE_BASE}${encoded}.jpg`,
+    fallback: `${IMAGE_BASE}${encoded}.JPG`,
+    label: String(baseName).trim()
+  };
+}
+
+function artifactImageUrls(photoId) {
   const baseName = String(photoId).trim().replace(/-/g, ' ');
   const encoded = encodeURIComponent(baseName);
   return {
@@ -95,37 +105,23 @@ function imageUrls(photoId) {
   };
 }
 
-function tuLevelImageUrls(tu, level) {
-  const cleanTU = String(tu).trim();
-  const cleanLevel = String(level).trim();
-
-  const baseName = `${cleanTU} ${cleanLevel}`;
-  const encoded = encodeURIComponent(baseName);
-
-  return {
-    display: `${IMAGE_BASE}${encoded}.jpg`,
-    fallback: `${IMAGE_BASE}${encoded}.jpg`,
-    label: `TU ${cleanTU}, Level ${cleanLevel}`
-  };
+function photoButtonHTML(urls, cssClass = '') {
+  return `
+    <button class="photo-button ${cssClass}" data-photo-label="${safeAttr(urls.label)}" data-photo-src="${safeAttr(urls.display)}" data-photo-fallback="${safeAttr(urls.fallback)}" type="button">
+      <img src="${urls.display}" alt="${safeAttr(urls.label)}" loading="lazy"
+        onerror="this.onerror=null; this.src='${urls.fallback}';">
+    </button>
+  `;
 }
 
-function namedImageUrls(filenameNoExtension) {
-  const encoded = encodeURIComponent(filenameNoExtension);
-  return {
-    display: `${IMAGE_BASE}${encoded}.JPG`,
-    fallback: `${IMAGE_BASE}${encoded}.jpg`,
-    label: filenameNoExtension
-  };
-}
-
-function photoBlock(photoIds, galleryIndexByPhoto = {}) {
+function artifactPhotoBlock(photoIds, galleryIndexByPhoto = {}) {
   const ids = Array.isArray(photoIds) ? photoIds.filter(Boolean) : [];
   if (!ids.length) {
     return `<div class="no-photo">No artifact photo available</div>`;
   }
 
   return ids.map(pid => {
-    const urls = imageUrls(pid);
+    const urls = artifactImageUrls(pid);
     const idx = galleryIndexByPhoto[pid];
     const idxAttr = idx !== undefined ? `data-gallery-index="${idx}"` : '';
     return `
@@ -140,29 +136,7 @@ function photoBlock(photoIds, galleryIndexByPhoto = {}) {
   }).join('');
 }
 
-function tuLevelPhotoBlock(tu, level) {
-  const urls = tuLevelImageUrls(tu, level);
-  return `
-    <div class="tu-level-photo">
-      <div class="tu-level-photo-title">Excavation context photo</div>
-      <button class="photo-button context-photo-button" data-photo-label="${safeAttr(urls.label)}" data-photo-src="${safeAttr(urls.display)}" data-photo-fallback="${safeAttr(urls.fallback)}" type="button">
-        <img src="${urls.display}" alt="${safeAttr(urls.label)}" loading="lazy"
-          onerror="
-            if (!this.dataset.try1) { this.dataset.try1='1'; this.src='${urls.fallback}'; return; }
-            if (!this.dataset.try2) { this.dataset.try2='1'; this.src='${urls.fallback2}'; return; }
-            if (!this.dataset.try3) { this.dataset.try3='1'; this.src='${urls.fallback3}'; return; }
-            if (!this.dataset.try4) { this.dataset.try4='1'; this.src='${urls.fallback4}'; return; }
-            this.closest('.tu-level-photo').classList.add('missing-context-photo');
-          ">
-      </button>
-      <div class="photo-label">${urls.label}</div>
-      <div class="small context-url-note">Expected filename: ${String(tu).trim()} ${String(level).trim()}.JPG</div>
-      <div class="missing-context-note">No context photo found for ${urls.label}. Tried: ${String(tu).trim()} ${String(level).trim()}.JPG, ${String(tu).trim()}-${String(level).trim()}.JPG, TU${String(tu).trim()} ${String(level).trim()}.JPG, TU${String(tu).trim()} Level ${String(level).trim()}.JPG.</div>
-    </div>
-  `;
-}
-
-function collectCeramicPhotos(tu) {
+function collectArtifactPhotos(tu) {
   const ceramic = ceramicsData[String(tu)];
   if (!ceramic) return [];
 
@@ -171,7 +145,7 @@ function collectCeramicPhotos(tu) {
     levelObj.records.forEach(r => {
       const ids = Array.isArray(r.photo_ids) ? r.photo_ids.filter(Boolean) : [];
       ids.forEach(pid => {
-        const urls = imageUrls(pid);
+        const urls = artifactImageUrls(pid);
         photos.push({
           photo_id: pid,
           display: urls.display,
@@ -195,8 +169,52 @@ function collectCeramicPhotos(tu) {
   });
 }
 
-function buildGalleryHTML(tu) {
-  const photos = collectCeramicPhotos(tu);
+function collectTUContextPhotos(tu) {
+  const ids = tuContextPhotos[String(tu)] || [];
+  return ids.map(id => {
+    const parts = String(id).trim().split(/\s+/);
+    const level = parts.length > 1 ? parts[1] : '';
+    const urls = urlForBaseName(id);
+    return {
+      context_id: id,
+      display: urls.display,
+      fallback: urls.fallback,
+      label: `TU ${tu}${level ? ', Level ' + level : ''}`,
+      level
+    };
+  });
+}
+
+function buildTUContextGalleryHTML(tu) {
+  const photos = collectTUContextPhotos(tu);
+  if (!photos.length) {
+    return `
+      <div class="tu-context-gallery">
+        <h3>Test Unit Photos</h3>
+        <div class="no-photo">No test unit photos are listed for this unit.</div>
+      </div>
+    `;
+  }
+
+  const thumbs = photos.map((p, i) => `
+    <button class="tu-context-thumb" data-context-index="${i}" data-photo-label="${safeAttr(p.label)}" data-photo-src="${safeAttr(p.display)}" data-photo-fallback="${safeAttr(p.fallback)}" type="button">
+      <img src="${p.display}" alt="${safeAttr(p.label)}" loading="lazy"
+        onerror="this.onerror=null; this.src='${p.fallback}';">
+      <span>${p.label}</span>
+    </button>
+  `).join('');
+
+  return `
+    <div class="tu-context-gallery">
+      <h3>Test Unit Photos</h3>
+      <div class="small">${photos.length} context photo${photos.length === 1 ? '' : 's'} for Test Unit ${tu}.</div>
+      <div class="tu-context-grid">${thumbs}</div>
+    </div>
+  `;
+}
+
+function buildArtifactGalleryHTML(tu) {
+  const photos = collectArtifactPhotos(tu);
   currentGallery = photos;
 
   if (!photos.length) {
@@ -233,32 +251,31 @@ function buildCeramicsHTML(tu) {
         <h3>2021 Analyzed Ceramics</h3>
         <div class="empty-state">No analyzed ceramic records linked yet for this test unit.</div>
       </div>
-      ${buildGalleryHTML(tu)}
+      ${buildArtifactGalleryHTML(tu)}
     `;
   }
 
-  const photos = collectCeramicPhotos(tu);
+  const photos = collectArtifactPhotos(tu);
   const galleryIndexByPhoto = {};
   photos.forEach((p, i) => { galleryIndexByPhoto[p.photo_id] = i; });
 
   const levelHtml = ceramic.levels.map(levelObj => {
     const recs = levelObj.records.map(r => {
       const parts = [];
-      parts.push(`<div class="ceramic-context-line"><strong>Context:</strong> TU ${tu}, Level ${levelObj.level}</div>`);
+      parts.push(`<div class="ceramic-context-line"><strong>Context:</strong> Test Unit ${tu}, Level ${levelObj.level}</div>`);
       if (r.count) parts.push(`<strong>Count:</strong> ${r.count}`);
       if (r.type) parts.push(`<strong>Type:</strong> ${r.type}`);
       if (r.chronology) parts.push(`<strong>Chronology:</strong> ${r.chronology}`);
       if (r.vessel_portion) parts.push(`<strong>Vessel Portion:</strong> ${r.vessel_portion}`);
       if (r.vessel_form) parts.push(`<strong>Vessel Form:</strong> ${r.vessel_form}`);
-      parts.push(photoBlock(r.photo_ids, galleryIndexByPhoto));
+      parts.push(artifactPhotoBlock(r.photo_ids, galleryIndexByPhoto));
       return `<li class="ceramic-record">${parts.join('<br>')}</li>`;
     }).join('');
 
     return `
       <div class="ceramic-level">
         <div class="ceramic-level-title">Level ${levelObj.level}</div>
-        <div class="small">Context: Test Unit ${tu}, Level ${levelObj.level}</div>
-        ${tuLevelPhotoBlock(tu, levelObj.level)}
+        <div class="small">Artifacts below are from Test Unit ${tu}, Level ${levelObj.level}.</div>
         <div class="small">Ceramic records: ${levelObj.level_record_count} | Ceramic count total: ${levelObj.level_total_count}</div>
         <ul class="ceramic-list">${recs}</ul>
       </div>
@@ -271,7 +288,7 @@ function buildCeramicsHTML(tu) {
       <div class="small">Records: ${ceramic.record_count} | Count total: ${ceramic.total_count}</div>
       ${levelHtml}
     </div>
-    ${buildGalleryHTML(tu)}
+    ${buildArtifactGalleryHTML(tu)}
   `;
 }
 
@@ -293,6 +310,7 @@ function buildTUSelectionHTML(props) {
   return `
     <div class="selection-title">Test Unit ${tu}</div>
     <div class="selection-total">Total artifacts: ${total}</div>
+    ${buildTUContextGalleryHTML(tu)}
     <h3>Artifact Category Summary</h3>
     ${assemblageHtml}
     ${buildCeramicsHTML(tu)}
@@ -330,21 +348,30 @@ function buildCabinSelectionHTML(props) {
 }
 
 function bindPhotoButtons() {
-  const buttons = selectionContent.querySelectorAll('.photo-button, .gallery-thumb');
+  const buttons = selectionContent.querySelectorAll('.photo-button, .gallery-thumb, .tu-context-thumb');
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       const idx = btn.getAttribute('data-gallery-index');
-      if (idx !== null && idx !== undefined && idx !== '') openLightbox(Number(idx));
-      else openLightboxDirect(btn.getAttribute('data-photo-src'), btn.getAttribute('data-photo-fallback'), btn.getAttribute('data-photo-label'));
+      if (idx !== null && idx !== undefined && idx !== '') {
+        openLightbox(Number(idx));
+      } else {
+        openLightboxDirect(btn.getAttribute('data-photo-src'), btn.getAttribute('data-photo-fallback'), btn.getAttribute('data-photo-label'));
+      }
     });
   });
 
   const churchPanel = document.getElementById('churchContextPanel');
   if (churchPanel) {
     const churchBtn = churchPanel.querySelector('.photo-button');
+    const closeBtn = churchPanel.querySelector('.church-close');
     if (churchBtn) {
       churchBtn.addEventListener('click', () => {
         openLightboxDirect(churchBtn.getAttribute('data-photo-src'), churchBtn.getAttribute('data-photo-fallback'), churchBtn.getAttribute('data-photo-label'));
+      });
+    }
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        churchPanel.classList.add('hidden');
       });
     }
   }
@@ -353,7 +380,6 @@ function bindPhotoButtons() {
 function ensureChurchPanel() {
   let panel = document.getElementById('churchContextPanel');
   if (panel) return panel;
-
   panel = document.createElement('aside');
   panel.id = 'churchContextPanel';
   panel.className = 'church-context-panel hidden';
@@ -365,16 +391,16 @@ function updateChurchPanel(tu) {
   const panel = ensureChurchPanel();
   const tuNum = Number(tu);
   if (tuNum >= 2 && tuNum <= 10) {
-    const urls = namedImageUrls('Church Excavation');
+    const urls = urlForBaseName('Church Excavation');
     panel.innerHTML = `
+      <button class="church-close" type="button" aria-label="Close Church Excavation image">×</button>
       <h3>Church Excavation Area</h3>
       <div class="small">Shown for Test Units 2–10.</div>
       <button class="photo-button church-photo-button" data-photo-label="${safeAttr(urls.label)}" data-photo-src="${safeAttr(urls.display)}" data-photo-fallback="${safeAttr(urls.fallback)}" type="button">
         <img src="${urls.display}" alt="Church Excavation" loading="lazy"
           onerror="this.onerror=null; this.src='${urls.fallback}';">
       </button>
-      <div class="photo-label">Church Excavation.JPG</div>
-      <div class="small context-url-note">Expected filename: Church Excavation.JPG</div>
+      <div class="photo-label">Church Excavation.jpg</div>
     `;
     panel.classList.remove('hidden');
   } else {
@@ -389,7 +415,6 @@ function showTUSelection(props) {
   selectedCabin = null;
   updateChurchPanel(selectedTU);
   bindPhotoButtons();
-
   if (map.getLayer('tu-selected')) map.setFilter('tu-selected', ['==', ['get', 'tu'], selectedTU]);
   if (map.getLayer('cabin-selected')) map.setFilter('cabin-selected', ['==', ['get', 'cabin_num'], -9999]);
   if (window.innerWidth <= 800) openSidebar();
@@ -535,12 +560,14 @@ Promise.all([
   fetch(DATA_URL).then(r => r.json()),
   fetch(CERAMICS_URL).then(r => r.json()).catch(() => ({})),
   fetch(CABINS_URL).then(r => r.json()),
-  fetch(CABIN_LINKS_URL).then(r => r.json()).catch(() => ({}))
-]).then(([data, ceramicJson, cabinJson, cabinLinkJson]) => {
+  fetch(CABIN_LINKS_URL).then(r => r.json()).catch(() => ({})),
+  fetch(TU_CONTEXT_PHOTOS_URL).then(r => r.json()).catch(() => ({}))
+]).then(([data, ceramicJson, cabinJson, cabinLinkJson, tuContextJson]) => {
   sourceData = data;
   ceramicsData = ceramicJson || {};
   cabinsData = cabinJson;
   cabinLinks = cabinLinkJson || {};
+  tuContextPhotos = tuContextJson || {};
 
   map.on('load', () => {
     map.addSource('tu-data', { type: 'geojson', data });
