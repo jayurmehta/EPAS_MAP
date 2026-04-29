@@ -406,3 +406,47 @@ button {
     max-height: 40%;
   }
 }
+
+
+/* v16 visibility fixes */
+.context-url-note {
+  margin-top: 4px;
+  color: #777;
+  font-size: 0.78rem;
+}
+
+.church-context-panel {
+  position: fixed !important;
+  top: 76px !important;
+  right: 16px !important;
+  width: 270px;
+  max-height: calc(100vh - 104px);
+  overflow-y: auto;
+  z-index: 9998 !important;
+  background: rgba(255,255,255,0.98);
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.28);
+}
+
+.church-context-panel.hidden {
+  display: none !important;
+}
+
+.church-context-panel img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .church-context-panel {
+    top: auto !important;
+    bottom: 14px !important;
+    right: 14px !important;
+    width: min(72vw, 250px);
+    max-height: 42vh;
+  }
+}

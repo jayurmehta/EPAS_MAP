@@ -22,5 +22,19 @@
     "example": "13 2.JPG",
     "church_photo": "Church Excavation.JPG",
     "church_photo_shown_for_tus": "2-10"
+  },
+  "v16_visibility_fix": {
+    "cache_busting": [
+      "style.css?v=16",
+      "app.js?v=16"
+    ],
+    "tu_level_photo_filenames_tried": [
+      "{tu} {level}.JPG",
+      "{tu} {level}.jpg",
+      "{tu}-{level}.JPG",
+      "TU{tu} {level}.JPG",
+      "TU{tu} Level {level}.JPG"
+    ],
+    "church_panel": "fixed overlay on body, shown for TU 2-10"
   }
 }

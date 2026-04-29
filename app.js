@@ -98,11 +98,23 @@ function imageUrls(photoId) {
 function tuLevelImageUrls(tu, level) {
   const cleanTU = String(tu).trim();
   const cleanLevel = String(level).trim();
-  const baseName = `${cleanTU} ${cleanLevel}`;
-  const encoded = encodeURIComponent(baseName);
+
+  // Primary expected filename: "13 2.JPG" for Test Unit 13, Level 2.
+  const primaryBase = `${cleanTU} ${cleanLevel}`;
+  const primary = encodeURIComponent(primaryBase);
+
+  // Fallbacks support common alternate naming conventions:
+  // "13-2.JPG", "TU13 2.JPG", and "TU13 Level 2.JPG".
+  const fallback1 = encodeURIComponent(`${cleanTU}-${cleanLevel}`);
+  const fallback2 = encodeURIComponent(`TU${cleanTU} ${cleanLevel}`);
+  const fallback3 = encodeURIComponent(`TU${cleanTU} Level ${cleanLevel}`);
+
   return {
-    display: `${IMAGE_BASE}${encoded}.JPG`,
-    fallback: `${IMAGE_BASE}${encoded}.jpg`,
+    display: `${IMAGE_BASE}${primary}.JPG`,
+    fallback: `${IMAGE_BASE}${primary}.jpg`,
+    fallback2: `${IMAGE_BASE}${fallback1}.JPG`,
+    fallback3: `${IMAGE_BASE}${fallback2}.JPG`,
+    fallback4: `${IMAGE_BASE}${fallback3}.JPG`,
     label: `TU ${cleanTU}, Level ${cleanLevel}`
   };
 }
@@ -145,10 +157,17 @@ function tuLevelPhotoBlock(tu, level) {
       <div class="tu-level-photo-title">Excavation context photo</div>
       <button class="photo-button context-photo-button" data-photo-label="${safeAttr(urls.label)}" data-photo-src="${safeAttr(urls.display)}" data-photo-fallback="${safeAttr(urls.fallback)}" type="button">
         <img src="${urls.display}" alt="${safeAttr(urls.label)}" loading="lazy"
-          onerror="this.onerror=null; this.src='${urls.fallback}'; this.onerror=function(){ this.closest('.tu-level-photo').classList.add('missing-context-photo'); };">
+          onerror="
+            if (!this.dataset.try1) { this.dataset.try1='1'; this.src='${urls.fallback}'; return; }
+            if (!this.dataset.try2) { this.dataset.try2='1'; this.src='${urls.fallback2}'; return; }
+            if (!this.dataset.try3) { this.dataset.try3='1'; this.src='${urls.fallback3}'; return; }
+            if (!this.dataset.try4) { this.dataset.try4='1'; this.src='${urls.fallback4}'; return; }
+            this.closest('.tu-level-photo').classList.add('missing-context-photo');
+          ">
       </button>
       <div class="photo-label">${urls.label}</div>
-      <div class="missing-context-note">No context photo found for ${urls.label}.</div>
+      <div class="small context-url-note">Expected filename: ${String(tu).trim()} ${String(level).trim()}.JPG</div>
+      <div class="missing-context-note">No context photo found for ${urls.label}. Tried: ${String(tu).trim()} ${String(level).trim()}.JPG, ${String(tu).trim()}-${String(level).trim()}.JPG, TU${String(tu).trim()} ${String(level).trim()}.JPG, TU${String(tu).trim()} Level ${String(level).trim()}.JPG.</div>
     </div>
   `;
 }
@@ -348,7 +367,7 @@ function ensureChurchPanel() {
   panel = document.createElement('aside');
   panel.id = 'churchContextPanel';
   panel.className = 'church-context-panel hidden';
-  document.getElementById('app').appendChild(panel);
+  document.body.appendChild(panel);
   return panel;
 }
 
@@ -365,6 +384,7 @@ function updateChurchPanel(tu) {
           onerror="this.onerror=null; this.src='${urls.fallback}';">
       </button>
       <div class="photo-label">Church Excavation.JPG</div>
+      <div class="small context-url-note">Expected filename: Church Excavation.JPG</div>
     `;
     panel.classList.remove('hidden');
   } else {
