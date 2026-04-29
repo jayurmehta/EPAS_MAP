@@ -2,9 +2,9 @@ const DATA_URL = 'tu_summary.geojson';
 const CERAMICS_URL = 'ceramics_2021_tu_1_13.json';
 const CABINS_URL = 'cabins.geojson';
 const CABIN_LINKS_URL = 'cabin_links.json';
+const IMAGE_BASE = 'https://pub-ab138914e68b46c9b202d08c2017af1b.r2.dev/';
 const FIELD_LABELS = window.FIELD_LABELS || {};
 const FILTER_FIELDS = window.FILTER_FIELDS || [];
-const IMAGE_BASE = "https://pub-ab138914e68b46c9b202d08c2017af1b.r2.dev/";
 
 const artifactSelect = document.getElementById('artifact');
 const minRange = document.getElementById('minrange');
@@ -24,6 +24,8 @@ let ceramicsData = {};
 let cabinsData = null;
 let cabinLinks = {};
 let selectedCabin = null;
+let currentGallery = [];
+let currentGalleryIndex = 0;
 
 const noneOpt = document.createElement('option');
 noneOpt.value = '';
@@ -72,20 +74,122 @@ function getBoundsFromGeoJSON(data) {
   const bounds = new maplibregl.LngLatBounds();
   data.features.forEach(f => {
     const geom = f.geometry;
-    if (geom.type === 'Polygon') {
-      geom.coordinates[0].forEach(coord => bounds.extend(coord));
-    } else if (geom.type === 'MultiPolygon') {
-      geom.coordinates.forEach(poly => poly[0].forEach(coord => bounds.extend(coord)));
-    }
+    if (geom.type === 'Polygon') geom.coordinates[0].forEach(coord => bounds.extend(coord));
+    else if (geom.type === 'MultiPolygon') geom.coordinates.forEach(poly => poly[0].forEach(coord => bounds.extend(coord)));
   });
   return bounds;
+}
+
+function imageUrls(photoId) {
+  if (!photoId) return null;
+  const baseName = String(photoId).trim().replace(/-/g, ' ');
+  const encoded = encodeURIComponent(baseName);
+  return {
+    display: `${IMAGE_BASE}${encoded}.JPG`,
+    fallback: `${IMAGE_BASE}${encoded}.jpg`,
+    label: String(photoId).trim()
+  };
+}
+
+function safeAttr(value) {
+  return String(value ?? '').replace(/"/g, '&quot;');
+}
+
+function photoBlock(photoId, galleryIndex = null) {
+  if (!photoId) {
+    return `<div class="no-photo">No photo available</div>`;
+  }
+
+  const urls = imageUrls(photoId);
+  const idxAttr = galleryIndex !== null ? `data-gallery-index="${galleryIndex}"` : '';
+
+  return `
+    <div class="artifact-photo">
+      <button class="photo-button" ${idxAttr} data-photo-label="${safeAttr(urls.label)}" data-photo-src="${safeAttr(urls.display)}" data-photo-fallback="${safeAttr(urls.fallback)}" type="button">
+        <img src="${urls.display}" alt="Artifact ${safeAttr(urls.label)}" loading="lazy"
+          onerror="this.onerror=null; this.src='${urls.fallback}';">
+      </button>
+      <div class="photo-label">Photo ID: ${urls.label}</div>
+    </div>
+  `;
+}
+
+function collectCeramicPhotos(tu) {
+  const ceramic = ceramicsData[String(tu)];
+  if (!ceramic) return [];
+  const photos = [];
+
+  ceramic.levels.forEach(levelObj => {
+    levelObj.records.forEach(r => {
+      if (!r.photo_id) return;
+      const urls = imageUrls(r.photo_id);
+      photos.push({
+        photo_id: r.photo_id,
+        display: urls.display,
+        fallback: urls.fallback,
+        level: levelObj.level,
+        count: r.count,
+        type: r.type,
+        chronology: r.chronology,
+        vessel_portion: r.vessel_portion,
+        vessel_form: r.vessel_form
+      });
+    });
+  });
+
+  return photos;
+}
+
+function buildGalleryHTML(tu) {
+  const photos = collectCeramicPhotos(tu);
+  currentGallery = photos;
+
+  if (!photos.length) {
+    return `
+      <div class="gallery-block">
+        <h3>Artifact Photo Gallery</h3>
+        <div class="no-photo">No linked artifact photos are available for this test unit yet.</div>
+      </div>
+    `;
+  }
+
+  const thumbs = photos.map((p, i) => {
+    return `
+      <button class="gallery-thumb" data-gallery-index="${i}" type="button" title="${safeAttr(p.photo_id)}">
+        <img src="${p.display}" alt="Artifact ${safeAttr(p.photo_id)}" loading="lazy"
+          onerror="this.onerror=null; this.src='${p.fallback}';">
+        <span>${p.photo_id}</span>
+      </button>
+    `;
+  }).join('');
+
+  return `
+    <div class="gallery-block">
+      <h3>Artifact Photo Gallery</h3>
+      <div class="small">${photos.length} linked photo${photos.length === 1 ? '' : 's'} for this test unit.</div>
+      <div class="gallery-grid">${thumbs}</div>
+    </div>
+  `;
 }
 
 function buildCeramicsHTML(tu) {
   const ceramic = ceramicsData[String(tu)];
   if (!ceramic) {
-    return '<div class="ceramics-block"><h3>2021 Analyzed Ceramics</h3><div class="empty-state">No analyzed ceramic records linked yet for this test unit.</div></div>';
+    return `
+      <div class="ceramics-block">
+        <h3>2021 Analyzed Ceramics</h3>
+        <div class="empty-state">No analyzed ceramic records linked yet for this test unit.</div>
+      </div>
+      ${buildGalleryHTML(tu)}
+    `;
   }
+
+  const photos = collectCeramicPhotos(tu);
+  const galleryIndexByPhoto = {};
+  photos.forEach((p, i) => {
+    if (!(p.photo_id in galleryIndexByPhoto)) galleryIndexByPhoto[p.photo_id] = i;
+  });
+
   const levelHtml = ceramic.levels.map(levelObj => {
     const recs = levelObj.records.map(r => {
       const parts = [];
@@ -94,31 +198,11 @@ function buildCeramicsHTML(tu) {
       if (r.chronology) parts.push(`<strong>Chronology:</strong> ${r.chronology}`);
       if (r.vessel_portion) parts.push(`<strong>Vessel Portion:</strong> ${r.vessel_portion}`);
       if (r.vessel_form) parts.push(`<strong>Vessel Form:</strong> ${r.vessel_form}`);
-      if (r.photo_id) {
-  // Convert EPAS2021-399 → EPAS2021 399
-        const baseName = r.photo_id.replace("-", " ");
-
-  // Encode for URL (space → %20)
-        const encoded = encodeURIComponent(baseName);
-
-  // Try both JPG and jpg automatically
-        const imgJPG = `https://pub-ab138914e68b46c9b202d08c2017af1b.r2.dev/${encoded}.JPG`;
-        const imgjpg = `https://pub-ab138914e68b46c9b202d08c2017af1b.r2.dev/${encoded}.jpg`;
-       
-        parts.push(`
-          <div class="artifact-photo">
-            <img 
-            src="${imgJPG}" 
-            alt="Artifact ${r.photo_id}" 
-            loading="lazy"
-            onerror="this.onerror=null; this.src='${imgjpg}';"
-          >
-          <div class="photo-label">Photo ID: ${r.photo_id}</div>
-        </div>
-      `);
-    }
+      const photoHtml = r.photo_id ? photoBlock(r.photo_id, galleryIndexByPhoto[r.photo_id]) : `<div class="no-photo">No photo available</div>`;
+      parts.push(photoHtml);
       return `<li class="ceramic-record">${parts.join('<br>')}</li>`;
     }).join('');
+
     return `
       <div class="ceramic-level">
         <div class="ceramic-level-title">Level ${levelObj.level}</div>
@@ -134,6 +218,7 @@ function buildCeramicsHTML(tu) {
       <div class="small">Records: ${ceramic.record_count} | Count total: ${ceramic.total_count}</div>
       ${levelHtml}
     </div>
+    ${buildGalleryHTML(tu)}
   `;
 }
 
@@ -166,12 +251,13 @@ function buildCabinSelectionHTML(props) {
   const link = cabinLinks[String(cabinNum)] || null;
   const cabinId = props.cabin_id || (link ? link.cabin_id : 'Unknown');
   const isLong = props.is_long || (link ? link.is_long : 'no');
-  const ptCount = props.pt_count ?? '';
   const nearby = link ? link.nearby_tus : [];
   const topCats = link ? link.top_categories : [];
+
   const nearbyHtml = nearby.length
     ? `<ul class="selection-list">${nearby.map(t => `<li><strong>TU ${t.tu}</strong> (${t.distance_m} m away) — Total artifacts: ${t.all_total}</li>`).join('')}</ul>`
     : `<div class="empty-state">No nearby test units linked.</div>`;
+
   const catsHtml = topCats.length
     ? `<ul class="selection-list">${topCats.map(c => `<li><strong>${c.label}:</strong> ${c.count}</li>`).join('')}</ul>`
     : `<div class="empty-state">No aggregated artifact categories available.</div>`;
@@ -182,7 +268,6 @@ function buildCabinSelectionHTML(props) {
     <h3>Cabin Information</h3>
     <ul class="selection-list">
       <li><strong>Long Cabin:</strong> ${isLong}</li>
-      <li><strong>Source Point Count:</strong> ${ptCount}</li>
     </ul>
     <h3>Nearby Test Units</h3>
     ${nearbyHtml}
@@ -191,21 +276,41 @@ function buildCabinSelectionHTML(props) {
   `;
 }
 
+function bindPhotoButtons() {
+  const buttons = selectionContent.querySelectorAll('.photo-button, .gallery-thumb');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = btn.getAttribute('data-gallery-index');
+      if (idx !== null && idx !== undefined && idx !== '') {
+        openLightbox(Number(idx));
+      } else {
+        const src = btn.getAttribute('data-photo-src');
+        const fallback = btn.getAttribute('data-photo-fallback');
+        const label = btn.getAttribute('data-photo-label');
+        openLightboxDirect(src, fallback, label);
+      }
+    });
+  });
+}
+
 function showTUSelection(props) {
   selectionContent.innerHTML = buildTUSelectionHTML(props);
+  bindPhotoButtons();
+
   selectedTU = Number(props.tu ?? -9999);
   selectedCabin = null;
-  map.setFilter('tu-selected', ['==', ['get', 'tu'], selectedTU]);
-  map.setFilter('cabin-selected', ['==', ['get', 'cabin_num'], -9999]);
+  if (map.getLayer('tu-selected')) map.setFilter('tu-selected', ['==', ['get', 'tu'], selectedTU]);
+  if (map.getLayer('cabin-selected')) map.setFilter('cabin-selected', ['==', ['get', 'cabin_num'], -9999]);
   if (window.innerWidth <= 800) openSidebar();
 }
 
 function showCabinSelection(props) {
   selectionContent.innerHTML = buildCabinSelectionHTML(props);
+  currentGallery = [];
   selectedCabin = Number(props.cabin_num ?? -9999);
   selectedTU = null;
-  map.setFilter('tu-selected', ['==', ['get', 'tu'], -9999]);
-  map.setFilter('cabin-selected', ['==', ['get', 'cabin_num'], selectedCabin]);
+  if (map.getLayer('tu-selected')) map.setFilter('tu-selected', ['==', ['get', 'tu'], -9999]);
+  if (map.getLayer('cabin-selected')) map.setFilter('cabin-selected', ['==', ['get', 'cabin_num'], selectedCabin]);
   if (window.innerWidth <= 800) openSidebar();
 }
 
@@ -217,6 +322,7 @@ function updateSummary() {
     summaryText.innerHTML = `Showing all ${feats.length} test units and ${cabinCount} cabins.`;
     return;
   }
+
   const visible = feats.filter(f => Number(f.properties[currentField] || 0) >= currentMin);
   const total = visible.reduce((sum, f) => sum + Number(f.properties[currentField] || 0), 0);
   summaryText.innerHTML = `
@@ -249,21 +355,115 @@ function closeSidebar() {
   toggleSidebar.textContent = '⟩';
   floatingOpenBtn.classList.remove('hidden');
 }
+
 function openSidebar() {
   sidebar.classList.remove('closed');
   toggleSidebar.textContent = '⟨';
   floatingOpenBtn.classList.add('hidden');
 }
+
 function toggleSidebarState() {
   if (sidebar.classList.contains('closed')) openSidebar();
   else closeSidebar();
+}
+
+function ensureLightbox() {
+  let lb = document.getElementById('lightbox');
+  if (lb) return lb;
+
+  lb = document.createElement('div');
+  lb.id = 'lightbox';
+  lb.className = 'lightbox hidden';
+  lb.innerHTML = `
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">‹</button>
+      <img id="lightboxImage" src="" alt="">
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">›</button>
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+  `;
+  document.body.appendChild(lb);
+
+  lb.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+  lb.querySelector('.lightbox-backdrop').addEventListener('click', closeLightbox);
+  lb.querySelector('.lightbox-prev').addEventListener('click', () => moveLightbox(-1));
+  lb.querySelector('.lightbox-next').addEventListener('click', () => moveLightbox(1));
+
+  document.addEventListener('keydown', e => {
+    if (lb.classList.contains('hidden')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') moveLightbox(-1);
+    if (e.key === 'ArrowRight') moveLightbox(1);
+  });
+
+  return lb;
+}
+
+function openLightbox(index) {
+  if (!currentGallery.length) return;
+  currentGalleryIndex = Math.max(0, Math.min(index, currentGallery.length - 1));
+  renderLightbox();
+}
+
+function openLightboxDirect(src, fallback, label) {
+  currentGallery = [{
+    photo_id: label,
+    display: src,
+    fallback: fallback,
+    type: '',
+    chronology: '',
+    vessel_portion: '',
+    vessel_form: '',
+    level: ''
+  }];
+  currentGalleryIndex = 0;
+  renderLightbox();
+}
+
+function renderLightbox() {
+  const lb = ensureLightbox();
+  const item = currentGallery[currentGalleryIndex];
+  const img = document.getElementById('lightboxImage');
+  const caption = document.getElementById('lightboxCaption');
+
+  img.src = item.display;
+  img.onerror = function() {
+    this.onerror = null;
+    this.src = item.fallback;
+  };
+  img.alt = `Artifact ${item.photo_id}`;
+
+  const details = [
+    item.photo_id ? `<strong>${item.photo_id}</strong>` : '',
+    item.level ? `Level ${item.level}` : '',
+    item.type ? item.type : '',
+    item.chronology ? item.chronology : '',
+    item.vessel_portion ? `Portion: ${item.vessel_portion}` : '',
+    item.vessel_form ? `Form: ${item.vessel_form}` : ''
+  ].filter(Boolean).join(' · ');
+
+  caption.innerHTML = `${details}<br><span>${currentGalleryIndex + 1} of ${currentGallery.length}</span>`;
+  lb.classList.remove('hidden');
+}
+
+function moveLightbox(delta) {
+  if (!currentGallery.length) return;
+  currentGalleryIndex = (currentGalleryIndex + delta + currentGallery.length) % currentGallery.length;
+  renderLightbox();
+}
+
+function closeLightbox() {
+  const lb = ensureLightbox();
+  lb.classList.add('hidden');
 }
 
 Promise.all([
   fetch(DATA_URL).then(r => r.json()),
   fetch(CERAMICS_URL).then(r => r.json()).catch(() => ({})),
   fetch(CABINS_URL).then(r => r.json()),
-  fetch(CABIN_LINKS_URL).then(r => r.json())
+  fetch(CABIN_LINKS_URL).then(r => r.json()).catch(() => ({}))
 ]).then(([data, ceramicJson, cabinJson, cabinLinkJson]) => {
   sourceData = data;
   ceramicsData = ceramicJson || {};
@@ -276,13 +476,10 @@ Promise.all([
 
     map.addLayer({ id: 'tu-fill', type: 'fill', source: 'tu-data', paint: { 'fill-color': '#cfcfcf', 'fill-opacity': 0.45 } });
     map.addLayer({ id: 'tu-outline', type: 'line', source: 'tu-data', paint: { 'line-color': '#333', 'line-width': 1.1 } });
-
     map.addLayer({ id: 'cabins-fill', type: 'fill', source: 'cabins-data', paint: { 'fill-color': '#8c5a2b', 'fill-opacity': 0.5 } });
     map.addLayer({ id: 'cabins-outline', type: 'line', source: 'cabins-data', paint: { 'line-color': '#6d431e', 'line-width': 1.4 } });
-
     map.addLayer({ id: 'tu-hover', type: 'line', source: 'tu-data', paint: { 'line-color': '#ff7f00', 'line-width': 3 }, filter: ['==', ['get', 'tu'], -9999] });
     map.addLayer({ id: 'tu-selected', type: 'line', source: 'tu-data', paint: { 'line-color': '#b30000', 'line-width': 3.5 }, filter: ['==', ['get', 'tu'], -9999] });
-
     map.addLayer({ id: 'cabin-hover', type: 'line', source: 'cabins-data', paint: { 'line-color': '#f0d264', 'line-width': 3 }, filter: ['==', ['get', 'cabin_num'], -9999] });
     map.addLayer({ id: 'cabin-selected', type: 'line', source: 'cabins-data', paint: { 'line-color': '#2a6fdb', 'line-width': 3.5 }, filter: ['==', ['get', 'cabin_num'], -9999] });
 
@@ -294,8 +491,7 @@ Promise.all([
 
     map.on('mousemove', 'tu-fill', e => {
       map.getCanvas().style.cursor = 'pointer';
-      const tu = Number(e.features[0].properties.tu ?? -9999);
-      map.setFilter('tu-hover', ['==', ['get', 'tu'], tu]);
+      map.setFilter('tu-hover', ['==', ['get', 'tu'], Number(e.features[0].properties.tu ?? -9999)]);
     });
     map.on('mouseleave', 'tu-fill', () => {
       map.getCanvas().style.cursor = '';
@@ -305,8 +501,7 @@ Promise.all([
 
     map.on('mousemove', 'cabins-fill', e => {
       map.getCanvas().style.cursor = 'pointer';
-      const cabinNum = Number(e.features[0].properties.cabin_num ?? -9999);
-      map.setFilter('cabin-hover', ['==', ['get', 'cabin_num'], cabinNum]);
+      map.setFilter('cabin-hover', ['==', ['get', 'cabin_num'], Number(e.features[0].properties.cabin_num ?? -9999)]);
     });
     map.on('mouseleave', 'cabins-fill', () => {
       map.getCanvas().style.cursor = '';
@@ -322,7 +517,12 @@ Promise.all([
 artifactSelect.addEventListener('change', e => { currentField = e.target.value; applyFilter(); });
 minRange.addEventListener('input', e => { currentMin = Number(e.target.value); minVal.textContent = currentMin; applyFilter(); });
 resetBtn.addEventListener('click', () => {
-  currentField = ''; currentMin = 0; artifactSelect.value = ''; minRange.value = 0; minVal.textContent = '0'; applyFilter();
+  currentField = '';
+  currentMin = 0;
+  artifactSelect.value = '';
+  minRange.value = 0;
+  minVal.textContent = '0';
+  applyFilter();
 });
 toggleSidebar.addEventListener('click', toggleSidebarState);
 floatingOpenBtn.addEventListener('click', openSidebar);

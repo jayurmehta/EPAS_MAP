@@ -1,10 +1,10 @@
-Evergreen MapLibre Package v9
+Evergreen MapLibre Package v11
 
 New in this version:
-- Uses the uploaded authoritative cabin polygon shapefile
-- Cabins are linked to nearby test units (3 nearest)
-- Clicking a cabin shows:
-  - cabin information
-  - nearby test units
-  - aggregated artifact summary from those nearby test units
-- Test unit clicks still show test unit artifact summaries and 2021 ceramics
+- Option A: click-to-enlarge lightbox for artifact images
+- Option B: explicit "No photo available" message for ceramic records without linked photos
+- Option C: per-test-unit artifact photo gallery in the side panel
+- Still uses the Photo? column as the photo source
+- Still maps IDs like EPAS2021-399 to filenames like EPAS2021 399.JPG / .jpg on Cloudflare R2
+
+Upload/replace all files in your EPAS_MAP GitHub repository, then commit changes.

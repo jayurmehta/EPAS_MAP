@@ -3,7 +3,7 @@
     "tu": 1,
     "levels": [
       {
-        "level": "1900-01-02 00:00:00",
+        "level": "2",
         "records": [
           {
             "count": 1,
@@ -98,7 +98,7 @@
         "level_record_count": 11
       },
       {
-        "level": "1900-01-03 00:00:00",
+        "level": "3",
         "records": [
           {
             "count": 1,
@@ -120,7 +120,7 @@
     "tu": 3,
     "levels": [
       {
-        "level": "1900-01-01 00:00:00",
+        "level": "1",
         "records": [
           {
             "count": 1,
@@ -142,7 +142,7 @@
     "tu": 4,
     "levels": [
       {
-        "level": "1900-01-02 00:00:00",
+        "level": "2",
         "records": [
           {
             "count": 1,
@@ -164,7 +164,7 @@
     "tu": 7,
     "levels": [
       {
-        "level": "1900-01-02 00:00:00",
+        "level": "2",
         "records": [
           {
             "count": 1,
@@ -194,7 +194,7 @@
     "tu": 9,
     "levels": [
       {
-        "level": "1900-01-02 00:00:00",
+        "level": "2",
         "records": [
           {
             "count": 1,
@@ -240,7 +240,7 @@
     "tu": 10,
     "levels": [
       {
-        "level": "1900-01-02 00:00:00",
+        "level": "2",
         "records": [
           {
             "count": 1,
@@ -303,14 +303,7 @@
             "vessel_portion": "body",
             "vessel_form": "bowl",
             "photo_id": "EPAS2021-886-887"
-          }
-        ],
-        "level_total_count": 3,
-        "level_record_count": 3
-      },
-      {
-        "level": "1900-01-01 00:00:00",
-        "records": [
+          },
           {
             "count": 1,
             "type": "whiteware",
@@ -320,8 +313,8 @@
             "photo_id": "EPAS2021-888-889"
           }
         ],
-        "level_total_count": 1,
-        "level_record_count": 1
+        "level_total_count": 4,
+        "level_record_count": 4
       }
     ],
     "record_count": 4,
@@ -331,7 +324,7 @@
     "tu": 13,
     "levels": [
       {
-        "level": "1900-01-01 00:00:00",
+        "level": "1",
         "records": [
           {
             "count": 1,
