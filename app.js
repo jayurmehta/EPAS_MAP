@@ -2,7 +2,7 @@ const DATA_URL = 'tu_summary.geojson';
 const CERAMICS_URL = 'ceramics_2021_tu_1_13.json';
 const CABINS_URL = 'cabins.geojson';
 const CABIN_LINKS_URL = 'cabin_links.json';
-const TU_CONTEXT_PHOTOS_URL = 'tu_context_photos.json';
+const TU_CONTEXT_PHOTOS_URL = 'tu_context_photos.json?v=18';
 const IMAGE_BASE = 'https://pub-ab138914e68b46c9b202d08c2017af1b.r2.dev/';
 const FIELD_LABELS = window.FIELD_LABELS || {};
 const FILTER_FIELDS = window.FILTER_FIELDS || [];
@@ -186,12 +186,14 @@ function collectTUContextPhotos(tu) {
 }
 
 function buildTUContextGalleryHTML(tu) {
-  const photos = collectTUContextPhotos(tu);
+  const tuKey = String(tu).replace(/^TU/i, '').trim();
+  const photos = collectTUContextPhotos(tuKey);
+
   if (!photos.length) {
     return `
       <div class="tu-context-gallery">
         <h3>Test Unit Photos</h3>
-        <div class="no-photo">No test unit photos are listed for this unit.</div>
+        <div class="no-photo">No test unit photos are listed for Test Unit ${tuKey}.</div>
       </div>
     `;
   }
@@ -207,7 +209,7 @@ function buildTUContextGalleryHTML(tu) {
   return `
     <div class="tu-context-gallery">
       <h3>Test Unit Photos</h3>
-      <div class="small">${photos.length} context photo${photos.length === 1 ? '' : 's'} for Test Unit ${tu}.</div>
+      <div class="small">${photos.length} context photo${photos.length === 1 ? '' : 's'} for Test Unit ${tuKey}.</div>
       <div class="tu-context-grid">${thumbs}</div>
     </div>
   `;
@@ -301,19 +303,20 @@ function buildTUSelectionHTML(props) {
   });
   entries.sort((a, b) => b.value - a.value);
 
-  const tu = props.tu ?? props.TestUnit ?? 'Unknown';
+  const tu = props.tu ?? props.TestUnit ?? props.TU ?? props.test_unit ?? 'Unknown';
+  const tuKey = String(tu).replace(/^TU/i, '').trim();
   const total = Number(props.all_total || 0);
   const assemblageHtml = entries.length
     ? `<ul class="selection-list">${entries.map(e => `<li><strong>${e.label}:</strong> ${e.value}</li>`).join('')}</ul>`
     : `<div class="empty-state">No nonzero artifact categories recorded for this unit.</div>`;
 
   return `
-    <div class="selection-title">Test Unit ${tu}</div>
+    <div class="selection-title">Test Unit ${tuKey}</div>
     <div class="selection-total">Total artifacts: ${total}</div>
-    ${buildTUContextGalleryHTML(tu)}
+    ${buildTUContextGalleryHTML(tuKey)}
     <h3>Artifact Category Summary</h3>
     ${assemblageHtml}
-    ${buildCeramicsHTML(tu)}
+    ${buildCeramicsHTML(tuKey)}
   `;
 }
 
@@ -410,11 +413,16 @@ function updateChurchPanel(tu) {
 }
 
 function showTUSelection(props) {
+  const rawTU = props.tu ?? props.TestUnit ?? props.TU ?? props.test_unit ?? -9999;
+  const tuKey = String(rawTU).replace(/^TU/i, '').trim();
+  const tuNumber = Number(tuKey);
+
   selectionContent.innerHTML = buildTUSelectionHTML(props);
-  selectedTU = Number(props.tu ?? -9999);
+  selectedTU = tuNumber;
   selectedCabin = null;
-  updateChurchPanel(selectedTU);
+  updateChurchPanel(tuNumber);
   bindPhotoButtons();
+
   if (map.getLayer('tu-selected')) map.setFilter('tu-selected', ['==', ['get', 'tu'], selectedTU]);
   if (map.getLayer('cabin-selected')) map.setFilter('cabin-selected', ['==', ['get', 'cabin_num'], -9999]);
   if (window.innerWidth <= 800) openSidebar();

@@ -95,5 +95,10 @@
     ],
     "church_panel_close_button": true,
     "church_panel_tus": "2-10"
+  },
+  "v18_fix": {
+    "tu_photos_independent_of_ceramics": true,
+    "tu_context_source": "tu_context_photos.json?v=18",
+    "normalized_tu_key": "props.tu / TestUnit / TU / test_unit -> string without TU prefix"
   }
 }
