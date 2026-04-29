@@ -326,3 +326,83 @@ button {
     width: 36px;
   }
 }
+
+
+.ceramic-context-line {
+  margin-bottom: 4px;
+  color: #444;
+}
+
+.tu-level-photo {
+  margin: 10px 0 12px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.tu-level-photo-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.tu-level-photo img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  display: block;
+}
+
+.missing-context-note {
+  display: none;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+.missing-context-photo .photo-button,
+.missing-context-photo .photo-label {
+  display: none;
+}
+
+.missing-context-photo .missing-context-note {
+  display: block;
+}
+
+.church-context-panel {
+  position: absolute;
+  top: 72px;
+  right: 14px;
+  width: 260px;
+  max-height: calc(100% - 100px);
+  overflow-y: auto;
+  z-index: 3;
+  background: rgba(255,255,255,0.96);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.2);
+}
+
+.church-context-panel h3 {
+  margin-top: 0;
+}
+
+.church-context-panel img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .church-context-panel {
+    position: absolute;
+    top: auto;
+    bottom: 12px;
+    right: 12px;
+    width: min(72vw, 240px);
+    max-height: 40%;
+  }
+}

@@ -1,15 +1,16 @@
-Evergreen MapLibre v14 PHOTOID Package
+Evergreen MapLibre v15 — Test Unit Level Photos
 
-This is the corrected package.
-
-Verified:
-- Uses PHOTOID1 column: PHOTOID1
-- Uses PHOTOID2 column: PHOTOID2
-- Does NOT use Photo? as the photo source
-- Stores images as clean photo_ids arrays in ceramics_2021_tu_1_13.json
-- Keeps Cloudflare R2 image loading, gallery, lightbox, no-photo messages, cabin layer, and cabin-to-TU links
-
-Debug summary:
-- Filtered ceramic rows: 64
-- TUs with ceramic records: ['1', '3', '4', '7', '9', '10', '12', '13']
-- Total linked photo IDs from PHOTOID1/PHOTOID2: 44
+New in this version:
+- Test unit context photos are displayed by level.
+- TU-level context photo filenames are expected to be:
+  - "1 1.JPG" for Test Unit 1, Level 1
+  - "13 2.JPG" for Test Unit 13, Level 2
+- The viewer automatically tries .JPG first and .jpg second.
+- Ceramic records now explicitly display their context as Test Unit + Level.
+- For TUs 2–10, the viewer shows "Church Excavation.JPG" in a floating right-side panel.
+- Existing behavior preserved:
+  - artifact photos from PHOTOID1/PHOTOID2
+  - artifact gallery
+  - lightbox image viewer
+  - cabin layer
+  - cabin-to-nearby-TU links

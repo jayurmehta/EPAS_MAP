@@ -16,5 +16,11 @@
     "13"
   ],
   "photo_id_count": 44,
-  "verified_uses_PHOTOID1_PHOTOID2": true
+  "verified_uses_PHOTOID1_PHOTOID2": true,
+  "v15_context_photos": {
+    "tu_level_photo_pattern": "{test_unit} {level}.JPG",
+    "example": "13 2.JPG",
+    "church_photo": "Church Excavation.JPG",
+    "church_photo_shown_for_tus": "2-10"
+  }
 }
