@@ -1,16 +1,15 @@
-Evergreen MapLibre Package v13 Rebuilt
+Evergreen MapLibre v14 PHOTOID Package
 
-This package uses a clean photo_ids array for each ceramic record and simplified viewer code.
+This is the corrected package.
 
-Important note:
-The uploaded workbook did not include PHOTOID1 / PHOTOID2 headers. I normalized the existing Photo? column into photo_ids so the viewer still uses the simplified schema.
+Verified:
+- Uses PHOTOID1 column: PHOTOID1
+- Uses PHOTOID2 column: PHOTOID2
+- Does NOT use Photo? as the photo source
+- Stores images as clean photo_ids arrays in ceramics_2021_tu_1_13.json
+- Keeps Cloudflare R2 image loading, gallery, lightbox, no-photo messages, cabin layer, and cabin-to-TU links
 
 Debug summary:
-- Source package used: evergreen_maplibre_v11.zip
-- Sheet used: Ceramics
-- Photo source used: Photo?
 - Filtered ceramic rows: 64
 - TUs with ceramic records: ['1', '3', '4', '7', '9', '10', '12', '13']
-- Total linked photo IDs: 58
-
-Upload/replace all files in your EPAS_MAP GitHub repository, then commit changes.
+- Total linked photo IDs from PHOTOID1/PHOTOID2: 44

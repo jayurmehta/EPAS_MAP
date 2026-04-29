@@ -7,17 +7,6 @@
         "records": [
           {
             "count": 1,
-            "type": "porcelain",
-            "chronology": "1660+",
-            "vessel_portion": "rim",
-            "vessel_form": "saucer",
-            "photo_ids": [
-              "EPAS2021-374",
-              "EPAS2021-375"
-            ]
-          },
-          {
-            "count": 1,
             "type": "pearlware",
             "chronology": "1775-1830",
             "vessel_portion": "base",
@@ -25,6 +14,17 @@
             "photo_ids": [
               "EPAS2021-372",
               "EPAS2021-373"
+            ]
+          },
+          {
+            "count": 1,
+            "type": "porcelain",
+            "chronology": "1660+",
+            "vessel_portion": "rim",
+            "vessel_form": "saucer",
+            "photo_ids": [
+              "EPAS2021-374",
+              "EPAS2021-375"
             ]
           },
           {
@@ -189,7 +189,10 @@
             "chronology": "1720-1750",
             "vessel_portion": "stem",
             "vessel_form": "",
-            "photo_ids": []
+            "photo_ids": [
+              "EPAS2021-57",
+              "EPAS2021-58"
+            ]
           }
         ],
         "level_total_count": 1,
@@ -212,8 +215,7 @@
             "vessel_portion": "body",
             "vessel_form": "saucer",
             "photo_ids": [
-              "EPAS2021-675",
-              "EPAS2021-676"
+              "EPAS2021-675"
             ]
           },
           {
@@ -223,8 +225,7 @@
             "vessel_portion": "rim",
             "vessel_form": "plate",
             "photo_ids": [
-              "EPAS2021-677",
-              "EPAS2021-678"
+              "EPAS2021-677"
             ]
           }
         ],
@@ -248,8 +249,7 @@
             "vessel_portion": "body",
             "vessel_form": "plate",
             "photo_ids": [
-              "EPAS2021-727",
-              "EPAS2021-728"
+              "EPAS2021-727"
             ]
           },
           {
@@ -259,8 +259,7 @@
             "vessel_portion": "neck",
             "vessel_form": "bottle",
             "photo_ids": [
-              "EPAS2021-729",
-              "EPAS2021-730"
+              "EPAS2021-729"
             ]
           },
           {
@@ -270,8 +269,7 @@
             "vessel_portion": "body",
             "vessel_form": "UID",
             "photo_ids": [
-              "EPAS2021-749",
-              "EPAS2021-750"
+              "EPAS2021-749"
             ]
           },
           {
@@ -281,8 +279,7 @@
             "vessel_portion": "rim",
             "vessel_form": "cup",
             "photo_ids": [
-              "EPAS2021-751",
-              "EPAS2021-752"
+              "EPAS2021-751"
             ]
           }
         ],
@@ -306,8 +303,7 @@
             "vessel_portion": "body",
             "vessel_form": "cup",
             "photo_ids": [
-              "EPAS2021-1081",
-              "EPAS2021-1082"
+              "EPAS2021-1081"
             ]
           },
           {
@@ -317,8 +313,7 @@
             "vessel_portion": "rim",
             "vessel_form": "teacup",
             "photo_ids": [
-              "EPAS2021-1083",
-              "EPAS2021-1084"
+              "EPAS2021-1083"
             ]
           },
           {
@@ -328,8 +323,7 @@
             "vessel_portion": "",
             "vessel_form": "",
             "photo_ids": [
-              "EPAS2021-1085",
-              "EPAS2021-1086"
+              "EPAS2021-1085"
             ]
           }
         ],
@@ -353,8 +347,7 @@
             "vessel_portion": "rim",
             "vessel_form": "bowl",
             "photo_ids": [
-              "EPAS2021-882",
-              "EPAS2021-883"
+              "EPAS2021-882"
             ]
           },
           {
@@ -364,8 +357,7 @@
             "vessel_portion": "body",
             "vessel_form": "bowl",
             "photo_ids": [
-              "EPAS2021-884",
-              "EPAS2021-885"
+              "EPAS2021-884"
             ]
           },
           {
@@ -375,8 +367,7 @@
             "vessel_portion": "body",
             "vessel_form": "bowl",
             "photo_ids": [
-              "EPAS2021-886",
-              "EPAS2021-887"
+              "EPAS2021-886"
             ]
           },
           {
@@ -386,8 +377,7 @@
             "vessel_portion": "body",
             "vessel_form": "bowl",
             "photo_ids": [
-              "EPAS2021-888",
-              "EPAS2021-889"
+              "EPAS2021-888"
             ]
           }
         ],
@@ -690,8 +680,7 @@
             "vessel_portion": "rim",
             "vessel_form": "plate",
             "photo_ids": [
-              "EPAS2021-1067",
-              "EPAS2021-1068"
+              "EPAS2021-1067"
             ]
           },
           {
@@ -701,8 +690,7 @@
             "vessel_portion": "body",
             "vessel_form": "plate",
             "photo_ids": [
-              "EPAS2021-1069",
-              "EPAS2021-1070"
+              "EPAS2021-1069"
             ]
           },
           {
@@ -712,8 +700,7 @@
             "vessel_portion": "body",
             "vessel_form": "plate",
             "photo_ids": [
-              "EPAS2021-1071",
-              "EPAS2021-1072"
+              "EPAS2021-1071"
             ]
           }
         ],

@@ -58,9 +58,15 @@ const map = new maplibregl.Map({
 map.addControl(new maplibregl.NavigationControl(), 'top-right');
 
 function colorExpression(field) {
-  return ['interpolate', ['linear'], ['coalesce', ['get', field], 0],
-    0, '#f7fbff', 1, '#deebf7', 5, '#9ecae1', 20, '#6baed6',
-    50, '#3182bd', 100, '#08519c', 500, '#08306b'
+  return [
+    'interpolate', ['linear'], ['coalesce', ['get', field], 0],
+    0, '#f7fbff',
+    1, '#deebf7',
+    5, '#9ecae1',
+    20, '#6baed6',
+    50, '#3182bd',
+    100, '#08519c',
+    500, '#08306b'
   ];
 }
 
@@ -91,7 +97,10 @@ function safeAttr(value) {
 
 function photoBlock(photoIds, galleryIndexByPhoto = {}) {
   const ids = Array.isArray(photoIds) ? photoIds.filter(Boolean) : [];
-  if (!ids.length) return `<div class="no-photo">No photo available</div>`;
+  if (!ids.length) {
+    return `<div class="no-photo">No photo available</div>`;
+  }
+
   return ids.map(pid => {
     const urls = imageUrls(pid);
     const idx = galleryIndexByPhoto[pid];
@@ -99,16 +108,19 @@ function photoBlock(photoIds, galleryIndexByPhoto = {}) {
     return `
       <div class="artifact-photo">
         <button class="photo-button" ${idxAttr} data-photo-label="${safeAttr(urls.label)}" data-photo-src="${safeAttr(urls.display)}" data-photo-fallback="${safeAttr(urls.fallback)}" type="button">
-          <img src="${urls.display}" alt="Artifact ${safeAttr(urls.label)}" loading="lazy" onerror="this.onerror=null; this.src='${urls.fallback}';">
+          <img src="${urls.display}" alt="Artifact ${safeAttr(urls.label)}" loading="lazy"
+            onerror="this.onerror=null; this.src='${urls.fallback}';">
         </button>
         <div class="photo-label">Photo ID: ${urls.label}</div>
-      </div>`;
+      </div>
+    `;
   }).join('');
 }
 
 function collectCeramicPhotos(tu) {
   const ceramic = ceramicsData[String(tu)];
   if (!ceramic) return [];
+
   const photos = [];
   ceramic.levels.forEach(levelObj => {
     levelObj.records.forEach(r => {
@@ -129,6 +141,7 @@ function collectCeramicPhotos(tu) {
       });
     });
   });
+
   const seen = new Set();
   return photos.filter(p => {
     if (seen.has(p.photo_id)) return false;
@@ -140,22 +153,45 @@ function collectCeramicPhotos(tu) {
 function buildGalleryHTML(tu) {
   const photos = collectCeramicPhotos(tu);
   currentGallery = photos;
+
   if (!photos.length) {
-    return `<div class="gallery-block"><h3>Artifact Photo Gallery</h3><div class="no-photo">No linked artifact photos are available for this test unit yet.</div></div>`;
+    return `
+      <div class="gallery-block">
+        <h3>Artifact Photo Gallery</h3>
+        <div class="no-photo">No linked artifact photos are available for this test unit yet.</div>
+      </div>
+    `;
   }
+
   const thumbs = photos.map((p, i) => `
-    <button class="gallery-thumb" data-gallery-index="${i}" type="button" title="${safeAttr(p.photo_id)}">
-      <img src="${p.display}" alt="Artifact ${safeAttr(p.photo_id)}" loading="lazy" onerror="this.onerror=null; this.src='${p.fallback}';">
-      <span>${p.photo_id}</span>
-    </button>`).join('');
-  return `<div class="gallery-block"><h3>Artifact Photo Gallery</h3><div class="small">${photos.length} linked photo${photos.length === 1 ? '' : 's'} for this test unit.</div><div class="gallery-grid">${thumbs}</div></div>`;
+      <button class="gallery-thumb" data-gallery-index="${i}" type="button" title="${safeAttr(p.photo_id)}">
+        <img src="${p.display}" alt="Artifact ${safeAttr(p.photo_id)}" loading="lazy"
+          onerror="this.onerror=null; this.src='${p.fallback}';">
+        <span>${p.photo_id}</span>
+      </button>
+  `).join('');
+
+  return `
+    <div class="gallery-block">
+      <h3>Artifact Photo Gallery</h3>
+      <div class="small">${photos.length} linked photo${photos.length === 1 ? '' : 's'} for this test unit.</div>
+      <div class="gallery-grid">${thumbs}</div>
+    </div>
+  `;
 }
 
 function buildCeramicsHTML(tu) {
   const ceramic = ceramicsData[String(tu)];
   if (!ceramic) {
-    return `<div class="ceramics-block"><h3>2021 Analyzed Ceramics</h3><div class="empty-state">No analyzed ceramic records linked yet for this test unit.</div></div>${buildGalleryHTML(tu)}`;
+    return `
+      <div class="ceramics-block">
+        <h3>2021 Analyzed Ceramics</h3>
+        <div class="empty-state">No analyzed ceramic records linked yet for this test unit.</div>
+      </div>
+      ${buildGalleryHTML(tu)}
+    `;
   }
+
   const photos = collectCeramicPhotos(tu);
   const galleryIndexByPhoto = {};
   photos.forEach((p, i) => { galleryIndexByPhoto[p.photo_id] = i; });
@@ -171,10 +207,24 @@ function buildCeramicsHTML(tu) {
       parts.push(photoBlock(r.photo_ids, galleryIndexByPhoto));
       return `<li class="ceramic-record">${parts.join('<br>')}</li>`;
     }).join('');
-    return `<div class="ceramic-level"><div class="ceramic-level-title">Level ${levelObj.level}</div><div class="small">Records: ${levelObj.level_record_count} | Count total: ${levelObj.level_total_count}</div><ul class="ceramic-list">${recs}</ul></div>`;
+
+    return `
+      <div class="ceramic-level">
+        <div class="ceramic-level-title">Level ${levelObj.level}</div>
+        <div class="small">Records: ${levelObj.level_record_count} | Count total: ${levelObj.level_total_count}</div>
+        <ul class="ceramic-list">${recs}</ul>
+      </div>
+    `;
   }).join('');
 
-  return `<div class="ceramics-block"><h3>2021 Analyzed Ceramics</h3><div class="small">Records: ${ceramic.record_count} | Count total: ${ceramic.total_count}</div>${levelHtml}</div>${buildGalleryHTML(tu)}`;
+  return `
+    <div class="ceramics-block">
+      <h3>2021 Analyzed Ceramics</h3>
+      <div class="small">Records: ${ceramic.record_count} | Count total: ${ceramic.total_count}</div>
+      ${levelHtml}
+    </div>
+    ${buildGalleryHTML(tu)}
+  `;
 }
 
 function buildTUSelectionHTML(props) {
@@ -185,12 +235,20 @@ function buildTUSelectionHTML(props) {
     if (value > 0) entries.push({ label: FIELD_LABELS[field] || field, value });
   });
   entries.sort((a, b) => b.value - a.value);
+
   const tu = props.tu ?? props.TestUnit ?? 'Unknown';
   const total = Number(props.all_total || 0);
   const assemblageHtml = entries.length
     ? `<ul class="selection-list">${entries.map(e => `<li><strong>${e.label}:</strong> ${e.value}</li>`).join('')}</ul>`
     : `<div class="empty-state">No nonzero artifact categories recorded for this unit.</div>`;
-  return `<div class="selection-title">Test Unit ${tu}</div><div class="selection-total">Total artifacts: ${total}</div><h3>Artifact Category Summary</h3>${assemblageHtml}${buildCeramicsHTML(tu)}`;
+
+  return `
+    <div class="selection-title">Test Unit ${tu}</div>
+    <div class="selection-total">Total artifacts: ${total}</div>
+    <h3>Artifact Category Summary</h3>
+    ${assemblageHtml}
+    ${buildCeramicsHTML(tu)}
+  `;
 }
 
 function buildCabinSelectionHTML(props) {
@@ -200,13 +258,27 @@ function buildCabinSelectionHTML(props) {
   const isLong = props.is_long || (link ? link.is_long : 'no');
   const nearby = link ? link.nearby_tus : [];
   const topCats = link ? link.top_categories : [];
+
   const nearbyHtml = nearby.length
     ? `<ul class="selection-list">${nearby.map(t => `<li><strong>TU ${t.tu}</strong> (${t.distance_m} m away) — Total artifacts: ${t.all_total}</li>`).join('')}</ul>`
     : `<div class="empty-state">No nearby test units linked.</div>`;
+
   const catsHtml = topCats.length
     ? `<ul class="selection-list">${topCats.map(c => `<li><strong>${c.label}:</strong> ${c.count}</li>`).join('')}</ul>`
     : `<div class="empty-state">No aggregated artifact categories available.</div>`;
-  return `<div class="selection-title">Cabin ${cabinNum}</div><div class="selection-total">Cabin ID: ${cabinId}</div><h3>Cabin Information</h3><ul class="selection-list"><li><strong>Long Cabin:</strong> ${isLong}</li></ul><h3>Nearby Test Units</h3>${nearbyHtml}<h3>Aggregated Artifact Summary from Nearby Test Units</h3>${catsHtml}`;
+
+  return `
+    <div class="selection-title">Cabin ${cabinNum}</div>
+    <div class="selection-total">Cabin ID: ${cabinId}</div>
+    <h3>Cabin Information</h3>
+    <ul class="selection-list">
+      <li><strong>Long Cabin:</strong> ${isLong}</li>
+    </ul>
+    <h3>Nearby Test Units</h3>
+    ${nearbyHtml}
+    <h3>Aggregated Artifact Summary from Nearby Test Units</h3>
+    ${catsHtml}
+  `;
 }
 
 function bindPhotoButtons() {
@@ -250,7 +322,12 @@ function updateSummary() {
   }
   const visible = feats.filter(f => Number(f.properties[currentField] || 0) >= currentMin);
   const total = visible.reduce((sum, f) => sum + Number(f.properties[currentField] || 0), 0);
-  summaryText.innerHTML = `<div><strong>Category:</strong> ${FIELD_LABELS[currentField] || currentField}</div><div><strong>Matching test units:</strong> ${visible.length}</div><div><strong>Total count:</strong> ${total}</div><div><strong>Cabins shown:</strong> ${cabinCount}</div>`;
+  summaryText.innerHTML = `
+    <div><strong>Category:</strong> ${FIELD_LABELS[currentField] || currentField}</div>
+    <div><strong>Matching test units:</strong> ${visible.length}</div>
+    <div><strong>Total count:</strong> ${total}</div>
+    <div><strong>Cabins shown:</strong> ${cabinCount}</div>
+  `;
 }
 
 function applyFilter() {
@@ -293,7 +370,16 @@ function ensureLightbox() {
   lb = document.createElement('div');
   lb.id = 'lightbox';
   lb.className = 'lightbox hidden';
-  lb.innerHTML = `<div class="lightbox-backdrop"></div><div class="lightbox-content"><button class="lightbox-close" type="button" aria-label="Close image viewer">×</button><button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">‹</button><img id="lightboxImage" src="" alt=""><button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">›</button><div id="lightboxCaption" class="lightbox-caption"></div></div>`;
+  lb.innerHTML = `
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">‹</button>
+      <img id="lightboxImage" src="" alt="">
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">›</button>
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+  `;
   document.body.appendChild(lb);
   lb.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
   lb.querySelector('.lightbox-backdrop').addEventListener('click', closeLightbox);

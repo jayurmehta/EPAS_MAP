@@ -1,19 +1,10 @@
 {
-  "source_zip_used": "evergreen_maplibre_v11.zip",
+  "source_zip_used": "evergreen_maplibre_v13_FINAL.zip",
+  "workbook_used": "2021CeramicAnalysis_04162015.xlsx",
   "sheet_used": "Ceramics",
-  "columns": {
-    "test_unit": "Test Unit",
-    "level": "Level",
-    "photo_source": "Photo?",
-    "photo1": null,
-    "photo2": null,
-    "photo": "Photo?",
-    "count": "Count",
-    "type": "Type",
-    "chronology": "Chronology",
-    "vessel_portion": "Vessel Portion",
-    "vessel_form": "Vessel Form"
-  },
+  "PHOTOID1_column": "PHOTOID1",
+  "PHOTOID2_column": "PHOTOID2",
+  "row_count_after_filter": 64,
   "tu_keys": [
     "1",
     "3",
@@ -24,6 +15,6 @@
     "12",
     "13"
   ],
-  "row_count_after_filter": 64,
-  "photo_record_count": 58
+  "photo_id_count": 44,
+  "verified_uses_PHOTOID1_PHOTOID2": true
 }
