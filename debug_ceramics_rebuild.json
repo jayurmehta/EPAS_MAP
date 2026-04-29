@@ -1,8 +1,12 @@
 {
+  "source_zip_used": "evergreen_maplibre_v11.zip",
   "sheet_used": "Ceramics",
   "columns": {
     "test_unit": "Test Unit",
     "level": "Level",
+    "photo_source": "Photo?",
+    "photo1": null,
+    "photo2": null,
     "photo": "Photo?",
     "count": "Count",
     "type": "Type",
@@ -20,6 +24,6 @@
     "12",
     "13"
   ],
-  "found_399": [],
-  "row_count_after_filter": 64
+  "row_count_after_filter": 64,
+  "photo_record_count": 58
 }
