@@ -1,9 +1,10 @@
-const SURFACE_URL = 'surface_collections_optionA_preview.geojson?v=19';
 const DATA_URL = 'tu_summary.geojson';
 const CERAMICS_URL = 'ceramics_2021_tu_1_13.json';
 const CABINS_URL = 'cabins.geojson';
 const CABIN_LINKS_URL = 'cabin_links.json';
-const TU_CONTEXT_PHOTOS_URL = 'tu_context_photos.json?v=18';
+const TU_CONTEXT_PHOTOS_URL = 'tu_context_photos.json?v=20';
+const ARTIFACT_CONTEXTS_URL = 'artifact_contexts_2021.json?v=20';
+const SURFACE_URL = 'surface_collections.geojson?v=20';
 const IMAGE_BASE = 'https://pub-ab138914e68b46c9b202d08c2017af1b.r2.dev/';
 const FIELD_LABELS = window.FIELD_LABELS || {};
 const FILTER_FIELDS = window.FILTER_FIELDS || [];
@@ -26,6 +27,7 @@ let ceramicsData = {};
 let cabinsData = null;
 let cabinLinks = {};
 let tuContextPhotos = {};
+let artifactContexts = {};
 let selectedCabin = null;
 let currentGallery = [];
 let currentGalleryIndex = 0;
@@ -295,6 +297,95 @@ function buildCeramicsHTML(tu) {
   `;
 }
 
+
+function artifactPhotoUrls(photoId) {
+  if (!photoId) return null;
+  const baseName = String(photoId).trim().replace(/-/g, ' ');
+  const encoded = encodeURIComponent(baseName);
+  return { display: `${IMAGE_BASE}${encoded}.JPG`, fallback: `${IMAGE_BASE}${encoded}.jpg`, label: String(photoId).trim() };
+}
+
+function buildContextArtifactsHTML(contextIds, title='Linked Artifacts') {
+  const ids = Array.isArray(contextIds) ? contextIds : [contextIds];
+  const blocks = [];
+  let totalRecords = 0;
+  let totalCount = 0;
+  const gallery = [];
+
+  ids.forEach(cid => {
+    const ctx = artifactContexts[cid];
+    if (!ctx) return;
+    totalRecords += ctx.total_records || 0;
+    totalCount += ctx.total_count || 0;
+    (ctx.artifacts || []).forEach(a => {
+      (a.photo_ids || []).forEach(pid => {
+        const urls = artifactPhotoUrls(pid);
+        gallery.push({pid, urls, label: `${pid} (${a.source_sheet || 'artifact'})`});
+      });
+    });
+
+    const bySheet = ctx.summary_by_sheet || {};
+    const sheetSummary = Object.keys(bySheet).length
+      ? `<ul class="selection-list">${Object.entries(bySheet).map(([k,v]) => `<li><strong>${k}:</strong> ${v}</li>`).join('')}</ul>`
+      : `<div class="empty-state">No artifact-type summary available.</div>`;
+
+    const artifactItems = (ctx.artifacts || []).slice(0, 80).map(a => {
+      const bits = [];
+      if (a.source_sheet) bits.push(`<strong>${a.source_sheet}</strong>`);
+      if (a.artifact_group) bits.push(a.artifact_group);
+      if (a.artifact_category) bits.push(a.artifact_category);
+      if (a.artifact_type) bits.push(a.artifact_type);
+      if (a.material) bits.push(a.material);
+      bits.push(`Count: ${a.count || 1}`);
+      const photos = (a.photo_ids || []).map(pid => {
+        const urls = artifactPhotoUrls(pid);
+        return `<button class="photo-button mini-photo-button" data-photo-label="${safeAttr(urls.label)}" data-photo-src="${safeAttr(urls.display)}" data-photo-fallback="${safeAttr(urls.fallback)}" type="button">
+          <img src="${urls.display}" alt="${safeAttr(urls.label)}" loading="lazy" onerror="this.onerror=null; this.src='${urls.fallback}';">
+        </button>`;
+      }).join('');
+      return `<li>${bits.filter(Boolean).join(' · ')}${photos ? `<div class="mini-photo-row">${photos}</div>` : ''}</li>`;
+    }).join('');
+
+    blocks.push(`
+      <div class="context-artifacts-block">
+        <h3>${title}: ${cid}</h3>
+        <div class="small">Records: ${ctx.total_records || 0} | Count: ${ctx.total_count || 0}</div>
+        <h4>Summary by artifact sheet</h4>
+        ${sheetSummary}
+        <h4>Artifact records</h4>
+        <ul class="selection-list artifact-record-list">${artifactItems || '<li>No artifact records.</li>'}</ul>
+        ${(ctx.artifacts || []).length > 80 ? '<div class="small">Showing first 80 artifact records.</div>' : ''}
+      </div>
+    `);
+  });
+
+  if (!blocks.length) {
+    return `<div class="context-artifacts-block"><h3>${title}</h3><div class="empty-state">No linked non-ceramic artifact records for this context yet.</div></div>`;
+  }
+
+  const galleryHtml = gallery.length ? `
+    <div class="gallery-block">
+      <h3>${title} Photo Gallery</h3>
+      <div class="gallery-grid">
+        ${gallery.map(g => `<button class="gallery-thumb" data-photo-label="${safeAttr(g.urls.label)}" data-photo-src="${safeAttr(g.urls.display)}" data-photo-fallback="${safeAttr(g.urls.fallback)}" type="button">
+          <img src="${g.urls.display}" alt="${safeAttr(g.urls.label)}" loading="lazy" onerror="this.onerror=null; this.src='${g.urls.fallback}';">
+          <span>${g.pid}</span>
+        </button>`).join('')}
+      </div>
+    </div>` : '';
+
+  return `<div class="context-artifacts-total"><strong>${title} total:</strong> ${totalRecords} records | ${totalCount} artifacts</div>${blocks.join('')}${galleryHtml}`;
+}
+
+function contextIdsForTU(tu) {
+  const prefix = `TU${tu}-L`;
+  return Object.keys(artifactContexts).filter(k => k.startsWith(prefix)).sort((a,b) => {
+    const la = Number((a.split('-L')[1] || '').replace(/[^\d.]/g,'')); 
+    const lb = Number((b.split('-L')[1] || '').replace(/[^\d.]/g,'')); 
+    return la-lb;
+  });
+}
+
 function buildTUSelectionHTML(props) {
   const entries = [];
   FILTER_FIELDS.forEach(field => {
@@ -317,6 +408,7 @@ function buildTUSelectionHTML(props) {
     ${buildTUContextGalleryHTML(tuKey)}
     <h3>Artifact Category Summary</h3>
     ${assemblageHtml}
+    ${buildContextArtifactsHTML(contextIdsForTU(tuKey), 'All Non-Ceramic Artifacts by Lot')}
     ${buildCeramicsHTML(tuKey)}
   `;
 }
@@ -570,21 +662,27 @@ Promise.all([
   fetch(CERAMICS_URL).then(r => r.json()).catch(() => ({})),
   fetch(CABINS_URL).then(r => r.json()),
   fetch(CABIN_LINKS_URL).then(r => r.json()).catch(() => ({})),
-  fetch(TU_CONTEXT_PHOTOS_URL).then(r => r.json()).catch(() => ({}))
-]).then(([data, ceramicJson, cabinJson, cabinLinkJson, tuContextJson]) => {
+  fetch(TU_CONTEXT_PHOTOS_URL).then(r => r.json()).catch(() => ({})),
+  fetch(ARTIFACT_CONTEXTS_URL).then(r => r.json()).catch(() => ({})),
+  fetch(SURFACE_URL).then(r => r.json()).catch(() => ({type:'FeatureCollection', features:[]}))
+]).then(([data, ceramicJson, cabinJson, cabinLinkJson, tuContextJson, artifactContextJson, surfaceJson]) => {
   sourceData = data;
   ceramicsData = ceramicJson || {};
   cabinsData = cabinJson;
   cabinLinks = cabinLinkJson || {};
   tuContextPhotos = tuContextJson || {};
+  artifactContexts = artifactContextJson || {};
 
   map.on('load', () => {
     map.addSource('tu-data', { type: 'geojson', data });
     map.addSource('cabins-data', { type: 'geojson', data: cabinJson });
+    map.addSource('surface-data', { type: 'geojson', data: surfaceJson });
     map.addLayer({ id: 'tu-fill', type: 'fill', source: 'tu-data', paint: { 'fill-color': '#cfcfcf', 'fill-opacity': 0.45 } });
     map.addLayer({ id: 'tu-outline', type: 'line', source: 'tu-data', paint: { 'line-color': '#333', 'line-width': 1.1 } });
     map.addLayer({ id: 'cabins-fill', type: 'fill', source: 'cabins-data', paint: { 'fill-color': '#8c5a2b', 'fill-opacity': 0.5 } });
     map.addLayer({ id: 'cabins-outline', type: 'line', source: 'cabins-data', paint: { 'line-color': '#6d431e', 'line-width': 1.4 } });
+    map.addLayer({ id: 'surface-fill', type: 'fill', source: 'surface-data', paint: { 'fill-color': '#756bb1', 'fill-opacity': 0.42 } });
+    map.addLayer({ id: 'surface-outline', type: 'line', source: 'surface-data', paint: { 'line-color': '#4a1486', 'line-width': 1.2 } });
     map.addLayer({ id: 'tu-hover', type: 'line', source: 'tu-data', paint: { 'line-color': '#ff7f00', 'line-width': 3 }, filter: ['==', ['get', 'tu'], -9999] });
     map.addLayer({ id: 'tu-selected', type: 'line', source: 'tu-data', paint: { 'line-color': '#b30000', 'line-width': 3.5 }, filter: ['==', ['get', 'tu'], -9999] });
     map.addLayer({ id: 'cabin-hover', type: 'line', source: 'cabins-data', paint: { 'line-color': '#f0d264', 'line-width': 3 }, filter: ['==', ['get', 'cabin_num'], -9999] });
@@ -594,11 +692,39 @@ Promise.all([
     const cabinBounds = getBoundsFromGeoJSON(cabinJson);
     tuBounds.extend(cabinBounds.getSouthWest());
     tuBounds.extend(cabinBounds.getNorthEast());
+    if (surfaceJson && surfaceJson.features && surfaceJson.features.length) {
+      const surfaceBounds = getBoundsFromGeoJSON(surfaceJson);
+      tuBounds.extend(surfaceBounds.getSouthWest());
+      tuBounds.extend(surfaceBounds.getNorthEast());
+    }
     map.fitBounds(tuBounds, { padding: 30 });
 
     map.on('mousemove', 'tu-fill', e => { map.getCanvas().style.cursor = 'pointer'; map.setFilter('tu-hover', ['==', ['get', 'tu'], Number(e.features[0].properties.tu ?? -9999)]); });
     map.on('mouseleave', 'tu-fill', () => { map.getCanvas().style.cursor = ''; map.setFilter('tu-hover', ['==', ['get', 'tu'], -9999]); });
     map.on('click', 'tu-fill', e => showTUSelection(e.features[0].properties));
+
+    map.on('mousemove', 'surface-fill', e => { map.getCanvas().style.cursor = 'pointer'; });
+    map.on('mouseleave', 'surface-fill', () => { map.getCanvas().style.cursor = ''; });
+    map.on('click', 'surface-fill', e => {
+      const p = e.features[0].properties;
+      selectionContent.innerHTML = `
+        <div class="selection-title">Surface Collection ${p.context_id}</div>
+        <div class="selection-total">Cabin reference: ${p.cabin_label} | Row ${p.row}</div>
+        <div class="small">${p.geometry_note || ''}</div>
+        <ul class="selection-list">
+          <li><strong>Total records:</strong> ${p.total_records || 0}</li>
+          <li><strong>Total count:</strong> ${p.total_count || 0}</li>
+          <li><strong>Photo count:</strong> ${p.photo_count || 0}</li>
+        </ul>
+        ${buildContextArtifactsHTML(p.context_id, 'Surface Collection Artifacts')}
+      `;
+      selectedTU = null;
+      selectedCabin = null;
+      updateChurchPanel(null);
+      bindPhotoButtons();
+      if (window.innerWidth <= 800) openSidebar();
+    });
+
 
     map.on('mousemove', 'cabins-fill', e => { map.getCanvas().style.cursor = 'pointer'; map.setFilter('cabin-hover', ['==', ['get', 'cabin_num'], Number(e.features[0].properties.cabin_num ?? -9999)]); });
     map.on('mouseleave', 'cabins-fill', () => { map.getCanvas().style.cursor = ''; map.setFilter('cabin-hover', ['==', ['get', 'cabin_num'], -9999]); });
@@ -614,40 +740,3 @@ resetBtn.addEventListener('click', () => { currentField = ''; currentMin = 0; ar
 toggleSidebar.addEventListener('click', toggleSidebarState);
 floatingOpenBtn.addEventListener('click', openSidebar);
 window.addEventListener('resize', () => { if (window.innerWidth > 800) openSidebar(); else if (!sidebar.classList.contains('closed') && !selectedTU && !selectedCabin) closeSidebar(); });
-
-
-fetch(SURFACE_URL).then(r=>r.json()).then(surfaceData=>{
-  map.addSource('surface-data', {type:'geojson', data:surfaceData});
-  map.addLayer({
-    id:'surface-fill',
-    type:'fill',
-    source:'surface-data',
-    paint:{
-      'fill-color':['match',['get','confidence'],
-        'precise','#e34a33',
-        'composite','#fdbb84',
-        'generalized','#756bb1',
-        '#999'
-      ],
-      'fill-opacity':0.6
-    }
-  });
-  map.addLayer({
-    id:'surface-outline',
-    type:'line',
-    source:'surface-data',
-    paint:{'line-color':'#333','line-width':1}
-  });
-
-  map.on('click','surface-fill', e=>{
-    const p = e.features[0].properties;
-    selectionContent.innerHTML = `
-      <div class="selection-title">Surface Collection</div>
-      <div><strong>Cabin Ref:</strong> ${p.cabin_label}</div>
-      <div><strong>Row:</strong> ${p.row}</div>
-      <div><strong>Entries:</strong> ${p.entries}</div>
-      <div><strong>Confidence:</strong> ${p.confidence}</div>
-    `;
-    openSidebar();
-  });
-});

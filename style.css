@@ -546,3 +546,35 @@ button {
     max-height: 42vh;
   }
 }
+
+
+.context-artifacts-block {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+.context-artifacts-block h4 {
+  margin: 10px 0 4px;
+}
+.context-artifacts-total {
+  margin: 12px 0;
+  padding: 8px;
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+.artifact-record-list li {
+  margin-bottom: 6px;
+}
+.mini-photo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+.mini-photo-button img {
+  width: 72px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}

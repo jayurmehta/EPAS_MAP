@@ -1,0 +1,10 @@
+{
+  "non_ceramic_artifact_records": 756,
+  "missing_lot_links": 0,
+  "unique_contexts": 79,
+  "surface_context_polygons": 44,
+  "row_offset_m": 15,
+  "cabin_source": "EVG_Cabin_poly.zip",
+  "artifact_catalog": "AMD Copy of 2021 \u2013\u00a0Artifact Catalog.xlsx",
+  "lot_catalog": "Lot Catalog - 2021.csv"
+}

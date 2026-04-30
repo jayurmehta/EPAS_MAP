@@ -1,18 +1,22 @@
-Evergreen MapLibre v18 — TU Photos Independent of Ceramics
+Evergreen MapLibre v20 — Context-Based Artifact System
 
-Fix:
-- Test unit photos now display from tu_context_photos.json regardless of whether that TU has ceramic-analysis records.
-- This means clicking a TU with no ceramics should still show its uploaded TU context photos.
+Major changes:
+- Rebuilt cabins.geojson from the newly uploaded EVG_Cabin_poly.zip.
+- Rebuilt surface collection polygons with rows offset 15 m from the cabin line.
+- Added artifact_contexts_2021.json, linking non-ceramic artifacts to contexts through Lot #.
+- Context logic:
+  - Lot Catalog column A = Lot #
+  - Artifact Catalog column B = Lot #
+  - Lot Catalog G = TU
+  - Lot Catalog H = Level
+  - Lot Catalog I = STP
+  - lot_context_parse_qc.csv corrected_code is used for surface corrections
+- Surface polygons now link to artifact records and available photos.
+- Test Units now display linked non-ceramic artifacts by lot context in addition to existing ceramic display.
 
-Key behavior:
-- TU context photos appear near the top of the side panel before artifact summaries.
-- Ceramic records, when present, are still grouped by level.
-- Church Excavation popup still appears for TUs 2–10 and has a close button.
-- app.js, style.css, and tu_context_photos.json are cache-busted.
-
-Important files to upload:
-- index.html
-- app.js
-- style.css
-- tu_context_photos.json
-- all existing GeoJSON/JSON/CSV files
+Build summary:
+- Non-ceramic artifact records: 756
+- Missing lot links: 0
+- Unique contexts: 79
+- Surface polygons: 44
+- Surface row offset: 15 m

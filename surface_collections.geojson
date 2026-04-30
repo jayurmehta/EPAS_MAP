@@ -1,0 +1,1897 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC11R11",
+        "context_type": "surface_collection",
+        "cabin_ref": 11.0,
+        "cabin_label": "C11",
+        "row": 11,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64343382279802,
+              30.022606104152654
+            ],
+            [
+              -90.64356902859798,
+              30.02241063722806
+            ],
+            [
+              -90.64356014905673,
+              30.02240598614679
+            ],
+            [
+              -90.64342494324694,
+              30.02260145306177
+            ],
+            [
+              -90.64343382279802,
+              30.022606104152654
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC11R4",
+        "context_type": "surface_collection",
+        "cabin_ref": 11.0,
+        "cabin_label": "C11",
+        "row": 4,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.6434959796796,
+              30.02263866177323
+            ],
+            [
+              -90.6436311854108,
+              30.022443194781385
+            ],
+            [
+              -90.64362230586354,
+              30.022438543704023
+            ],
+            [
+              -90.64348710012251,
+              30.022634010686254
+            ],
+            [
+              -90.6434959796796,
+              30.02263866177323
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC11R5",
+        "context_type": "surface_collection",
+        "cabin_ref": 11.0,
+        "cabin_label": "C11",
+        "row": 5,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64348710012251,
+              30.022634010686254
+            ],
+            [
+              -90.64362230586354,
+              30.022438543704023
+            ],
+            [
+              -90.64361342631713,
+              30.02243389262608
+            ],
+            [
+              -90.64347822056628,
+              30.0226293595987
+            ],
+            [
+              -90.64348710012251,
+              30.022634010686254
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC11R6",
+        "context_type": "surface_collection",
+        "cabin_ref": 11.0,
+        "cabin_label": "C11",
+        "row": 6,
+        "total_records": 3,
+        "total_count": 3,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64347822056628,
+              30.0226293595987
+            ],
+            [
+              -90.64361342631713,
+              30.02243389262608
+            ],
+            [
+              -90.64360454677158,
+              30.022429241547595
+            ],
+            [
+              -90.64346934101091,
+              30.022624708510623
+            ],
+            [
+              -90.64347822056628,
+              30.0226293595987
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC11R7",
+        "context_type": "surface_collection",
+        "cabin_ref": 11.0,
+        "cabin_label": "C11",
+        "row": 7,
+        "total_records": 3,
+        "total_count": 47,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64346934101091,
+              30.022624708510623
+            ],
+            [
+              -90.64360454677158,
+              30.022429241547595
+            ],
+            [
+              -90.6435956672269,
+              30.022424590468546
+            ],
+            [
+              -90.6434604614564,
+              30.022620057421964
+            ],
+            [
+              -90.64346934101091,
+              30.022624708510623
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC11R8",
+        "context_type": "surface_collection",
+        "cabin_ref": 11.0,
+        "cabin_label": "C11",
+        "row": 8,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.6434604614564,
+              30.022620057421964
+            ],
+            [
+              -90.6435956672269,
+              30.022424590468546
+            ],
+            [
+              -90.64358678768308,
+              30.022419939388936
+            ],
+            [
+              -90.64345158190275,
+              30.022615406332747
+            ],
+            [
+              -90.6434604614564,
+              30.022620057421964
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC1R1",
+        "context_type": "surface_collection",
+        "cabin_ref": 1.0,
+        "cabin_label": "C1",
+        "row": 1,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64215425496668,
+              30.02463080501631
+            ],
+            [
+              -90.64229030540713,
+              30.02443412659049
+            ],
+            [
+              -90.64228142575796,
+              30.024429475417612
+            ],
+            [
+              -90.64214537530762,
+              30.024626153833772
+            ],
+            [
+              -90.64215425496668,
+              30.02463080501631
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC1R2",
+        "context_type": "surface_collection",
+        "cabin_ref": 1.0,
+        "cabin_label": "C1",
+        "row": 2,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64214537530762,
+              30.024626153833772
+            ],
+            [
+              -90.64228142575796,
+              30.024429475417612
+            ],
+            [
+              -90.64227254610964,
+              30.024424824244175
+            ],
+            [
+              -90.64213649564942,
+              30.024621502650675
+            ],
+            [
+              -90.64214537530762,
+              30.024626153833772
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC1R4",
+        "context_type": "surface_collection",
+        "cabin_ref": 1.0,
+        "cabin_label": "C1",
+        "row": 4,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64212761599208,
+              30.02461685146703
+            ],
+            [
+              -90.64226366646217,
+              30.024420173070194
+            ],
+            [
+              -90.64225478681557,
+              30.024415521895644
+            ],
+            [
+              -90.6421187363356,
+              30.024612200282814
+            ],
+            [
+              -90.64212761599208,
+              30.02461685146703
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC1R5",
+        "context_type": "surface_collection",
+        "cabin_ref": 1.0,
+        "cabin_label": "C1",
+        "row": 5,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.6421187363356,
+              30.024612200282814
+            ],
+            [
+              -90.64225478681557,
+              30.024415521895644
+            ],
+            [
+              -90.64224590716982,
+              30.024410870720544
+            ],
+            [
+              -90.64210985667997,
+              30.024607549098036
+            ],
+            [
+              -90.6421187363356,
+              30.024612200282814
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC2R1",
+        "context_type": "surface_collection",
+        "cabin_ref": 2.0,
+        "cabin_label": "C2",
+        "row": 1,
+        "total_records": 2,
+        "total_count": 2,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64229030540713,
+              30.02443412659049
+            ],
+            [
+              -90.64242475281166,
+              30.024239764598548
+            ],
+            [
+              -90.64241587317225,
+              30.024235113435232
+            ],
+            [
+              -90.64228142575796,
+              30.024429475417612
+            ],
+            [
+              -90.64229030540713,
+              30.02443412659049
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC2R2",
+        "context_type": "surface_collection",
+        "cabin_ref": 2.0,
+        "cabin_label": "C2",
+        "row": 2,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64228142575796,
+              30.024429475417612
+            ],
+            [
+              -90.64241587317225,
+              30.024235113435232
+            ],
+            [
+              -90.64240699353368,
+              30.024230462271365
+            ],
+            [
+              -90.64227254610964,
+              30.024424824244175
+            ],
+            [
+              -90.64228142575796,
+              30.024429475417612
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC2R3",
+        "context_type": "surface_collection",
+        "cabin_ref": 2.0,
+        "cabin_label": "C2",
+        "row": 3,
+        "total_records": 3,
+        "total_count": 21,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64227254610964,
+              30.024424824244175
+            ],
+            [
+              -90.64240699353368,
+              30.024230462271365
+            ],
+            [
+              -90.642398113896,
+              30.024225811106923
+            ],
+            [
+              -90.64226366646217,
+              30.024420173070194
+            ],
+            [
+              -90.64227254610964,
+              30.024424824244175
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC2R4",
+        "context_type": "surface_collection",
+        "cabin_ref": 2.0,
+        "cabin_label": "C2",
+        "row": 4,
+        "total_records": 3,
+        "total_count": 3,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64226366646217,
+              30.024420173070194
+            ],
+            [
+              -90.642398113896,
+              30.024225811106923
+            ],
+            [
+              -90.64238923425917,
+              30.024221159941934
+            ],
+            [
+              -90.64225478681557,
+              30.024415521895644
+            ],
+            [
+              -90.64226366646217,
+              30.024420173070194
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC2R5",
+        "context_type": "surface_collection",
+        "cabin_ref": 2.0,
+        "cabin_label": "C2",
+        "row": 5,
+        "total_records": 7,
+        "total_count": 7,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64225478681557,
+              30.024415521895644
+            ],
+            [
+              -90.64238923425917,
+              30.024221159941934
+            ],
+            [
+              -90.64238035462317,
+              30.02421650877638
+            ],
+            [
+              -90.64224590716982,
+              30.024410870720544
+            ],
+            [
+              -90.64225478681557,
+              30.024415521895644
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC2R6",
+        "context_type": "surface_collection",
+        "cabin_ref": 2.0,
+        "cabin_label": "C2",
+        "row": 6,
+        "total_records": 6,
+        "total_count": 46,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64224590716982,
+              30.024410870720544
+            ],
+            [
+              -90.64238035462317,
+              30.02421650877638
+            ],
+            [
+              -90.64237147498805,
+              30.024211857610272
+            ],
+            [
+              -90.64223702752493,
+              30.02440621954488
+            ],
+            [
+              -90.64224590716982,
+              30.024410870720544
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC2R7",
+        "context_type": "surface_collection",
+        "cabin_ref": 2.0,
+        "cabin_label": "C2",
+        "row": 7,
+        "total_records": 5,
+        "total_count": 5,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64223702752493,
+              30.02440621954488
+            ],
+            [
+              -90.64237147498805,
+              30.024211857610272
+            ],
+            [
+              -90.64236259535379,
+              30.024207206443613
+            ],
+            [
+              -90.6422281478809,
+              30.024401568368653
+            ],
+            [
+              -90.64223702752493,
+              30.02440621954488
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC2R8",
+        "context_type": "surface_collection",
+        "cabin_ref": 2.0,
+        "cabin_label": "C2",
+        "row": 8,
+        "total_records": 4,
+        "total_count": 4,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.6422281478809,
+              30.024401568368653
+            ],
+            [
+              -90.64236259535379,
+              30.024207206443613
+            ],
+            [
+              -90.64235371572039,
+              30.02420255527638
+            ],
+            [
+              -90.64221926823772,
+              30.024396917191872
+            ],
+            [
+              -90.6422281478809,
+              30.024401568368653
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC3R1",
+        "context_type": "surface_collection",
+        "cabin_ref": 3.0,
+        "cabin_label": "C3",
+        "row": 1,
+        "total_records": 2,
+        "total_count": 3,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64242475281166,
+              30.024239764598548
+            ],
+            [
+              -90.64255838682733,
+              30.024046577524214
+            ],
+            [
+              -90.64254950719763,
+              30.024041926370394
+            ],
+            [
+              -90.64241587317225,
+              30.024235113435232
+            ],
+            [
+              -90.64242475281166,
+              30.024239764598548
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC3R2",
+        "context_type": "surface_collection",
+        "cabin_ref": 3.0,
+        "cabin_label": "C3",
+        "row": 2,
+        "total_records": 3,
+        "total_count": 9,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64241587317225,
+              30.024235113435232
+            ],
+            [
+              -90.64254950719763,
+              30.024041926370394
+            ],
+            [
+              -90.64254062756878,
+              30.024037275215996
+            ],
+            [
+              -90.64240699353368,
+              30.024230462271365
+            ],
+            [
+              -90.64241587317225,
+              30.024235113435232
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC3R4",
+        "context_type": "surface_collection",
+        "cabin_ref": 3.0,
+        "cabin_label": "C3",
+        "row": 4,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.642398113896,
+              30.024225811106923
+            ],
+            [
+              -90.64253174794078,
+              30.02403262406107
+            ],
+            [
+              -90.64252286831366,
+              30.024027972905575
+            ],
+            [
+              -90.64238923425917,
+              30.024221159941934
+            ],
+            [
+              -90.642398113896,
+              30.024225811106923
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC3R5",
+        "context_type": "surface_collection",
+        "cabin_ref": 3.0,
+        "cabin_label": "C3",
+        "row": 5,
+        "total_records": 2,
+        "total_count": 2,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64238923425917,
+              30.024221159941934
+            ],
+            [
+              -90.64252286831366,
+              30.024027972905575
+            ],
+            [
+              -90.6425139886874,
+              30.024023321749517
+            ],
+            [
+              -90.64238035462317,
+              30.02421650877638
+            ],
+            [
+              -90.64238923425917,
+              30.024221159941934
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC3R6",
+        "context_type": "surface_collection",
+        "cabin_ref": 3.0,
+        "cabin_label": "C3",
+        "row": 6,
+        "total_records": 2,
+        "total_count": 2,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64238035462317,
+              30.02421650877638
+            ],
+            [
+              -90.6425139886874,
+              30.024023321749517
+            ],
+            [
+              -90.64250510906197,
+              30.024018670592906
+            ],
+            [
+              -90.64237147498805,
+              30.024211857610272
+            ],
+            [
+              -90.64238035462317,
+              30.02421650877638
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC3R7",
+        "context_type": "surface_collection",
+        "cabin_ref": 3.0,
+        "cabin_label": "C3",
+        "row": 7,
+        "total_records": 2,
+        "total_count": 2,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64237147498805,
+              30.024211857610272
+            ],
+            [
+              -90.64250510906197,
+              30.024018670592906
+            ],
+            [
+              -90.64249622943741,
+              30.024014019435736
+            ],
+            [
+              -90.64236259535379,
+              30.024207206443613
+            ],
+            [
+              -90.64237147498805,
+              30.024211857610272
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC3R8",
+        "context_type": "surface_collection",
+        "cabin_ref": 3.0,
+        "cabin_label": "C3",
+        "row": 8,
+        "total_records": 6,
+        "total_count": 6,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64236259535379,
+              30.024207206443613
+            ],
+            [
+              -90.64249622943741,
+              30.024014019435736
+            ],
+            [
+              -90.6424873498137,
+              30.024009368278012
+            ],
+            [
+              -90.64235371572039,
+              30.02420255527638
+            ],
+            [
+              -90.64236259535379,
+              30.024207206443613
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC3R9",
+        "context_type": "surface_collection",
+        "cabin_ref": 3.0,
+        "cabin_label": "C3",
+        "row": 9,
+        "total_records": 2,
+        "total_count": 3,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64235371572039,
+              30.02420255527638
+            ],
+            [
+              -90.6424873498137,
+              30.024009368278012
+            ],
+            [
+              -90.64247847019087,
+              30.024004717119716
+            ],
+            [
+              -90.64234483608783,
+              30.024197904108597
+            ],
+            [
+              -90.64235371572039,
+              30.02420255527638
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC4R2",
+        "context_type": "surface_collection",
+        "cabin_ref": 4.0,
+        "cabin_label": "C4",
+        "row": 2,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64254950719763,
+              30.024041926370394
+            ],
+            [
+              -90.64268308832264,
+              30.023848814837443
+            ],
+            [
+              -90.6426742087035,
+              30.02384416369257
+            ],
+            [
+              -90.64254062756878,
+              30.024037275215996
+            ],
+            [
+              -90.64254950719763,
+              30.024041926370394
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC4R3",
+        "context_type": "surface_collection",
+        "cabin_ref": 4.0,
+        "cabin_label": "C4",
+        "row": 3,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64254062756878,
+              30.024037275215996
+            ],
+            [
+              -90.6426742087035,
+              30.02384416369257
+            ],
+            [
+              -90.64266532908522,
+              30.023839512547124
+            ],
+            [
+              -90.64253174794078,
+              30.02403262406107
+            ],
+            [
+              -90.64254062756878,
+              30.024037275215996
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC4R4",
+        "context_type": "surface_collection",
+        "cabin_ref": 4.0,
+        "cabin_label": "C4",
+        "row": 4,
+        "total_records": 3,
+        "total_count": 3,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64253174794078,
+              30.02403262406107
+            ],
+            [
+              -90.64266532908522,
+              30.023839512547124
+            ],
+            [
+              -90.64265644946778,
+              30.023834861401117
+            ],
+            [
+              -90.64252286831366,
+              30.024027972905575
+            ],
+            [
+              -90.64253174794078,
+              30.02403262406107
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC5R1",
+        "context_type": "surface_collection",
+        "cabin_ref": 5.0,
+        "cabin_label": "C5",
+        "row": 1,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64269196794262,
+              30.023853465981784
+            ],
+            [
+              -90.64283266957283,
+              30.023650059647196
+            ],
+            [
+              -90.64282378996306,
+              30.023645408512856
+            ],
+            [
+              -90.64268308832264,
+              30.023848814837443
+            ],
+            [
+              -90.64269196794262,
+              30.023853465981784
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC5R2",
+        "context_type": "surface_collection",
+        "cabin_ref": 5.0,
+        "cabin_label": "C5",
+        "row": 2,
+        "total_records": 3,
+        "total_count": 3,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64268308832264,
+              30.023848814837443
+            ],
+            [
+              -90.64282378996306,
+              30.023645408512856
+            ],
+            [
+              -90.64281491035415,
+              30.02364075737796
+            ],
+            [
+              -90.6426742087035,
+              30.02384416369257
+            ],
+            [
+              -90.64268308832264,
+              30.023848814837443
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC5R4",
+        "context_type": "surface_collection",
+        "cabin_ref": 5.0,
+        "cabin_label": "C5",
+        "row": 4,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64266532908522,
+              30.023839512547124
+            ],
+            [
+              -90.64280603074607,
+              30.023636106242527
+            ],
+            [
+              -90.64279715113886,
+              30.023631455106514
+            ],
+            [
+              -90.64265644946778,
+              30.023834861401117
+            ],
+            [
+              -90.64266532908522,
+              30.023839512547124
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC5R6",
+        "context_type": "surface_collection",
+        "cabin_ref": 5.0,
+        "cabin_label": "C5",
+        "row": 6,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.6426475698512,
+              30.023830210254555
+            ],
+            [
+              -90.64278827153252,
+              30.023626803969954
+            ],
+            [
+              -90.64277939192704,
+              30.02362215283282
+            ],
+            [
+              -90.6426386902355,
+              30.02382555910743
+            ],
+            [
+              -90.6426475698512,
+              30.023830210254555
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC6R1",
+        "context_type": "surface_collection",
+        "cabin_ref": 6.0,
+        "cabin_label": "C6",
+        "row": 1,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64283266957283,
+              30.023650059647196
+            ],
+            [
+              -90.64298090754369,
+              30.023435757215275
+            ],
+            [
+              -90.64297202794468,
+              30.023431106091472
+            ],
+            [
+              -90.64282378996306,
+              30.023645408512856
+            ],
+            [
+              -90.64283266957283,
+              30.023650059647196
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC6R2",
+        "context_type": "surface_collection",
+        "cabin_ref": 6.0,
+        "cabin_label": "C6",
+        "row": 2,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64282378996306,
+              30.023645408512856
+            ],
+            [
+              -90.64297202794468,
+              30.023431106091472
+            ],
+            [
+              -90.64296314834652,
+              30.023426454967126
+            ],
+            [
+              -90.64281491035415,
+              30.02364075737796
+            ],
+            [
+              -90.64282378996306,
+              30.023645408512856
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC6R3",
+        "context_type": "surface_collection",
+        "cabin_ref": 6.0,
+        "cabin_label": "C6",
+        "row": 3,
+        "total_records": 3,
+        "total_count": 3,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64281491035415,
+              30.02364075737796
+            ],
+            [
+              -90.64296314834652,
+              30.023426454967126
+            ],
+            [
+              -90.64295426874924,
+              30.023421803842215
+            ],
+            [
+              -90.64280603074607,
+              30.023636106242527
+            ],
+            [
+              -90.64281491035415,
+              30.02364075737796
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC6R5",
+        "context_type": "surface_collection",
+        "cabin_ref": 6.0,
+        "cabin_label": "C6",
+        "row": 5,
+        "total_records": 6,
+        "total_count": 6,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64279715113886,
+              30.023631455106514
+            ],
+            [
+              -90.6429453891528,
+              30.02341715271673
+            ],
+            [
+              -90.64293650955722,
+              30.02341250159071
+            ],
+            [
+              -90.64278827153252,
+              30.023626803969954
+            ],
+            [
+              -90.64279715113886,
+              30.023631455106514
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC7R1",
+        "context_type": "surface_collection",
+        "cabin_ref": 7.0,
+        "cabin_label": "C7",
+        "row": 1,
+        "total_records": 2,
+        "total_count": 2,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64298090754369,
+              30.023435757215275
+            ],
+            [
+              -90.64312193194,
+              30.023231882117113
+            ],
+            [
+              -90.64311305235124,
+              30.023227231003325
+            ],
+            [
+              -90.64297202794468,
+              30.023431106091472
+            ],
+            [
+              -90.64298090754369,
+              30.023435757215275
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC7R2",
+        "context_type": "surface_collection",
+        "cabin_ref": 7.0,
+        "cabin_label": "C7",
+        "row": 2,
+        "total_records": 3,
+        "total_count": 4,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64297202794468,
+              30.023431106091472
+            ],
+            [
+              -90.64311305235124,
+              30.023227231003325
+            ],
+            [
+              -90.64310417276333,
+              30.02322257988899
+            ],
+            [
+              -90.64296314834652,
+              30.023426454967126
+            ],
+            [
+              -90.64297202794468,
+              30.023431106091472
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC7R3",
+        "context_type": "surface_collection",
+        "cabin_ref": 7.0,
+        "cabin_label": "C7",
+        "row": 3,
+        "total_records": 2,
+        "total_count": 2,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64296314834652,
+              30.023426454967126
+            ],
+            [
+              -90.64310417276333,
+              30.02322257988899
+            ],
+            [
+              -90.64309529317627,
+              30.02321792877411
+            ],
+            [
+              -90.64295426874924,
+              30.023421803842215
+            ],
+            [
+              -90.64296314834652,
+              30.023426454967126
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC7R5",
+        "context_type": "surface_collection",
+        "cabin_ref": 7.0,
+        "cabin_label": "C7",
+        "row": 5,
+        "total_records": 2,
+        "total_count": 2,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.6429453891528,
+              30.02341715271673
+            ],
+            [
+              -90.6430864135901,
+              30.023213277658655
+            ],
+            [
+              -90.64307753400475,
+              30.02320862654264
+            ],
+            [
+              -90.64293650955722,
+              30.02341250159071
+            ],
+            [
+              -90.6429453891528,
+              30.02341715271673
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC8R5",
+        "context_type": "surface_collection",
+        "cabin_ref": 8.0,
+        "cabin_label": "C8",
+        "row": 5,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.6430864135901,
+              30.023213277658655
+            ],
+            [
+              -90.64322006155345,
+              30.023020065591336
+            ],
+            [
+              -90.64321118197782,
+              30.023015414484828
+            ],
+            [
+              -90.64307753400475,
+              30.02320862654264
+            ],
+            [
+              -90.6430864135901,
+              30.023213277658655
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC9R3",
+        "context_type": "surface_collection",
+        "cabin_ref": 9.0,
+        "cabin_label": "C9",
+        "row": 3,
+        "total_records": 1,
+        "total_count": 1,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64323782070726,
+              30.023029367802692
+            ],
+            [
+              -90.64337133313882,
+              30.022836350681448
+            ],
+            [
+              -90.64336245357117,
+              30.022831699585534
+            ],
+            [
+              -90.64322894112992,
+              30.023024716697286
+            ],
+            [
+              -90.64323782070726,
+              30.023029367802692
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "context_id": "SFC9R5",
+        "context_type": "surface_collection",
+        "cabin_ref": 9.0,
+        "cabin_label": "C9",
+        "row": 5,
+        "total_records": 9,
+        "total_count": 15,
+        "photo_count": 0,
+        "row_offset_m": 15.0,
+        "row_spacing_m": 1.0,
+        "geometry_note": "Generalized approximation; rows begin 15 m from cabin line; collection areas not regularly sized."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64322006155345,
+              30.023020065591336
+            ],
+            [
+              -90.64335357400438,
+              30.022827048489063
+            ],
+            [
+              -90.64334469443845,
+              30.02282239739204
+            ],
+            [
+              -90.64321118197782,
+              30.023015414484828
+            ],
+            [
+              -90.64322006155345,
+              30.023020065591336
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+Lot #,Note,Date,Excavators,Year,Operation,TU,Level,STP,Feature,Recovery Method,Provenience,Extended Note,lot_norm,context_id,context_type,context_source,confidence
+21-001,,6/8/2021,"GC, TNS",2021.0,1,,,1.0,,Shovel Test Pit,"OP 1, STP1",,21-001,STP1,STP,lot_STP,structured
+21-002,,6/8/2021,"BO, MEC",2021.0,1,,,2.0,,Shovel Test Pit,"OP 1, STP2",,21-002,STP2,STP,lot_STP,structured
+21-003,,6/8/2021,"GC, TNS",2021.0,1,,,3.0,,Shovel Test Pit,"OP 1, STP3",,21-003,STP3,STP,lot_STP,structured
+21-004,,6/8/2021,"BO, MEC",2021.0,1,,,4.0,,Shovel Test Pit,"OP 1, STP4",,21-004,STP4,STP,lot_STP,structured
+21-005,,6/9/2021,"GC, TNS",2021.0,1,,,5.0,,Shovel Test Pit,"OP 1, STP5",,21-005,STP5,STP,lot_STP,structured
+21-006,,6/9/2021,"GC, TNS",2021.0,1,,,6.0,,Shovel Test Pit,"OP 1, STP6",,21-006,STP6,STP,lot_STP,structured
+21-007,,6/9/2021,"GC, TNS",2021.0,1,,,7.0,,Shovel Test Pit,"OP 1, STP7",,21-007,STP7,STP,lot_STP,structured
+21-008,,6/9/2021,"GC, MEC, TNS",2021.0,1,,,8.0,,Shovel Test Pit,"OP 1, STP8",Box 40,21-008,STP8,STP,lot_STP,structured
+21-009,,6/9/2021,"GC, MEC, TNS",2021.0,1,,,9.0,,Shovel Test Pit,"OP 1, STP9",,21-009,STP9,STP,lot_STP,structured
+21-010,,6/9/2021,"GC, MEC, TNS",2021.0,1,,,10.0,,Shovel Test Pit,"OP 1, STP10",,21-010,STP10,STP,lot_STP,structured
+21-011,,6/10/2021,"GC, MEC, TNS",2021.0,1,,,11.0,,Shovel Test Pit,"OP 1, STP11",,21-011,STP11,STP,lot_STP,structured
+21-012,,6/10/2021,"JMM, TNS",2021.0,1,,,12.0,,Shovel Test Pit,"OP 1, STP12",,21-012,STP12,STP,lot_STP,structured
+21-013,,6/23/2021,"EC, LR, TNS",2021.0,1,,,13.0,,Shovel Test Pit,"OP 1, STP13",,21-013,STP13,STP,lot_STP,structured
+21-014,,6/24/2021,TNS,2021.0,1,,,14.0,,Shovel Test Pit,"OP 1, STP14",,21-014,STP14,STP,lot_STP,structured
+21-015,,6/24/2021,"BO, LR, MEC",2021.0,1,,,15.0,,Shovel Test Pit,"OP 1, STP15",,21-015,STP15,STP,lot_STP,structured
+21-016,,6/24/2021,"CKP, TNS",2021.0,1,,,16.0,,Shovel Test Pit,"OP 1, STP16",,21-016,STP16,STP,lot_STP,structured
+21-017,,6/25/2021,,2021.0,1,,,17.0,,Shovel Test Pit,"OP 1, STP17",,21-017,STP17,STP,lot_STP,structured
+21-018,,6/11/2021,"GC, JMM, MEC, TNS",2021.0,1,1.0,1.0,,,Excavation,"OP 1, TU-1, L1",Box 40,21-018,TU1-L1,TU,lot_TU_Level,structured
+21-019,,6/11/2021,"GC, MEC, TNS",2021.0,1,1.0,2.0,,,Excavation,"OP 1, TU-1, L2",,21-019,TU1-L2,TU,lot_TU_Level,structured
+21-020,,6/14/2021,"GC, MEC",2021.0,1,1.0,3.0,,,Excavation,"OP 1, TU-1, L3",,21-020,TU1-L3,TU,lot_TU_Level,structured
+21-021,,6/14/2021,"JMM, TNS",2021.0,1,2.0,1.0,,,Excavation,"OP 1, TU-2, L1",Box 40,21-021,TU2-L1,TU,lot_TU_Level,structured
+21-022,,6/14/2021,"GC, MEC, TNS",2021.0,1,3.0,1.0,,,Excavation,"OP 1, TU-3, L1",Box 40,21-022,TU3-L1,TU,lot_TU_Level,structured
+21-023,,6/26/2021,MEC,2021.0,1,3.0,2.0,,,Excavation,"OP 1, TU-3, L2",,21-023,TU3-L2,TU,lot_TU_Level,structured
+21-024,,6/15/2021,"GC, TNS",2021.0,1,4.0,1.0,,,Excavation,"OP 1, TU-4, L1",Box 40,21-024,TU4-L1,TU,lot_TU_Level,structured
+21-025,,6/16/2021,"GC, TNS",2021.0,1,4.0,2.0,,,Excavation,"OP 1, TU-4, L2",Box 40,21-025,TU4-L2,TU,lot_TU_Level,structured
+21-026,,6/16/2021,"JMM, MEC",2021.0,1,5.0,1.0,,,Excavation,"OP 1, TU-5, L1",Box 40,21-026,TU5-L1,TU,lot_TU_Level,structured
+21-027,,6/25/2021,"EC, LR, MEC",2021.0,1,5.0,2.0,,,Excavation,"OP 1, TU-5, L2",,21-027,TU5-L2,TU,lot_TU_Level,structured
+21-028,,6/17/2021,MEC,2021.0,1,6.0,1.0,,,Excavation,"OP 1, TU-6, L1",Box 40,21-028,TU6-L1,TU,lot_TU_Level,structured
+21-029,,6/25/2021,MEC,2021.0,1,6.0,2.0,,,Excavation,"OP 1, TU-6, L2",,21-029,TU6-L2,TU,lot_TU_Level,structured
+21-030,,6/24/2021,"MEC, TNS",2021.0,1,7.0,2.0,,,Excavation,"OP 1, TU-7, L2",,21-030,TU7-L2,TU,lot_TU_Level,structured
+21-031,,6/17/2021,"GC, TNS",2021.0,1,8.0,1.0,,,Excavation,"OP 1, TU-8, L1",Box 40,21-031,TU8-L1,TU,lot_TU_Level,structured
+21-032,,6/17/2021,MEC,2021.0,1,9.0,1.0,,,Excavation,"OP 1, TU-9, L1",Box 40,21-032,TU9-L1,TU,lot_TU_Level,structured
+21-033,,6/28/2021,TNS,2021.0,1,9.0,2.0,,,Excavation,"OP 1, TU-9, L2",,21-033,TU9-L2,TU,lot_TU_Level,structured
+21-034,,6/25/2021,"JMM, TNS",2021.0,1,10.0,2.0,,,Excavation,"OP 1, TU-10, L2",,21-034,TU10-L2,TU,lot_TU_Level,structured
+21-035,,6/25/2021,"JMM, LR, MEC, TNS",2021.0,1,12.0,1.0,,,Excavation,"OP 1, TU-12, L1",,21-035,TU12-L1,TU,lot_TU_Level,structured
+21-036,,6/25/2021,"JMM, LR, MEC, TNS",2021.0,1,12.0,2.0,,,Excavation,"OP 1, TU-12, L2",,21-036,TU12-L2,TU,lot_TU_Level,structured
+21-037,,6/28/2021,"JMM, MEC",2021.0,1,13.0,1.0,,,Excavation,"OP 1, TU-13, L1",,21-037,TU13-L1,TU,lot_TU_Level,structured
+21-038,,6/29/2021,,2021.0,1,14.0,1.0,,,Excavation,"OP 1, TU-14, L1",,21-038,TU14-L1,TU,lot_TU_Level,structured
+21-039,,6/29/2021,,2021.0,1,14.0,2.0,,,Excavation,"OP 1, TU-14, L2",,21-039,TU14-L2,TU,lot_TU_Level,structured
+21-040,"Dennis Christopher, NYC; collected Jan/Feb & Apr 2012",2/13/2012,,2021.0,?,,,,,Surface Collection,"OP ?, Surface Collection, Dennis Christopher, NYC; collected Jan/Feb & Apr 2012",,21-040,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-041,General,6/23/2021,AG,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, General",,21-041,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-042,C1 East,6/23/2021,"BO, NRK",,3,,,,,Surface Collection,"OP 3, Surface Collection, C1 East",,21-042,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-043,C1 West,6/23/2021,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C1 West",,21-043,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-044,C1 R1,6/17/2021,,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C1 R1",,21-044,SFC1R1,surface,conservative_text_parse,parsed
+21-045,C1 R2,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C1 R2",,21-045,SFC1R2,surface,conservative_text_parse,parsed
+21-046,C1 R4,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C1 R4",,21-046,SFC1R4,surface,conservative_text_parse,parsed
+21-047,C1 R5,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C1 R5",,21-047,SFC1R5,surface,conservative_text_parse,parsed
+21-048,C1 R6,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C1 R6",,21-048,SFC1R6,surface,conservative_text_parse,parsed
+21-049,C1-2 R1-2,6/16/2021,AG,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C1-2 R1-2",,21-049,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-050,C1-2 R2,6/16/2021,"AG, NRK",,3,,,,,Surface Collection,"OP 3, Surface Collection, C1-2 R2",,21-050,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-051,C1-2 R4,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C1-2 R4",,21-051,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-052,C1-2 R6,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C1-2 R6",,21-052,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-053,C1-3 R1-5,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C1-3 R1-5",,21-053,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-054,C1-3 R2-4,6/16/2021,NRK,,3,,,,,Surface Collection,"OP 3, Surface Collection, C1-3 R2-4",,21-054,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-055,C1-6 R5,6/17/2021,AG,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C1-6 R5",,21-055,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-056,C2,6/23/2021,NRK,,3,,,,,Surface Collection,"OP 3, Surface Collection, C2",,21-056,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-057,C2 R1,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C2 R1",,21-057,SFC2R1,surface,conservative_text_parse,parsed
+21-058,C2 R2,,,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C2 R2",,21-058,SFC2R2,surface,conservative_text_parse,parsed
+21-059,C2 R2-5,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C2 R2-5",,21-059,SFC2R4,surface,corrected_code,human_corrected
+21-060,C2 R3,,,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C2 R3",,21-060,SFC2R3,surface,conservative_text_parse,parsed
+21-061,C2 R5,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C2 R5",,21-061,SFC2R5,surface,conservative_text_parse,parsed
+21-062,C2 R6,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C2 R6",,21-062,SFC2R6,surface,conservative_text_parse,parsed
+21-063,C2 R7,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C2 R7",,21-063,SFC2R7,surface,conservative_text_parse,parsed
+21-064,C2 R8,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C2 R8",,21-064,SFC2R8,surface,conservative_text_parse,parsed
+21-065,C2 R9,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C2 R9",,21-065,SFC2R9,surface,conservative_text_parse,parsed
+21-066,C2-3 R2-3,6/16/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C2-3 R2-3",,21-066,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-067,C2-4 R3,,,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C2-4 R3",,21-067,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-068,C2-3 R3-4,6/16/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C2-3 R3-4",,21-068,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-069,C2-3 R5,,,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C2-3 R5",,21-069,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-070,C2-3 R6,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C2-3 R6",,21-070,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-071,C2-3 R8,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C2-3 R8",,21-071,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-072,C2-4 R1,6/16/2021,NRK,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C2-4 R1",,21-072,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-073,C2-4 R2-7,6/17/2021,NRK,,3,,,,,Surface Collection,"OP 3, Surface Collection, C2-4 R2-7",,21-073,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-074,C2-5 R4-8,6/17/2021,NRK,,3,,,,,Surface Collection,"OP 3, Surface Collection, C2-5 R4-8",,21-074,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-075,C3,6/23/2021,NRK,,3,,,,,Surface Collection,"OP 3, Surface Collection, C3",,21-075,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-076,C3 R2,6/16/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C3 R2",,21-076,SFC3R2,surface,conservative_text_parse,parsed
+21-077,C3 R3,6/17/2021,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C3 R3",,21-077,SFC3R3,surface,conservative_text_parse,parsed
+21-078,C3 R4,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C3 R4",,21-078,SFC3R4,surface,conservative_text_parse,parsed
+21-079,C3 R5,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C3 R5",,21-079,SFC3R5,surface,conservative_text_parse,parsed
+21-080,C3 R6,6/17/2021,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C3 R6",,21-080,SFC3R6,surface,conservative_text_parse,parsed
+21-081,C3 R7,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C3 R7",,21-081,SFC3R7,surface,conservative_text_parse,parsed
+21-082,C3 R8,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C3 R8",,21-082,SFC3R8,surface,conservative_text_parse,parsed
+21-083,C3 R9,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C3 R9",,21-083,SFC3R9,surface,conservative_text_parse,parsed
+21-084,C3-4 R2,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C3-4 R2",,21-084,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-085,C3-4 R3,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C3-4 R3",,21-085,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-086,C3-4 R4,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C3-4 R4",,21-086,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-087,C4,6/23/2021,NRK,,3,,,,,Surface Collection,"OP 3, Surface Collection, C4",,21-087,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-088,C4 R2,6/17/2021,NRK,,3,,,,,Surface Collection,"OP 3, Surface Collection, C4 R2",,21-088,SFC4R2,surface,conservative_text_parse,parsed
+21-089,C4 R3,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C4 R3",,21-089,SFC4R3,surface,conservative_text_parse,parsed
+21-090,C4 R4,6/17/2021,"AG, NRK",,3,,,,,Surface Collection,"OP 3, Surface Collection, C4 R4",,21-090,SFC4R4,surface,conservative_text_parse,parsed
+21-091,C4 R5,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C4 R5",,21-091,SFC4R5,surface,conservative_text_parse,parsed
+21-092,C4 R7,6/17/2021,AG,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C4 R7",,21-092,SFC4R7,surface,conservative_text_parse,parsed
+21-093,C4 R8,6/17/2021,AG,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C4 R8",,21-093,SFC4R8,surface,conservative_text_parse,parsed
+21-094,C4-5,6/24/2021,NRK,,3,,,,,Surface Collection,"OP 3, Surface Collection, C4-5",,21-094,SFC4.5,surface,corrected_code,human_corrected
+21-095,C4-5 R1,,,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C4-5 R1",,21-095,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-096,C4-5 R4,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C4-5 R4",,21-096,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-097,C4-5 R5,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C4-5 R5",,21-097,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-098,C4-5 R6,6/17/2021,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C4-5 R6",,21-098,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-099,C5 R1,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C5 R1",,21-099,SFC5R1,surface,conservative_text_parse,parsed
+21-100,C5 R2,6/16/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C5 R2",,21-100,SFC5R2,surface,conservative_text_parse,parsed
+21-101,C5 R4,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C5 R4",,21-101,SFC5R4,surface,conservative_text_parse,parsed
+21-102,C5 R6,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C5 R6",,21-102,SFC5R6,surface,conservative_text_parse,parsed
+21-103,C5-6 R2,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C5-6 R2",,21-103,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-104,C5-6 R5,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C5-6 R5",,21-104,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-105,C5-7 R1-2,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C5-7 R1-2",,21-105,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-106,C6,6/24/2021,NRK,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C6",,21-106,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-107,C6 R1,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C6 R1",,21-107,SFC6R1,surface,conservative_text_parse,parsed
+21-108,C6 R2,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C6 R2",,21-108,SFC6R2,surface,conservative_text_parse,parsed
+21-109,C6 R2-3,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C6 R2-3",,21-109,SFC6R3,surface,corrected_code,human_corrected
+21-110,C6 R3,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C6 R3",,21-110,SFC6R3,surface,conservative_text_parse,parsed
+21-111,C6 R5,6/17/2021,AG,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C6 R5",,21-111,SFC6R5,surface,conservative_text_parse,parsed
+21-112,C6-7 R6,,,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C6-7 R6",,21-112,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-113,C7,6/24/2021,NRK,,3,,,,,Surface Collection,"OP 3, Surface Collection, C7",,21-113,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-114,C7 R1,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C7 R1",,21-114,SFC7R1,surface,conservative_text_parse,parsed
+21-115,C7 R2,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C7 R2",,21-115,SFC7R2,surface,conservative_text_parse,parsed
+21-116,C7 R2-3,,,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C7 R2-3",,21-116,SFC7R2,surface,corrected_code,human_corrected
+21-117,C7 R3,,,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C7 R3",,21-117,SFC7R3,surface,conservative_text_parse,parsed
+21-118,C7 R5,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C7 R5",,21-118,SFC7R5,surface,conservative_text_parse,parsed
+21-119,C8 R5,6/17/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C8 R5",,21-119,SFC8R5,surface,conservative_text_parse,parsed
+21-120,C9 R3,6/17/2021,AG,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C9 R3",,21-120,SFC9R3,surface,conservative_text_parse,parsed
+21-121,C9 R5,6/17/2021,AG,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C9 R5",,21-121,SFC9R5,surface,conservative_text_parse,parsed
+21-122,C11 R4,,,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C11 R4",,21-122,SFC11R4,surface,conservative_text_parse,parsed
+21-123,C11 R5,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C11 R5",,21-123,SFC11R5,surface,conservative_text_parse,parsed
+21-124,C11 R6,,,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C11 R6",,21-124,SFC11R6,surface,conservative_text_parse,parsed
+21-125,C11 R7,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C11 R7",,21-125,SFC11R7,surface,conservative_text_parse,parsed
+21-126,C11 R8,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C11 R8",,21-126,SFC11R8,surface,conservative_text_parse,parsed
+21-127,C11 R11,,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C11 R11",,21-127,SFC11R11,surface,conservative_text_parse,parsed
+21-128,C12,6/23/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C12",,21-128,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-129,C12-13,6/23/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C12-13",,21-129,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-130,C13,6/23/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C13",,21-130,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-131,C14,6/23/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C14",,21-131,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-132,C15,6/23/2021,AG,,3,,,,,Surface Collection,"OP 3, Surface Collection, C15",,21-132,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-133,C16,6/28/2021,,,3,,,,,Surface Collection,"OP 3, Surface Collection, C16",,21-133,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-134,North of Turn Row,6/16/2021,BO,,4,,,,,Surface Collection,"OP 4, Surface Collection, North of Turn Row",,21-134,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-135,No info,,BO,,3,,,,,Surface Collection,"OP 3, Surface Collection, No info",,21-135,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-136,No info,,NRK,,3,,,,,Surface Collection,"OP 3, Surface Collection, No info",,21-136,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-137,C7 R8 B1,,,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C7 R8 B1",,21-137,SFC7R8,surface,corrected_code,human_corrected
+21-138,S.F. (2012),2012,Django,,?,,,,,Surface Collection,"OP ?, Surface Collection, S.F. (2012)","""Found in tree...""; Note incl.: ""Items found in Feb. 2012... a hole 4'x6'x10"" deep was dug... the right hand side of the tractor... create a fake puddle of the movie ""Django Unchained""",21-138,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-139,S.F. (N.D.) Big House,,,,A,,,,,Surface Collection,"OP A, Surface Collection, S.F. (N.D.) Big House",Behind the Big House Toward Kitchen,21-139,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-140,"S.F. (2012 ""Cane field across road"")",2012,,,?,,,,,Surface Collection,"OP ?, Surface Collection, S.F. (2012 ""Cane field across road"")",,21-140,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-141,S.F. (N.D.),,,,?,,,,,Surface Collection,"OP ?, Surface Collection, S.F. (N.D.)",,21-141,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-142,S.F. (Jan + Feb 2012),2012,,,?,,,,,Surface Collection,"OP ?, Surface Collection, S.F. (Jan + Feb 2012)",This collection was found in the field just behind the citrus orchard. January and February of 2012.,21-142,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-143,,6/17/2021,TNS,2021.0,1,7.0,1.0,,,Excavation,"TU-7, L1",,21-143,TU7-L1,TU,lot_TU_Level,structured
+21-144,,6/23/2021,"MEC, TNS",2021.0,1,10.0,1.0,,,Excavation,"TU-10, L1",,21-144,TU10-L1,TU,lot_TU_Level,structured
+21-145,,6/16/2021,"GC, TNS",2021.0,1,4.0,2.0,,S23,Excavation,"TU-4, L2, Feature S23",,21-145,TU4-L2,TU,lot_TU_Level,structured
+21-146,SW Corner,6/10/2021,"JMM, MEC",2021.0,1,1.0,1.0,,,Excavation,"TU-1, L1",,21-146,TU1-L1,TU,lot_TU_Level,structured
+21-147,"S.F. (2012 ""Axe from french kitchen Gordon Site""",2012,,2012.0,,,,,,Surface Collection,"OP , Surface Collection, S.F. (2012 ""Axe from french kitchen Gordon Site""",,21-147,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-148,"Dennis Christopher, NYC; collected Jan/Feb & Apr 2012",4/27/2012,,2012.0,?,,,,,Surface Collection,"OP ?, Surface Collection, Dennis Christopher, NYC; collected Jan/Feb & Apr 2012",,21-148,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-149,"S.F.  "" at the tree line, back left qaurter houses""",2/13/2012,,2021.0,,,,,,Surface Collection,"OP , Surface Collection, S.F.  "" at the tree line, back left qaurter houses""",,21-149,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-150,C16E,,,2021.0,5,,,,,Surface Collection,"OP 5, Surface Collection, C16E",,21-150,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-151,"C1 East, 3rd Oak TreeNorth",,BO,2021.0,4,,,,,Surface Collection,"OP 4, Surface Collection, C1 East, 3rd Oak TreeNorth",,21-151,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-152,C17,6/23/2021,AG,2021.0,5,,,,,Surface Collection,"OP 5, Surface Collection, C17",,21-152,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-153,Field,6/29/2021,,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, Field",,21-153,surface_unparsed,surface_unparsed,unparsed,unmapped
+21-154,C3 R1,6/17/2021,,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C3 R1",,21-154,SFC3R1,surface,conservative_text_parse,parsed
+21-155,C1,6/23/2021,AG,2021.0,3,,,,,Surface Collection,"OP 3, Surface Collection, C1",,21-155,surface_unparsed,surface_unparsed,unparsed,unmapped
