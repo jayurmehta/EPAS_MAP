@@ -578,3 +578,21 @@ button {
   border-radius: 5px;
   border: 1px solid #ddd;
 }
+
+
+.context-photos-block {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.general-surface-button {
+  margin-top: 10px;
+  width: 100%;
+  background: #4a1486;
+  color: #fff;
+}
+
+.general-surface-button:hover {
+  opacity: 0.9;
+}

@@ -1,22 +1,17 @@
-Evergreen MapLibre v20 — Context-Based Artifact System
+Evergreen MapLibre v21 — Photo Log Context Photos
 
-Major changes:
-- Rebuilt cabins.geojson from the newly uploaded EVG_Cabin_poly.zip.
-- Rebuilt surface collection polygons with rows offset 15 m from the cabin line.
-- Added artifact_contexts_2021.json, linking non-ceramic artifacts to contexts through Lot #.
-- Context logic:
-  - Lot Catalog column A = Lot #
-  - Artifact Catalog column B = Lot #
-  - Lot Catalog G = TU
-  - Lot Catalog H = Level
-  - Lot Catalog I = STP
-  - lot_context_parse_qc.csv corrected_code is used for surface corrections
-- Surface polygons now link to artifact records and available photos.
-- Test Units now display linked non-ceramic artifacts by lot context in addition to existing ceramic display.
+New:
+- Added context_photos_2021.json from EPAS 2021 Photo Log_April 2023.xlsx.
+- Photo IDs are stored as Cloudflare filenames without dashes, e.g. EPAS2021 399.
+- Context photos are separate from artifact photos.
+- TU, STP, and surface collection contexts can display context photos.
+- General surface photos that are not spatially constrained are available through the "View General Surface Photos" button.
 
-Build summary:
-- Non-ceramic artifact records: 756
-- Missing lot links: 0
-- Unique contexts: 79
-- Surface polygons: 44
-- Surface row offset: 15 m
+Photo log summary:
+- Photo-log rows: 645
+- Expanded photo IDs: 1112
+- Contexts with photos: 147
+- General/unmapped surface photos: 88
+- TU contexts with photos: 136
+- STP contexts with photos: 10
+- Surface spatial contexts with photos: 0

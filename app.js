@@ -4,7 +4,8 @@ const CABINS_URL = 'cabins.geojson';
 const CABIN_LINKS_URL = 'cabin_links.json';
 const TU_CONTEXT_PHOTOS_URL = 'tu_context_photos.json?v=20';
 const ARTIFACT_CONTEXTS_URL = 'artifact_contexts_2021.json?v=20';
-const SURFACE_URL = 'surface_collections.geojson?v=20';
+const SURFACE_URL = 'surface_collections.geojson?v=21';
+const CONTEXT_PHOTOS_URL = 'context_photos_2021.json?v=21';
 const IMAGE_BASE = 'https://pub-ab138914e68b46c9b202d08c2017af1b.r2.dev/';
 const FIELD_LABELS = window.FIELD_LABELS || {};
 const FILTER_FIELDS = window.FILTER_FIELDS || [];
@@ -28,6 +29,7 @@ let cabinsData = null;
 let cabinLinks = {};
 let tuContextPhotos = {};
 let artifactContexts = {};
+let contextPhotos = {};
 let selectedCabin = null;
 let currentGallery = [];
 let currentGalleryIndex = 0;
@@ -305,6 +307,60 @@ function artifactPhotoUrls(photoId) {
   return { display: `${IMAGE_BASE}${encoded}.JPG`, fallback: `${IMAGE_BASE}${encoded}.jpg`, label: String(photoId).trim() };
 }
 
+
+function contextPhotoUrls(photoId) {
+  if (!photoId) return null;
+  const encoded = encodeURIComponent(String(photoId).trim());
+  return { display: `${IMAGE_BASE}${encoded}.jpg`, fallback: `${IMAGE_BASE}${encoded}.JPG`, label: String(photoId).trim() };
+}
+
+function buildContextPhotosHTML(contextIds, title='Context Photos') {
+  const ids = Array.isArray(contextIds) ? contextIds : [contextIds];
+  let photos = [];
+  ids.forEach(cid => {
+    const fromSeparate = contextPhotos[cid] || [];
+    const fromContext = artifactContexts[cid] && artifactContexts[cid].context_photos ? artifactContexts[cid].context_photos : [];
+    [...fromSeparate, ...fromContext].forEach(pid => {
+      if (pid && !photos.includes(pid)) photos.push(pid);
+    });
+  });
+
+  if (!photos.length) {
+    return `<div class="context-photos-block"><h3>${title}</h3><div class="empty-state">No context photos linked for this context.</div></div>`;
+  }
+
+  return `
+    <div class="context-photos-block">
+      <h3>${title}</h3>
+      <div class="small">${photos.length} linked context photo${photos.length === 1 ? '' : 's'}.</div>
+      <div class="gallery-grid">
+        ${photos.map(pid => {
+          const urls = contextPhotoUrls(pid);
+          return `<button class="gallery-thumb" data-photo-label="${safeAttr(urls.label)}" data-photo-src="${safeAttr(urls.display)}" data-photo-fallback="${safeAttr(urls.fallback)}" type="button">
+            <img src="${urls.display}" alt="${safeAttr(urls.label)}" loading="lazy" onerror="this.onerror=null; this.src='${urls.fallback}';">
+            <span>${pid}</span>
+          </button>`;
+        }).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function showGeneralSurfacePhotos() {
+  selectionContent.innerHTML = `
+    <div class="selection-title">General Surface Photos</div>
+    <div class="selection-total">Not spatially constrained</div>
+    <div class="small">These photo-log entries are associated with general surface finds and are intentionally not tied to a polygon.</div>
+    ${buildContextPhotosHTML('surface_general_unmapped', 'General Surface Context Photos')}
+    ${buildContextArtifactsHTML('surface_unparsed', 'Unmapped Surface Artifacts')}
+  `;
+  selectedTU = null;
+  selectedCabin = null;
+  updateChurchPanel(null);
+  bindPhotoButtons();
+  openSidebar();
+}
+
 function buildContextArtifactsHTML(contextIds, title='Linked Artifacts') {
   const ids = Array.isArray(contextIds) ? contextIds : [contextIds];
   const blocks = [];
@@ -408,6 +464,7 @@ function buildTUSelectionHTML(props) {
     ${buildTUContextGalleryHTML(tuKey)}
     <h3>Artifact Category Summary</h3>
     ${assemblageHtml}
+    ${buildContextPhotosHTML(contextIdsForTU(tuKey), 'Test Unit Context Photos')}
     ${buildContextArtifactsHTML(contextIdsForTU(tuKey), 'All Non-Ceramic Artifacts by Lot')}
     ${buildCeramicsHTML(tuKey)}
   `;
@@ -664,14 +721,16 @@ Promise.all([
   fetch(CABIN_LINKS_URL).then(r => r.json()).catch(() => ({})),
   fetch(TU_CONTEXT_PHOTOS_URL).then(r => r.json()).catch(() => ({})),
   fetch(ARTIFACT_CONTEXTS_URL).then(r => r.json()).catch(() => ({})),
-  fetch(SURFACE_URL).then(r => r.json()).catch(() => ({type:'FeatureCollection', features:[]}))
-]).then(([data, ceramicJson, cabinJson, cabinLinkJson, tuContextJson, artifactContextJson, surfaceJson]) => {
+  fetch(SURFACE_URL).then(r => r.json()).catch(() => ({type:'FeatureCollection', features:[]})),
+  fetch(CONTEXT_PHOTOS_URL).then(r => r.json()).catch(() => ({}))
+]).then(([data, ceramicJson, cabinJson, cabinLinkJson, tuContextJson, artifactContextJson, surfaceJson, contextPhotoJson]) => {
   sourceData = data;
   ceramicsData = ceramicJson || {};
   cabinsData = cabinJson;
   cabinLinks = cabinLinkJson || {};
   tuContextPhotos = tuContextJson || {};
   artifactContexts = artifactContextJson || {};
+  contextPhotos = contextPhotoJson || {};
 
   map.on('load', () => {
     map.addSource('tu-data', { type: 'geojson', data });
@@ -716,6 +775,7 @@ Promise.all([
           <li><strong>Total count:</strong> ${p.total_count || 0}</li>
           <li><strong>Photo count:</strong> ${p.photo_count || 0}</li>
         </ul>
+        ${buildContextPhotosHTML(p.context_id, 'Surface Context Photos')}
         ${buildContextArtifactsHTML(p.context_id, 'Surface Collection Artifacts')}
       `;
       selectedTU = null;
@@ -740,3 +800,19 @@ resetBtn.addEventListener('click', () => { currentField = ''; currentMin = 0; ar
 toggleSidebar.addEventListener('click', toggleSidebarState);
 floatingOpenBtn.addEventListener('click', openSidebar);
 window.addEventListener('resize', () => { if (window.innerWidth > 800) openSidebar(); else if (!sidebar.classList.contains('closed') && !selectedTU && !selectedCabin) closeSidebar(); });
+
+
+// v21 general surface photo tool
+window.addEventListener('DOMContentLoaded', () => {
+  const controls = document.querySelector('.controls') || document.getElementById('sidebar') || document.body;
+  if (controls && !document.getElementById('generalSurfacePhotosBtn')) {
+    const btn = document.createElement('button');
+    btn.id = 'generalSurfacePhotosBtn';
+    btn.className = 'reset-button general-surface-button';
+    btn.textContent = 'View General Surface Photos';
+    btn.type = 'button';
+    btn.addEventListener('click', showGeneralSurfacePhotos);
+    controls.appendChild(btn);
+  }
+});
+
