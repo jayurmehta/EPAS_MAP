@@ -1,17 +1,20 @@
-Evergreen MapLibre v21 — Photo Log Context Photos
+Evergreen MapLibre v22 — Surface Photo Link Fix
 
-New:
-- Added context_photos_2021.json from EPAS 2021 Photo Log_April 2023.xlsx.
-- Photo IDs are stored as Cloudflare filenames without dashes, e.g. EPAS2021 399.
-- Context photos are separate from artifact photos.
-- TU, STP, and surface collection contexts can display context photos.
-- General surface photos that are not spatially constrained are available through the "View General Surface Photos" button.
+Fix:
+- Re-parsed the 2021 Photo Log so Columns D and E can resolve to surface Cabin/Row contexts.
+- Columns D/E are treated as surface contexts when they explicitly indicate Cabin/Row/Surface or when the resulting SFC#R# matches a known surface polygon.
+- Photo IDs remain Cloudflare-compatible filenames, e.g. EPAS2021 399.jpg, with no dash.
 
-Photo log summary:
-- Photo-log rows: 645
+Summary:
 - Expanded photo IDs: 1112
-- Contexts with photos: 147
-- General/unmapped surface photos: 88
-- TU contexts with photos: 136
+- Contexts with photos: 63
+- Spatial surface contexts with photos: 44
+- Spatial surface photo count: 484
+- General unmapped surface photo count: 476
+- TU contexts with photos: 8
 - STP contexts with photos: 10
-- Surface spatial contexts with photos: 0
+
+New audit files:
+- photo_log_context_links_v22.csv
+- surface_photo_link_audit_v22.csv
+- v22_photo_log_summary.json

@@ -1,0 +1,22 @@
+{
+  "photo_log_rows": 645,
+  "expanded_photo_ids": 1112,
+  "contexts_with_photos": 63,
+  "general_surface_photo_count": 476,
+  "surface_spatial_contexts_with_photos": 44,
+  "surface_spatial_photo_count": 484,
+  "tu_contexts_with_photos": 8,
+  "stp_contexts_with_photos": 10,
+  "source_counts": {
+    "general_surface_no_spatial_context": 185,
+    "surface_from_D_E_explicit": 117,
+    "surface_cabin_no_row": 115,
+    "surface_text": 101,
+    "stp_text": 52,
+    "surface_from_D_E_numeric_known_surface": 44,
+    "TU_Level_known_context": 28,
+    "TU_no_level": 3
+  },
+  "photo_filename_rule": "EPAS2021 #.jpg",
+  "key_fix": "Columns D/E are now parsed as Cabin/Row surface contexts when explicit or when they match known SFC polygons."
+}

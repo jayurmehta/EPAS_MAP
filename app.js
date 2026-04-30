@@ -3,9 +3,9 @@ const CERAMICS_URL = 'ceramics_2021_tu_1_13.json';
 const CABINS_URL = 'cabins.geojson';
 const CABIN_LINKS_URL = 'cabin_links.json';
 const TU_CONTEXT_PHOTOS_URL = 'tu_context_photos.json?v=20';
-const ARTIFACT_CONTEXTS_URL = 'artifact_contexts_2021.json?v=20';
-const SURFACE_URL = 'surface_collections.geojson?v=21';
-const CONTEXT_PHOTOS_URL = 'context_photos_2021.json?v=21';
+const ARTIFACT_CONTEXTS_URL = 'artifact_contexts_2021.json?v=22';
+const SURFACE_URL = 'surface_collections.geojson?v=22';
+const CONTEXT_PHOTOS_URL = 'context_photos_2021.json?v=22';
 const IMAGE_BASE = 'https://pub-ab138914e68b46c9b202d08c2017af1b.r2.dev/';
 const FIELD_LABELS = window.FIELD_LABELS || {};
 const FILTER_FIELDS = window.FILTER_FIELDS || [];
@@ -773,7 +773,7 @@ Promise.all([
         <ul class="selection-list">
           <li><strong>Total records:</strong> ${p.total_records || 0}</li>
           <li><strong>Total count:</strong> ${p.total_count || 0}</li>
-          <li><strong>Photo count:</strong> ${p.photo_count || 0}</li>
+          <li><strong>Photo count:</strong> ${p.photo_count || 0}</li><li><strong>Context photos:</strong> ${p.context_photo_count || 0}</li>
         </ul>
         ${buildContextPhotosHTML(p.context_id, 'Surface Context Photos')}
         ${buildContextArtifactsHTML(p.context_id, 'Surface Collection Artifacts')}
